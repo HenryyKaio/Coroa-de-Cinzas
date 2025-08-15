@@ -1,0 +1,24 @@
+{
+	
+	funcao inicio()
+	{
+		escreva("╭────────────────────────────────────────────╮", "\n")
+escreva("│                                            │", "\n")
+escreva("│  Saudações.                                │", "\n")
+escreva("│                                            │", "\n")
+escreva("│  Sua presença foi convocada novamente      │", "\n")
+escreva("│  pela Divina Corte.                        │", "\n")
+escreva("│                                            │", "\n")
+escreva("│  Compareça ao Palácio Real assim que       │", "\n")
+escreva("│  receber essa carta. O assunto é urgente.  │", "\n")
+escreva("│                                            │", "\n")
+escreva("│                                            │", "\n")
+escreva("│                                            │", "\n")
+escreva("│                                            │", "\n")
+escreva("│                                            │", "\n")
+escreva("│  Assinado: A CORTE                         │", "\n")
+escreva("│                                            │", "\n")
+escreva("╰────────────────────────────────────────────╯", "\n")
+
+	}
+}

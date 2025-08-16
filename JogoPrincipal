@@ -1,0 +1,87 @@
+programa
+{
+
+	inclua biblioteca Tipos --> t
+	inclua biblioteca Texto --> tx
+	inclua biblioteca Util --> u
+
+	inteiro cem = 100
+	
+	funcao inicio()
+	{	
+		introducao()
+	
+	}
+
+	funcao escreva_devagar(cadeia texto)
+	
+	{ //uma espécie de "escreva()" porém pausadamente. 
+							
+		caracter letra
+		inteiro velocidade = 20 //pausa padrão entre um caracter e outro.
+		
+		para(inteiro i = 0 ; i < tx.numero_caracteres(texto) ; i++){ //repete enquanto a frase inteiro não for escrita.
+
+			letra = tx.obter_caracter(texto, i) //obtem o caracter da frase.
+			
+			escreva(letra)
+
+			u.aguarde(velocidade)
+			
+			escolha(letra){ //verifica diferentes tipos de caracter para efetuar (ou não) determinadas pausas.
+
+				caso ' ': u.aguarde(0) pare				
+				caso ',': u.aguarde(velocidade * 3) pare	
+				caso ':': u.aguarde(velocidade * 3) pare	
+				caso ';': u.aguarde(velocidade * 3) pare		
+				caso '.': u.aguarde(velocidade * 5) pare			
+				caso '!': u.aguarde(velocidade * 5) pare				
+				caso '?': u.aguarde(velocidade * 5) pare				
+				caso contrario: u.aguarde(velocidade) pare
+				
+			}
+			
+			
+		}
+	}
+
+	funcao introducao(){
+		
+	// Faz uma breve introdução da história.
+
+	escreva_devagar("Bem vindo ao: \n")
+	
+	escreva(" ▄████▄   ▒█████   ██▀███   ▒█████   ▄▄▄         ▓█████▄ ▓█████     ▄████▄   ██▓ ███▄    █ ▒███████▒ ▄▄▄        ██████ ", "\n")
+	escreva("▒██▀ ▀█  ▒██▒  ██▒▓██ ▒ ██▒▒██▒  ██▒▒████▄       ▒██▀ ██▌▓█   ▀    ▒██▀ ▀█  ▓██▒ ██ ▀█   █ ▒ ▒ ▒ ▄▀░▒████▄    ▒██    ▒ ", "\n")
+	escreva("▒▓█    ▄ ▒██░  ██▒▓██ ░▄█ ▒▒██░  ██▒▒██  ▀█▄     ░██   █▌▒███      ▒▓█    ▄ ▒██▒▓██  ▀█ ██▒░ ▒ ▄▀▒░ ▒██  ▀█▄  ░ ▓██▄   ", "\n")
+	escreva("▒▓▓▄ ▄██▒▒██   ██░▒██▀▀█▄  ▒██   ██░░██▄▄▄▄██    ░▓█▄   ▌▒▓█  ▄    ▒▓▓▄ ▄██▒░██░▓██▒  ▐▌██▒  ▄▀▒   ░░██▄▄▄▄██   ▒   ██▒", "\n")
+	escreva("▒ ▓███▀ ░░ ████▓▒░░██▓ ▒██▒░ ████▓▒░ ▓█   ▓██▒   ░▒████▓ ░▒████▒   ▒ ▓███▀ ░░██░▒██░   ▓██░▒███████▒ ▓█   ▓██▒▒██████▒▒", "\n")
+	escreva("░ ░▒ ▒  ░░ ▒░▒░▒░ ░ ▒▓ ░▒▓░░ ▒░▒░▒░  ▒▒   ▓▒█░    ▒▒▓  ▒ ░░ ▒░ ░   ░ ░▒ ▒  ░░▓  ░ ▒░   ▒ ▒ ░▒▒ ▓░▒░▒ ▒▒   ▓▒█░▒ ▒▓▒ ▒ ░", "\n")
+	escreva("  ░  ▒     ░ ▒ ▒░   ░▒ ░ ▒░  ░ ▒ ▒░   ▒   ▒▒ ░    ░ ▒  ▒  ░ ░  ░     ░  ▒    ▒ ░░ ░░   ░ ▒░░░▒ ▒ ░ ▒  ▒   ▒▒ ░░ ░▒  ░ ░", "\n")
+	escreva("░        ░ ░ ░ ▒    ░░   ░ ░ ░ ░ ▒    ░   ▒       ░ ░  ░    ░      ░         ▒ ░   ░   ░ ░ ░ ░ ░ ░ ░  ░   ▒   ░  ░  ░  ", "\n")
+	escreva("░ ░          ░ ░     ░         ░ ░        ░  ░      ░       ░  ░   ░ ░       ░           ░   ░ ░          ░  ░      ░  ", "\n")
+	escreva("░                                                 ░                ░                       ░                            ", "\n")
+
+	u.aguarde(1000)
+	
+	escreva_devagar("Em uma ilha enorme e pouco conhecida, distante de tudo que conhecemos,\n")
+	escreva_devagar("existe um lugar, cercado pelos Picos Tokan, pelo arquipélago de Darom,\n")
+	escreva_devagar("e pelas colinas Sofna, chamado de “Reino de Aolis”. \n")
+	escreva_devagar("\n")
+
+	escreva_devagar("Dentro desse reino, existem várias “zonas”, onde cada classe de pessoas vive. \n")
+	escreva_devagar("Você mora na classe mais baixa, junto de todos os plebeus,\n")
+	escreva_devagar("mas esconde um grande segredo. \n")
+	escreva_devagar("\n")
+	
+	escreva_devagar("Você é um renomado detetive-caçador, oficial da corte real.\n")
+	escreva_devagar("Ninguém, nem mesmo sua família sabe quem você realmente é. \n")
+	escreva_devagar("Suas missões são extremamente secretas, em sigilo total. \n")
+	escreva_devagar("\n")
+	escreva_devagar("Agora suas ações são por sua conta e risco... \n")
+	escreva_devagar("\n")
+
+	
+	}
+
+}

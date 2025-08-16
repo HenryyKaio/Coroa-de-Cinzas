@@ -111,11 +111,11 @@ programa
 	escreva("│                                            │", "\n")
 	escreva("│                                            │", "\n")
 	escreva("│                                            │", "\n")
-	escreva("│  Assinado: A CORTE Ӝ                       │", "\n")
+	escreva("│   Ӝ A CORTE Ӝ                              │", "\n")
 	escreva("│                                            │", "\n")
 	escreva("╰────────────────────────────────────────────╯", "\n")
 	escreva("\n\n\n\n")
-	u.aguarde(1500)
+	u.aguarde(1800)
 	
 	escreve(".")
 	u.aguarde(400)
@@ -144,9 +144,9 @@ programa
 	u.aguarde(500)
 	escreve("Serei curto e direto.\n")
 	u.aguarde(900)
-	escreva("A consagrada donzela sumiu.\n")
+	escreve("A consagrada donzela sumiu.\n")
 	escreve("Quem é ela? Isso não é do seu interesse. Tudo o que você precisa saber é que ela nunca sai do castelo e ficava sempre bem protegida no quarto lá em cima.\n")
-	escreve("É de EXTREMA importância que você a encontre o mais RÁPIDO possível. Te dou um prazo de dois amanhecer do sol. Confio em você.\n")
+	escreve("É de EXTREMA importância que você a encontre o mais RÁPIDO possível. Te dou um prazo máximo de dois dias. Confio em você.\n")
 	escreve("Você tem a liberdade de investigar o quarto dela e apenas as áreas do castelo que os serviçais te indicarem.\n")
 	escreve("Caso você precise, também te darei carta de livre acesso por todas as áreas do reino. O pagamento só será entregue se a donzela for entregue com vida.\n")
 	itens[0] = "passe"
@@ -158,7 +158,50 @@ programa
 	}
 
 	funcao QuartoDonzela(){
+		escreve("Dentro do quarto você não consegue enxergar nada fora do lugar, não parece que houve resistência")
+		retc(600)
+
+		escreve("Você sente que deve investigar melhor. Por onde começar? \n")
+		escreve("- Cama [1]\n")
+		escreve("- Guarda-Roupa [2]\n")
+		escreve("- Penteadeira [3]\n")
+		escreve("- Janela [4]\n")
+		inteiro opcao
+		leia(opcao)
+
+		escolha(opcao){
+			caso 1: 
+			escreve("Você faz uma averiguação na cama e encontra, escondido embaixo do colchão, uma carta. ")
+			pare
+
+			caso 2:
+			escreve("Você olha dentro do guarda-roupa e encontra")
+			retc(600)
+			escreve("roupas.")
+			u.aguarde(750)
+			escreve("Que surpresa.")
+			pare
+
+			caso 3:
+			pare
+
+			caso 4:
+			escreve("Você averigua a janela. Não há nada de estranho exceto por certos riscos na madeira.\n")
+			escreve("Seriam eles sinais de ataque? Mas não faz sentido terem sinais de ataque apenas na madeira da janela.\n")
+			escreve("Você começa a se sentir levemente ansioso.")
+			u.aguarde(400)
+			pare
+		}
 		
+	}
+
+	funcao retc(inteiro velocidade) { //É uma função que faz esse efeito de ... mais devagar
+		escreve(".")
+		u.aguarde(velocidade)
+		escreve(".")
+		u.aguarde(velocidade)
+		escreve(".")
+		u.aguarde(velocidade)
 	}
 	
 

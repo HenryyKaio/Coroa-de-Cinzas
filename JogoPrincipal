@@ -6,14 +6,18 @@ programa
 	inclua biblioteca Util --> u
 
 	inteiro cem = 100
+	cadeia itens[6]
+	inteiro vida = 30
 	
 	funcao inicio()
 	{	
-		introducao()
+		//introducao()
+		//PrimeiraParte()
+		QuartoDonzela()
 	
 	}
 
-	funcao escreva_devagar(cadeia texto)
+	funcao escreve(cadeia texto)
 	
 	{ //uma espécie de "escreva()" porém pausadamente. 
 							
@@ -36,7 +40,7 @@ programa
 				caso ';': u.aguarde(velocidade * 3) pare		
 				caso '.': u.aguarde(velocidade * 5) pare			
 				caso '!': u.aguarde(velocidade * 5) pare				
-				caso '?': u.aguarde(velocidade * 5) pare				
+				caso '?': u.aguarde(velocidade * 6) pare				
 				caso contrario: u.aguarde(velocidade) pare
 				
 			}
@@ -49,7 +53,7 @@ programa
 		
 	// Faz uma breve introdução da história.
 
-	escreva_devagar("Bem vindo ao: \n")
+	escreve("Bem vindo ao: \n")
 	
 	escreva(" ▄████▄   ▒█████   ██▀███   ▒█████   ▄▄▄         ▓█████▄ ▓█████     ▄████▄   ██▓ ███▄    █ ▒███████▒ ▄▄▄        ██████ ", "\n")
 	escreva("▒██▀ ▀█  ▒██▒  ██▒▓██ ▒ ██▒▒██▒  ██▒▒████▄       ▒██▀ ██▌▓█   ▀    ▒██▀ ▀█  ▓██▒ ██ ▀█   █ ▒ ▒ ▒ ▄▀░▒████▄    ▒██    ▒ ", "\n")
@@ -64,24 +68,98 @@ programa
 
 	u.aguarde(1000)
 	
-	escreva_devagar("Em uma ilha enorme e pouco conhecida, distante de tudo que conhecemos,\n")
-	escreva_devagar("existe um lugar, cercado pelos Picos Tokan, pelo arquipélago de Darom,\n")
-	escreva_devagar("e pelas colinas Sofna, chamado de “Reino de Aolis”. \n")
-	escreva_devagar("\n")
+	escreve("Distante de tudo que conhecemos,")
+	escreve("existe um lugar. \n")
+	escreve("Cercado pelos Picos Tokan, pelo arquipélago de Darom \n")
+	escreve("e pelas colinas Sofna, o “Reino de Aolis”. \n")
+	escreva("\n")
 
-	escreva_devagar("Dentro desse reino, existem várias “zonas”, onde cada classe de pessoas vive. \n")
-	escreva_devagar("Você mora na classe mais baixa, junto de todos os plebeus,\n")
-	escreva_devagar("mas esconde um grande segredo. \n")
-	escreva_devagar("\n")
+	escreve("Esse reino é totalmente dividido em classes sociais. \n")
+	escreve("Você mora na classe mais baixa.\n")
+	escreve("No entanto...")
+	escreve("\n\n")
 	
-	escreva_devagar("Você é um renomado detetive-caçador, oficial da corte real.\n")
-	escreva_devagar("Ninguém, nem mesmo sua família sabe quem você realmente é. \n")
-	escreva_devagar("Suas missões são extremamente secretas, em sigilo total. \n")
-	escreva_devagar("\n")
-	escreva_devagar("Agora suas ações são por sua conta e risco... \n")
-	escreva_devagar("\n")
+	escreve("Você é um habilidoso caçador não-oficial da corte real.\n")
+	escreve("Ninguém sabe o que você faz. \n")
+	escreve("Você não tem família.\n")
+	escreve("Suas missões são extremamente secretas e sigilosas. \n")
+	escreve("É assim que você ganha a vida.")
+	u.aguarde(500)
+	escreve("\n\n\n\n")
 
 	
 	}
+
+	funcao PrimeiraParte(){
+	escreve("Você acorda de manhã e percebe que alguém deixou uma carta.\n")
+	escreve("Você percebe que ela tem a insígnia da Corte, então isso significa que você tem mais um serviço.\n")
+	escreva("Você pega a carta e lê.")
+	u.aguarde(400)
+	
+	escreva("\n\n\n\n")
+	escreva("╭────────────────────────────────────────────╮", "\n")
+	escreva("│                                            │", "\n")
+	escreva("│  Saudações.                                │", "\n")
+	escreva("│                                            │", "\n")
+	escreva("│  Seus serviços foram convocados            │", "\n")
+	escreva("│  novamente pela Divina Corte.              │", "\n")
+	escreva("│                                            │", "\n")
+	escreva("│  Compareça ao Palácio Real assim que       │", "\n")
+	escreva("│  receber essa carta. O assunto é urgente.  │", "\n")
+	escreva("│                                            │", "\n")
+	escreva("│                                            │", "\n")
+	escreva("│                                            │", "\n")
+	escreva("│                                            │", "\n")
+	escreva("│                                            │", "\n")
+	escreva("│  Assinado: A CORTE Ӝ                       │", "\n")
+	escreva("│                                            │", "\n")
+	escreva("╰────────────────────────────────────────────╯", "\n")
+	escreva("\n\n\n\n")
+	u.aguarde(1500)
+	
+	escreve(".")
+	u.aguarde(400)
+	escreve(".")
+	u.aguarde(400)
+	escreve(".")
+	u.aguarde(800)
+	escreve("\n\n\n\n\n")
+	
+
+	escreva("Chegando no castelo, os guardas reais barram sua entrada.\n")
+	escreve("Quem é você e o que quer?\n")
+	u.aguarde(520)
+	escreve("Apesar de você ter certeza de que os guardas sabem quem você é e o que veio fazer, você diz: \n")
+	escreve("Meu nome é ")
+	cadeia nome
+	leia(nome)
+	escreve("e então mostra a carta com a assinatura da corte para eles.\n\n")
+	u.aguarde(350)
+	escreve("Apenas verificação de praxe. Pode passar.\n\n")
+	u.aguarde(1050)
+	escreve("Você surpreende-se ao ver que o próprio rei em pessoa veio conversar.\n")
+	u.aguarde(600)
+	escreve(nome)
+	escreve (" finalmente! Estava à sua espera. Como você já deve ter percebido o assunto é de extrema urgência.\n")
+	u.aguarde(500)
+	escreve("Serei curto e direto.\n")
+	u.aguarde(900)
+	escreva("A consagrada donzela sumiu.\n")
+	escreve("Quem é ela? Isso não é do seu interesse. Tudo o que você precisa saber é que ela nunca sai do castelo e ficava sempre bem protegida no quarto lá em cima.\n")
+	escreve("É de EXTREMA importância que você a encontre o mais RÁPIDO possível. Te dou um prazo de dois amanhecer do sol. Confio em você.\n")
+	escreve("Você tem a liberdade de investigar o quarto dela e apenas as áreas do castelo que os serviçais te indicarem.\n")
+	escreve("Caso você precise, também te darei carta de livre acesso por todas as áreas do reino. O pagamento só será entregue se a donzela for entregue com vida.\n")
+	itens[0] = "passe"
+	u.aguarde(500)
+	escreve("Agora suas ações são por sua conta e risco... \n")
+	u.aguarde(900)
+	escreve("\n\n\n\n\n\n")
+	
+	}
+
+	funcao QuartoDonzela(){
+		
+	}
+	
 
 }

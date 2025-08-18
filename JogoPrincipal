@@ -11,8 +11,8 @@ programa
 	
 	funcao inicio()
 	{	
-		//introducao()
-		//PrimeiraParte()
+		introducao()
+		PrimeiraParte()
 		QuartoDonzela()
 	
 	}
@@ -117,6 +117,8 @@ programa
 	escreva("\n\n\n\n")
 	u.aguarde(1800)
 	
+	escreve("Imediatamente, você arruma o necessário e parte para o castelo.")
+	
 	escreve(".")
 	u.aguarde(400)
 	escreve(".")
@@ -127,51 +129,68 @@ programa
 	
 
 	escreva("Chegando no castelo, os guardas reais barram sua entrada.\n")
-	escreve("Quem é você e o que quer?\n")
+	escreve("Guarda: Quem é você e o que quer?\n")
 	u.aguarde(520)
 	escreve("Apesar de você ter certeza de que os guardas sabem quem você é e o que veio fazer, você diz: \n")
-	escreve("Meu nome é ")
+	escreve("- Meu nome é ")
 	cadeia nome
 	leia(nome)
 	escreve("e então mostra a carta com a assinatura da corte para eles.\n\n")
 	u.aguarde(350)
-	escreve("Apenas verificação de praxe. Pode passar.\n\n")
+	escreve("Guarda: Apenas verificação de praxe. Pode passar.\n\n")
 	u.aguarde(1050)
 	escreve("Você surpreende-se ao ver que o próprio rei em pessoa veio conversar.\n")
 	u.aguarde(600)
+	escreva("Rei: ")
 	escreve(nome)
-	escreve (" finalmente! Estava à sua espera. Como você já deve ter percebido o assunto é de extrema urgência.\n")
+	escreve (" finalmente! Estava à sua espera.\n")
+	escreve("R: Como você já deve ter percebido o assunto é de extrema urgência. \n")
 	u.aguarde(500)
-	escreve("Serei curto e direto.\n")
+	escreve("R: Serei curto e direto.\n")
 	u.aguarde(900)
-	escreve("A consagrada donzela sumiu.\n")
-	escreve("Quem é ela? Isso não é do seu interesse. Tudo o que você precisa saber é que ela nunca sai do castelo e ficava sempre bem protegida no quarto lá em cima.\n")
-	escreve("É de EXTREMA importância que você a encontre o mais RÁPIDO possível. Te dou um prazo máximo de dois dias. Confio em você.\n")
-	escreve("Você tem a liberdade de investigar o quarto dela e apenas as áreas do castelo que os serviçais te indicarem.\n")
-	escreve("Caso você precise, também te darei carta de livre acesso por todas as áreas do reino. O pagamento só será entregue se a donzela for entregue com vida.\n")
+	escreve("Rei: A consagrada donzela sumiu.\n")
+	escreve("- Quem é ela? \n")
+	escreve("Rei: Isso não é do seu interesse. \n")
+	escreve("R: Tudo o que você precisa saber é que ela nunca saia do castelo. \n")
+	escreve("R: Ficava sempre bem protegida no quarto lá em cima.\n")
+	escreve("R: É de EXTREMA importância que você a encontre o mais RÁPIDO possível.\n")
+	escreve("R: Te dou um prazo máximo de dois dias.\n")
+	escreve("R: Você tem a liberdade de investigar o quarto dela.\n")
+	escreve("R: E todas as áreas do castelo que os serviçais te indicarem.\n")
+	escreve("R: Caso você precise, estou te dando o acesso livre por todas as áreas do reino. \n")
 	itens[0] = "passe"
-	u.aguarde(500)
+	escreve("R: O pagamento só será entregue se a donzela for entregue com vida.\n")
+	escreve("R: Eu confio em você.\n")
+	retc(500)
 	escreve("Agora suas ações são por sua conta e risco... \n")
 	u.aguarde(900)
 	escreve("\n\n\n\n\n\n")
 	
+
 	}
 
 	funcao QuartoDonzela(){
-		escreve("Dentro do quarto você não consegue enxergar nada fora do lugar, não parece que houve resistência")
+		
+		escreve("Você se dirige para o quarto da donzela.\n")
+		escreve("Dentro dele, você não consegue enxergar nada fora do lugar.\n")
+		escreva("Não parece que houve resistência.\n")
 		retc(600)
 
 		escreve("Você sente que deve investigar melhor. Por onde começar? \n")
-		escreve("- Cama [1]\n")
-		escreve("- Guarda-Roupa [2]\n")
-		escreve("- Penteadeira [3]\n")
-		escreve("- Janela [4]\n")
+		escreve("[1] - Cama\n")
+		escreve("[2] - Guarda-Roupa \n")
+		escreve("[3] - Penteadeira \n")
+		escreve("[4] - Janela \n")
 		inteiro opcao
 		leia(opcao)
 
 		escolha(opcao){
 			caso 1: 
-			escreve("Você faz uma averiguação na cama e encontra, escondido embaixo do colchão, uma carta. ")
+			escreve("Você começa a olhar em baixo de lençois e travesseiros.\n")
+			escreve("Tudo parece normal.\n")
+			escreve("Ao olhar em baixo da cama, encontra uma pequena caixa de madeira.\n")
+			escreve("Há diversas coisas como amarradores de cabelo, pulseiras e luvas de cetim.\n")
+			escreve("Em baixo de tudo isso você encontra um envelope.\n")
 			pare
 
 			caso 2:
@@ -180,6 +199,10 @@ programa
 			escreve("roupas.")
 			u.aguarde(750)
 			escreve("Que surpresa.")
+			escreve("Começa a olhar todas as caixas de sapatos.")
+			escreve("Em baixo de uma sapatilha marrom de couro puro,")
+
+			// Parei nesta parte do codigo.
 			pare
 
 			caso 3:

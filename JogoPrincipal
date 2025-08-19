@@ -8,12 +8,14 @@ programa
 	inteiro cem = 100
 	cadeia itens[6]
 	inteiro vida = 30
+	inteiro contador = 0
+	cadeia nome
 	
 	funcao inicio()
 	{	
-		introducao()
+		//introducao()
 		PrimeiraParte()
-		QuartoDonzela()
+		//QuartoDonzela()
 	
 	}
 
@@ -23,6 +25,7 @@ programa
 							
 		caracter letra
 		inteiro velocidade = 20 //pausa padrão entre um caracter e outro.
+		
 		
 		para(inteiro i = 0 ; i < tx.numero_caracteres(texto) ; i++){ //repete enquanto a frase inteiro não for escrita.
 
@@ -115,9 +118,9 @@ programa
 	escreva("│                                            │", "\n")
 	escreva("╰────────────────────────────────────────────╯", "\n")
 	escreva("\n\n\n\n")
-	u.aguarde(1800)
+	leia(nome) // uma gambiarra para fazer com que a história só continue após apertar enter
 	
-	escreve("Imediatamente, você arruma o necessário e parte para o castelo.")
+	
 	
 	escreve(".")
 	u.aguarde(400)
@@ -133,7 +136,6 @@ programa
 	u.aguarde(520)
 	escreve("Apesar de você ter certeza de que os guardas sabem quem você é e o que veio fazer, você diz: \n")
 	escreve("- Meu nome é ")
-	cadeia nome
 	leia(nome)
 	escreve("e então mostra a carta com a assinatura da corte para eles.\n\n")
 	u.aguarde(350)
@@ -151,12 +153,12 @@ programa
 	escreve("Rei: A consagrada donzela sumiu.\n")
 	escreve("- Quem é ela? \n")
 	escreve("Rei: Isso não é do seu interesse. \n")
-	escreve("R: Tudo o que você precisa saber é que ela nunca saia do castelo. \n")
+	escreve("R: Tudo o que você precisa saber é que ela nunca saía do castelo. \n")
 	escreve("R: Ficava sempre bem protegida no quarto lá em cima.\n")
 	escreve("R: É de EXTREMA importância que você a encontre o mais RÁPIDO possível.\n")
 	escreve("R: Te dou um prazo máximo de dois dias.\n")
-	escreve("R: Você tem a liberdade de investigar o quarto dela.\n")
-	escreve("R: E todas as áreas do castelo que os serviçais te indicarem.\n")
+	escreve("R: Você tem a liberdade de investigar o quarto dela ")
+	escreve("e todas as áreas do castelo que os serviçais te indicarem.\n")
 	escreve("R: Caso você precise, estou te dando o acesso livre por todas as áreas do reino. \n")
 	itens[0] = "passe"
 	escreve("R: O pagamento só será entregue se a donzela for entregue com vida.\n")
@@ -173,7 +175,7 @@ programa
 		
 		escreve("Você se dirige para o quarto da donzela.\n")
 		escreve("Dentro dele, você não consegue enxergar nada fora do lugar.\n")
-		escreva("Não parece que houve resistência.\n")
+		escreva("Não parece que houve resistência")
 		retc(600)
 
 		escreve("Você sente que deve investigar melhor. Por onde começar? \n")

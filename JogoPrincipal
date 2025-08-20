@@ -8,14 +8,13 @@ programa
 	inteiro cem = 100
 	cadeia itens[6]
 	inteiro vida = 30
-	inteiro contador = 0
-	cadeia nome
 	
 	funcao inicio()
 	{	
 		//introducao()
-		PrimeiraParte()
+		//PrimeiraParte()
 		//QuartoDonzela()
+		
 	
 	}
 
@@ -25,7 +24,6 @@ programa
 							
 		caracter letra
 		inteiro velocidade = 20 //pausa padrão entre um caracter e outro.
-		
 		
 		para(inteiro i = 0 ; i < tx.numero_caracteres(texto) ; i++){ //repete enquanto a frase inteiro não for escrita.
 
@@ -118,9 +116,9 @@ programa
 	escreva("│                                            │", "\n")
 	escreva("╰────────────────────────────────────────────╯", "\n")
 	escreva("\n\n\n\n")
-	leia(nome) // uma gambiarra para fazer com que a história só continue após apertar enter
+	u.aguarde(1800)
 	
-	
+	escreve("Imediatamente, você arruma o necessário e parte para o castelo.")
 	
 	escreve(".")
 	u.aguarde(400)
@@ -136,6 +134,7 @@ programa
 	u.aguarde(520)
 	escreve("Apesar de você ter certeza de que os guardas sabem quem você é e o que veio fazer, você diz: \n")
 	escreve("- Meu nome é ")
+	cadeia nome
 	leia(nome)
 	escreve("e então mostra a carta com a assinatura da corte para eles.\n\n")
 	u.aguarde(350)
@@ -153,12 +152,12 @@ programa
 	escreve("Rei: A consagrada donzela sumiu.\n")
 	escreve("- Quem é ela? \n")
 	escreve("Rei: Isso não é do seu interesse. \n")
-	escreve("R: Tudo o que você precisa saber é que ela nunca saía do castelo. \n")
+	escreve("R: Tudo o que você precisa saber é que ela nunca saia do castelo. \n")
 	escreve("R: Ficava sempre bem protegida no quarto lá em cima.\n")
 	escreve("R: É de EXTREMA importância que você a encontre o mais RÁPIDO possível.\n")
 	escreve("R: Te dou um prazo máximo de dois dias.\n")
-	escreve("R: Você tem a liberdade de investigar o quarto dela ")
-	escreve("e todas as áreas do castelo que os serviçais te indicarem.\n")
+	escreve("R: Você tem a liberdade de investigar o quarto dela.\n")
+	escreve("R: E todas as áreas do castelo que os serviçais te indicarem.\n")
 	escreve("R: Caso você precise, estou te dando o acesso livre por todas as áreas do reino. \n")
 	itens[0] = "passe"
 	escreve("R: O pagamento só será entregue se a donzela for entregue com vida.\n")
@@ -175,7 +174,7 @@ programa
 		
 		escreve("Você se dirige para o quarto da donzela.\n")
 		escreve("Dentro dele, você não consegue enxergar nada fora do lugar.\n")
-		escreva("Não parece que houve resistência")
+		escreva("Não parece que houve resistência.\n")
 		retc(600)
 
 		escreve("Você sente que deve investigar melhor. Por onde começar? \n")
@@ -193,6 +192,11 @@ programa
 			escreve("Ao olhar em baixo da cama, encontra uma pequena caixa de madeira.\n")
 			escreve("Há diversas coisas como amarradores de cabelo, pulseiras e luvas de cetim.\n")
 			escreve("Em baixo de tudo isso você encontra um envelope.\n")
+			retc(500)
+			escreve("Você abre o envelope e encontra um papelzinho..")
+			flor()
+			
+
 			pare
 
 			caso 2:
@@ -200,20 +204,42 @@ programa
 			retc(600)
 			escreve("roupas.")
 			u.aguarde(750)
-			escreve("Que surpresa.")
-			escreve("Começa a olhar todas as caixas de sapatos.")
-			escreve("Em baixo de uma sapatilha marrom de couro puro,")
+			escreve("Que surpresa.\n")
+			escreve("Começa a olhar todas as caixas de sapatos.\n")
+			escreve("Em baixo de uma sapatilha marrom de couro puro,\n")
+			escreve("Você encontra um bilhetinho grudado,\n")
+			retc(500)
+			escreve("Você decide então abri-lo...\n")
+			flor()
 
 			// Parei nesta parte do codigo.
 			pare
 
-			caso 3:
+			caso 3: 
+			escreve("Você começa a olhar cada item da penteadeira.\n")
+			escreve("Sem tocar em nada.\n")
+			escreve("Tudo parece normal, cada coisa em seu devido lugar.\n")
+			escreve("A não ser por... uma especie de produto feminino deitado.\n")
+			escreve("Por que todos estariam de pé e apenas este deitado?\n")
+			escreve("Poderia muito bem ser o vento, mas não.\n")
+			escreve("A janela estava fechada.\n")
+			escreve("Você decide averiguar, e como sempre,\n")
+			escreve("Você estava correto, um bilhete.\n")
+			retc(500)
+			flor()
 			pare
 
 			caso 4:
-			escreve("Você averigua a janela. Não há nada de estranho exceto por certos riscos na madeira.\n")
-			escreve("Seriam eles sinais de ataque? Mas não faz sentido terem sinais de ataque apenas na madeira da janela.\n")
-			escreve("Você começa a se sentir levemente ansioso.")
+			escreve("Você averigua a janela. \n")
+			escreve("Não há nada de estranho exceto por certos riscos na madeira.\n")
+			escreve("Seriam eles sinais de ataque?\n")
+			escreve("Ou sinais de uma possivel fuga?\n")
+			escreve("Você começa a se sentir levemente ansioso.\n")
+			escreve("Começa a investigar com instinto caçador.\n")
+			escreve("Você encontra uma fissura, no canto esquerdo da janela.\n")
+			escreve("Dentro dele, um pequeno papel.\n")
+			retc(500)
+			flor()
 			u.aguarde(400)
 			pare
 		}
@@ -229,5 +255,24 @@ programa
 		u.aguarde(velocidade)
 	}
 	
-
+	funcao flor(){
+			escreva("\n")
+			escreva("╭────────────────────────────────────────────╮", "\n")
+			escreva("│                                            │", "\n")
+			escreva("│            /\\^/`\\                          │", "\n")
+			escreva("│           | \\/   ||                        │", "\n")
+			escreva("│           | |    ||                        │", "\n")
+			escreva("│            \\ \\   /                         │", "\n")
+			escreva("│             '\\\\//'                         │", "\n")
+			escreva("│               ||                           │", "\n")
+			escreva("│               ||                           │", "\n")
+			escreva("│               ||                           │", "\n")
+			escreva("│               ||                           │", "\n")
+			escreva("│          |\\   ||  |\\                       │", "\n")
+			escreva("│           | | ||  | |                      │", "\n")
+			escreva("│           | | || / /                       │", "\n")
+			escreva("│           \\  \\||/ /                        │", "\n")
+			escreva("│                                            │", "\n")
+			escreva("╰────────────────────────────────────────────╯", "\n")
+	}
 }

@@ -5,7 +5,7 @@ programa
 	inclua biblioteca Texto --> tx
 	inclua biblioteca Util --> u
 
-	inteiro cem = 100
+	cadeia next
 	cadeia itens[6]
 	inteiro vida = 30
 	
@@ -13,7 +13,7 @@ programa
 	{	
 		//introducao()
 		//PrimeiraParte()
-		//QuartoDonzela()
+		 QuartoDonzela()
 		
 	
 	}
@@ -116,9 +116,10 @@ programa
 	escreva("│                                            │", "\n")
 	escreva("╰────────────────────────────────────────────╯", "\n")
 	escreva("\n\n\n\n")
-	u.aguarde(1800)
 	
-	escreve("Imediatamente, você arruma o necessário e parte para o castelo.")
+	leia(next)
+
+	escreva("\n\n")
 	
 	escreve(".")
 	u.aguarde(400)
@@ -191,10 +192,12 @@ programa
 			escreve("Tudo parece normal.\n")
 			escreve("Ao olhar em baixo da cama, encontra uma pequena caixa de madeira.\n")
 			escreve("Há diversas coisas como amarradores de cabelo, pulseiras e luvas de cetim.\n")
-			escreve("Em baixo de tudo isso você encontra um envelope.\n")
-			retc(500)
-			escreve("Você abre o envelope e encontra um papelzinho..")
-			flor()
+			escreve("Em baixo de tudo isso você encontra um livro.\n")
+			escreve("Um livro de romance. Nada interessante.\n")
+			escreve("Vasculhando as páginas, você encontra a pétala de uma flor.\n")
+			escreve("Como ela conseguiu isso? Veio do jardim.")
+			u.aguarde(700)
+			escreve("Vou investigar lá")
 			
 
 			pare
@@ -205,28 +208,21 @@ programa
 			escreve("roupas.")
 			u.aguarde(750)
 			escreve("Que surpresa.\n")
-			escreve("Começa a olhar todas as caixas de sapatos.\n")
-			escreve("Em baixo de uma sapatilha marrom de couro puro,\n")
-			escreve("Você encontra um bilhetinho grudado,\n")
-			retc(500)
-			escreve("Você decide então abri-lo...\n")
-			flor()
-
-			// Parei nesta parte do codigo.
+			escreve("Parece que realmente não tem nada aqui além de roupas.")
+			
 			pare
 
 			caso 3: 
 			escreve("Você começa a olhar cada item da penteadeira.\n")
 			escreve("Sem tocar em nada.\n")
 			escreve("Tudo parece normal, cada coisa em seu devido lugar.\n")
-			escreve("A não ser por... uma especie de produto feminino deitado.\n")
-			escreve("Por que todos estariam de pé e apenas este deitado?\n")
-			escreve("Poderia muito bem ser o vento, mas não.\n")
-			escreve("A janela estava fechada.\n")
-			escreve("Você decide averiguar, e como sempre,\n")
-			escreve("Você estava correto, um bilhete.\n")
+			escreve("Dentro da gaveta você percebe uma folha amassada.\n")
+			escreve("Você desamassa e percebe que era a folha de um diário. \n")
+			escreva("Ela parece que foi molhada, mas você consegue entender algumas palavras.\n")
+			escreve("Gosto; Jardim; Pela noite; Ele; Flores; Encontrei; Talvez seja melhor não.\n")
+			escreve("Jardim é? Parece uma boa investigar lá")
 			retc(500)
-			flor()
+			escreve("Você termina de averiguar o quarto e vai.")
 			pare
 
 			caso 4:
@@ -235,11 +231,12 @@ programa
 			escreve("Seriam eles sinais de ataque?\n")
 			escreve("Ou sinais de uma possivel fuga?\n")
 			escreve("Você começa a se sentir levemente ansioso.\n")
-			escreve("Começa a investigar com instinto caçador.\n")
-			escreve("Você encontra uma fissura, no canto esquerdo da janela.\n")
-			escreve("Dentro dele, um pequeno papel.\n")
-			retc(500)
+			escreve("Há um desenho colado na janela\n")
 			flor()
+			escreve("Lá embaixo, um enorme jardim se estende.\n")
+			escreve("- É isso, acho melhor investigar o jardim.\n ")
+			retc(500)
+			escreve("Você termina de averiguar o quarto e vai.")
 			u.aguarde(400)
 			pare
 		}
@@ -275,4 +272,5 @@ programa
 			escreva("│                                            │", "\n")
 			escreva("╰────────────────────────────────────────────╯", "\n")
 	}
+
 }

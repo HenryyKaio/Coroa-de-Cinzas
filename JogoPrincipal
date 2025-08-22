@@ -14,8 +14,8 @@ programa
 	{	
 		//introducao()
 		//PrimeiraParte()
-		//QuartoDonzela()
-		
+		QuartoDonzela()
+		jardim()
 	
 	}
 
@@ -172,16 +172,19 @@ programa
 		escreve("Dentro dele, você não consegue enxergar nada fora do lugar.\n")
 		escreve("Não parece que houve resistência.\n")
 		retc(600)
-
 		escreve("Você sente que deve investigar melhor. Por onde começar? \n")
-		escreve("[1] - Cama\n")
-		escreve("[2] - Guarda-Roupa \n")
-		escreve("[3] - Penteadeira \n")
-		escreve("[4] - Janela \n")
-		inteiro opcao
-		leia(opcao)
 
-		escolha(opcao){
+		logico continuar = verdadeiro
+		enquanto(continuar==verdadeiro){
+
+			escreve("[1] - Cama\n")
+			escreve("[2] - Guarda-Roupa \n")
+			escreve("[3] - Penteadeira \n")
+			escreve("[4] - Janela \n")
+			inteiro opcao
+			leia(opcao)
+
+			escolha(opcao){
 			caso 1: 
 			escreve("Você começa a olhar em baixo de lençois e travesseiros.\n")
 			escreve("Tudo parece normal.\n")
@@ -193,7 +196,8 @@ programa
 			petala = verdadeiro
 			escreve("Como ela conseguiu isso? Provavelmente veio do jardim.\n")
 			u.aguarde(700)
-			escreve("Você guarda tudo em seu devido lugar e desce para o jardim.")
+			escreve("Você guarda tudo em seu devido lugar e se dirige ao corredor.\n")
+			continuar = falso
 			
 
 			pare
@@ -201,7 +205,7 @@ programa
 			caso 2:
 			escreve("Você olha dentro do guarda-roupa e encontra")
 			retc(600)
-			escreve("roupas.")
+			escreve("Roupas.")
 			u.aguarde(750)
 			escreve("Que surpresa.\n")
 			escreve("Parece que realmente não tem nada aqui além de roupas.\n")
@@ -211,9 +215,10 @@ programa
 			barro = verdadeiro
 			escreve("Mas como ua donzela que não sai de seu quarto, poderia ter as sujado de barro?\n")
 			escreve("Isso indica que ela costuma passear escondida...")
-			escreve("No jardim?")
+			escreve("No jardim?\n")
 			escreve("Isso soa intrigante. \n")
-			escreve("Você organiza tudo e desce para investigar o jardim. \n")
+			escreve("Você organiza tudo e se digire ao corredor. \n")
+			continuar = falso
 			
 			pare
 
@@ -228,8 +233,10 @@ programa
 			escreve("Jardim é? Parece uma boa investigar lá.\n")
 			retc(500)
 			escreve("Você termina de averiguar o quarto e vai.\n")
+			continuar = falso
+			
 			pare
-
+			
 			caso 4:
 			escreve("Você averigua a janela. \n")
 			escreve("Não há nada de estranho exceto por certos riscos na madeira.\n")
@@ -243,55 +250,91 @@ programa
 			retc(500)
 			escreve("Você termina de averiguar o quarto e vai.\n")
 			u.aguarde(400)
+			continuar = falso
+			
 			pare
-
+			
 			caso contrario:
-			escreve("Essa opçaão é invalida.")
-		}
+			escreve("Essa opção é invalida. Escolha uma das opções: \n")
 		
-	}
+		}//fim do escolha
+		}//fim do enquanto	
+	
+		escreve("\n\n\n")
+	
+	}// fim da função
 
 	funcao jardim(){
+		
 		escreve("Você desce as escadas com cuidado, até chegar ao jardim.\n")
 		escreve("É estupidamente e desnecessáriamente grande.\n")
 		escreve("Ao olhar, você vê dois caminhos, os das flores e o do chafariz.\n")
-		escreve("Por onde começar a investigação?\n")
+		escreve("Por qual seguir?\n")
 
-		escreve("[1] - Flores\n")
-		escreve("[2] - Chafariz \n")
-		inteiro opcao
-		leia(opcao)
-		
-		escolha(opcao){
+		logico continuar = verdadeiro
+		enquanto(continuar==verdadeiro){
+
+			escreve("[1] - Flores\n")
+			escreve("[2] - Chafariz \n")
+			inteiro opcao
+			leia(opcao)
+			
+			escolha(opcao){
 			caso 1:
-			escreve("O caminho era cheio de terra e lama.")
+			escreve("O caminho era cheio de terra e lama.\n")
 			
-			se(barro == verdadeiro){
-				escreve("Percebe que exatamente ali, a donzela pode ter sujado as sapatilhas.")
-				escreve("Sua teoria esta correta.")
-			}
+				se(barro == verdadeiro){
+					escreve("Percebe que exatamente ali, a donzela pode ter sujado as sapatilhas.\n")
+					escreve("Sua teoria estava correta.\n")}
 			
-			escreve("Por outro lado, era cercado de tulipas, lírios...")
-			escreve("Apenas flores comuns, tudo normal.")
+			escreve("Por outro lado, era cercado de tulipas, lírios...\n")
+			escreve("Apenas flores comuns, tudo normal.\n")
 
-			se(petala == verdadeiro){
-				escreve("Percebe que existem flores com as mesmas petalas que você encontrou.")
-				escreve("Sua teoria esta correta.")
-			}
+				se(petala == verdadeiro){
+					escreve("Percebe que existem flores com as mesmas petalas que você encontrou.\n")
+					escreve("Sua teoria esta correta.\n")}
 		
 			u.aguarde(500)
-			escreve("Você continua andando, apenas observando.")
-			escreve("Por que será que a donzela supostamente gostava de vir a este lugar?")
-			escreve("Depois de um tempo, quase perto do muro do jardim,")
-			escreve("você avista de longe, um ponto brilhante.")
-			escreve("- O que é aquilo?")
-			escreve("Você se aproxima e ve um lindo colar, escrito Stella.")
-			escreve("Você nunca ouviu falar este nome.")
-			escreve("Será este o nome da donzela?")
-			escreve("Você guarda para investigar depois.")
+			escreve("Você continua andando, apenas observando.\n")
+			escreve("Por que será que a donzela supostamente gostava de vir a este lugar?\n")
+			escreve("Depois de um tempo, quase perto do muro do jardim,\n")
+			escreve("você avista de longe, um ponto brilhante.\n")
+			escreve("- O que é aquilo?\n")
+			escreve("Você se aproxima e ve um lindo colar, escrito Stella.\n")
+			escreve("Você nunca ouviu falar este nome.\n")
+			escreve("Será este o nome da donzela?\n")
+			escreve("Você guarda para investigar depois.\n")
+			itens[1] = "colar"
+			continuar = falso
+			pare
+
+			caso 2:
+			escreve("Você segue por um lindo caminho com pedras e arbustos.\n")
+			escreve("Em alguns pontos percebe terra e grama.\n")
 			
-		}
-	}
+				se(barro == verdadeiro){
+					escreve("Percebe que exatamente ali, a donzela pode ter sujado as sapatilhas.\n")
+					escreve("Sua teoria estava correta.\n")}
+		
+			escreve("O chafariz era cheio de cascatas pequenas pedras brilhantes.\n")
+			escreve("Você continua andando sem ver nada de suspeito.\n")
+			escreve("Você chega perto do muro, e no chão ve um ponto brilhando.\n")
+			escreve("Ao se aproximar, você percebe que é um colar.\n")
+			escreve("Com o nome Stella.\n")
+			escreve("Você nunca ouviu falar este nome.\n")
+			escreve("Será este o nome da donzela?\n")
+			escreve("Você guarda para investigar depois.\n")
+			itens[1] = "colar"
+			continuar = falso
+			pare
+
+			caso contrario:
+			escreve("Essa opção é invalida. Escolha uma das opções: \n")
+			
+			
+		}// fim do escolha
+		}// fim do enquanto
+	}// fim da função
 
 	funcao retc(inteiro velocidade) { //É uma função que faz esse efeito de ... mais devagar
 		escreve(".")
@@ -300,6 +343,7 @@ programa
 		u.aguarde(velocidade)
 		escreve(".")
 		u.aguarde(velocidade)
+		escreva("\n")
 	}
 	
 	funcao flor(){

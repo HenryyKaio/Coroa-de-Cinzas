@@ -12,8 +12,8 @@ programa
 	
 	funcao inicio()
 	{	
-		//introducao()
-		//PrimeiraParte()
+		introducao()
+		PrimeiraParte()
 		QuartoDonzela()
 		jardim()
 	
@@ -89,6 +89,7 @@ programa
 	u.aguarde(500)
 	escreve("\n\n\n\n")
 
+	enter()
 	
 	}
 
@@ -118,7 +119,7 @@ programa
 	escreva("╰────────────────────────────────────────────╯", "\n")
 	escreva("\n\n")
 	
-	enter()
+	enterCarta()
 
 	escreva("\n")
 	retc(500)
@@ -161,7 +162,8 @@ programa
 	retc(500)
 	escreve("Agora suas ações são por sua conta e risco... \n")
 	u.aguarde(900)
-	escreve("\n\n\n\n\n\n")
+
+	enter()
 	
 
 	}
@@ -170,7 +172,7 @@ programa
 		
 		escreve("Você se dirige para o quarto da donzela.\n")
 		escreve("Dentro dele, você não consegue enxergar nada fora do lugar.\n")
-		escreve("Não parece que houve resistência.\n")
+		escreve("Não parece que houve resistência")
 		retc(600)
 		escreve("Você sente que deve investigar melhor. Por onde começar? \n")
 
@@ -261,7 +263,8 @@ programa
 		}//fim do enquanto	
 	
 		escreve("\n\n\n")
-	
+		enter()
+		
 	}// fim da função
 
 	funcao jardim(){
@@ -292,7 +295,7 @@ programa
 
 				se(petala == verdadeiro){
 					escreve("Percebe que existem flores com as mesmas petalas que você encontrou.\n")
-					escreve("Sua teoria esta correta.\n")}
+					escreve("Sua teoria estava correta.\n")}
 		
 			u.aguarde(500)
 			escreve("Você continua andando, apenas observando.\n")
@@ -334,6 +337,9 @@ programa
 			
 		}// fim do escolha
 		}// fim do enquanto
+	
+		enter()
+	
 	}// fim da função
 
 	funcao retc(inteiro velocidade) { //É uma função que faz esse efeito de ... mais devagar
@@ -366,12 +372,16 @@ programa
 			escreva("│                                            │", "\n")
 			escreva("╰────────────────────────────────────────────╯", "\n")
 	}
-	funcao enter(){
-		escreva("▄▖        ▘        ▄▖  ▗     ", "\n")
-		escreva("▙▌▛▘█▌▛▘▛▘▌▛▌▛▌█▌  ▙▖▛▌▜▘█▌▛▘", "\n")
-		escreva("▌ ▌ ▙▖▄▌▄▌▌▙▌▌▌▙▖  ▙▖▌▌▐▖▙▖▌ ", "\n")
-
+	funcao enterCarta(){
+		escreve("Pressione Enter para continuar.")
 		cadeia next
 		leia(next)
 	}
+	funcao enter(){
+		cadeia next
+		leia(next)
+
+		limpa()
+	}
+
 }

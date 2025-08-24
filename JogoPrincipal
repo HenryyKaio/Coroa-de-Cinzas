@@ -12,10 +12,10 @@ programa
 	
 	funcao inicio()
 	{	
-		introducao()
-		PrimeiraParte()
-		QuartoDonzela()
-		jardim()
+		//introducao()
+		//PrimeiraParte()
+		//QuartoDonzela()
+		//jardim()
 	
 	}
 
@@ -124,9 +124,13 @@ programa
 	escreva("\n")
 	retc(500)
 	escreve("\n\n")
-	
 
-	escreva("Chegando no castelo, os guardas reais barram sua entrada.\n")
+	escreve("Você finalmente chega ao castelo.\n")
+
+	castelo()
+	enterCarta()
+
+	escreva("Ao tentar entrar, os guardas reais barram sua entrada.\n")
 	escreve("Guarda: Quem é você e o que quer?\n")
 	u.aguarde(520)
 	escreve("Apesar de você ter certeza de que os guardas sabem quem você é e o que veio fazer, você diz: \n")
@@ -342,6 +346,107 @@ programa
 	
 	}// fim da função
 
+	funcao jardimCozinha(){
+
+		escreve("Você se sente cada vez mais ancioso.")
+		escreve("Ao invés de respostas, você só consegue mais perguntas.")
+		escreve("Será que tem mais coisas por este jardim?")
+		escreve("Ou será que terá mais respostas conversando com uma das criadas?")
+		escreve("O que deve ser feito?")
+
+		logico continuar = verdadeiro
+		enquanto(continuar==verdadeiro){
+
+			escreve("[1] - Continuar pelo Jardim.\n")
+			escreve("[2] - Conversar com a criada. \n")
+			inteiro opcao
+			leia(opcao)
+
+			escolha(opcao){
+				caso 1: 
+				escreve("Você começa a andar perto do muro do jardim.\n")
+				escreve("Procurando alguma rachadura, ou algo do tipo.\n")
+				escreve("Em poucos metros, você percebe algo estranho.\n")
+				escreve("No meio de todo muro de pedras, você encontra uma porta camuflada.\n")
+				escreve("Embaixo de diversos musgos na parede.\n")
+				escreve("- O que é isso?\n")
+				escreve("Você começa a abrir a porta, com muita cautela.\n")
+				escreve("Está completamente escuro, a unica luz presente é a da porta se abrindo.\n")
+				escreve("Meu deus.\n")
+				escreve("Um corpo.\n")
+				retc(500)
+				escreve("Você corre ao encontro do corpo no chão.\n")
+				escreve("É um homem de meia idade, sem ferimetos.\n")
+				escreve("- O que está fazendo aqui? Quem é você?\n")
+				escreve("O homem parece estar inconciente, ele tem o brazão do castelo na roupa.\n")
+				escreve("É um soldado do rei.\n")
+				escreve("Guarda: Meu jovem, me ajude.\n")
+				escreve("- Claro senhor.\n")
+				escreve("Você ajuda o guarda a se sentar melhor.\n")
+				escreve("- O senhor está bem? Pode me contar como veio parar aqui?\n")
+				escreve("Guarda: Eu estou bem, só fui golpeado.\n")
+				escreve("- Eu sou um investigador, pode me contar como isso aconteceu?\n")
+				escreve("- Estou investigando o sumiço da donzela.\n")
+				escreve("Guarda: Eu faço a ronda da noite pelo jardim, todos os dias.\n")
+				escreve("G: Ontem a noite, vi as flores do campo se mechendo.\n")
+				escreve("G: Não dei muita atenção e vim vindo devagar.\n")
+				escreve("G: Achei que era a donzela como de costume.\n")
+				escreve("- Como assim 'Como de costume'? \n")
+				escreve("Guarda: A vida da donzela é triste, durante a noite ela sai.\n")
+				escreve("G: Só alguns dias, para o Pérola vermelha, o bar do reino.\n")
+				escreve("Então a donzela saia escondido...\n")
+				escreve("Guarda: Eu vim conferir se estava tudo bem, achando que era ela.\n")
+				escreve("G: Quando cheguei aqui, fui golpeado e jogado pra dentro.\n")
+				escreve("- O senhor sabe quem te golpeou?\n")
+				escreve("Guarda: Não o avistei, ele veio por trás.\n")
+				escreve("Isso é uma ajuda e tanto.\n")
+				escreve("Você leva o guarda para dentro do castelo, junto das curandeiras.\n")
+				escreve("Agora você tem uma ótima dica.\n")
+				escreve("O pérola Vermelha.\n")
+				continuar = falso
+				pare
+
+				caso 2:
+				escreve("Você se dirige para a cozinha do castelo.\n")
+				escreve("A criada que leva a comida para ela, com certeza deve saber algo.\n")
+				escreve("Ao olhar a cozinha, vê apenas uma senhora.\n")
+				escreve("- Olá senhora, sou o caçador que esta cuidando do caso da dozela.\n")
+				escreve("- A senhora poderia me contar um pouco sobre sua convivência com ela?\n")
+				escreve("Criada: A donzela não gostava muito de conversa.\n")
+				escreve("C: Nem de comer, não sei como estava viva.\n")
+				escreve("- A senhora sabe me dizer se isto é dela?\n")
+				escreve("Você mostra o colar a ela.\n")
+				escreve("A senhora parece ficar tensa, ela pega o colar com as mãos.\n")
+				escreve("Criada: Não sei se deveria te contar isso, mas...\n")
+				escreve("C: Pelo que sei, esta é a unica coisa que a donzela tem da sua vida antiga.\n")
+				escreve("C: Foi a unica coisa vinda com ela quando ela chegou aqui.\n")
+				escreve("C: Ela não lembrava nem o seu proprio nome.\n")
+				escreve("C: Deduzimos que este deveria ser o nome dela, mas não podemos chama-la assim.\n")
+				escreve("C: Ordens do Rei.\n")
+				escreve("Isso soa muito estranho, por que não poderiam chama-la pelo nome?\n")
+				escreve("- A senhora ja presenciou algo estranho que acontecia com ela?\n")
+				escreve("Criada: O rei era muito severa com ela. Ele batia nela.\n")
+				escreve("C: A coitadinha ficava com o rosto inchado por dias.\n")
+				escreve("C: Uma vez, há pouco tempo fui levar comida para ela de noite,\n")
+				escreve("C: mas ela não estava no quarto.\n")
+				escreve("C: Fiquei esperando ela chegar, e fiz ela me contar onde estava.\n")
+				escreve("C: Não contei nunca ao rei, ele iria bater nela denovo.\n")
+				escreve("- E onde ela estava?\n")
+				escreve("Criada: Ela disse ter ido ao Perola vermelha. O bar da cidade.\n")
+				escreve("C: Eu entendia a donzela, ela queria ter uma vida normal.\n")
+				escreve("Isso é uma dica e tanto.\n")
+				escreve("Você agradece a senhora por tudo, inclusive pela pista.\n")
+				escreve("E agora você se dirige a sua mais nova esperança.\n")
+				escreve("O pérola Vermelha.\n")
+				continuar = falso
+				pare
+
+				caso contrario:
+				escreve("Essa opção é invalida. Escolha uma das opções: \n")
+			}//fim do escolha
+		}//fim do enquanto
+	}
+	
 	funcao retc(inteiro velocidade) { //É uma função que faz esse efeito de ... mais devagar
 		escreve(".")
 		u.aguarde(velocidade)
@@ -372,6 +477,44 @@ programa
 			escreva("│                                            │", "\n")
 			escreva("╰────────────────────────────────────────────╯", "\n")
 	}
+	
+	funcao castelo(){
+		escreva("!_        \n")
+		escreva("                                                  |*~=-.,   \n")
+		escreva("                                                  |_,-'`    \n")
+		escreva("                                                  |         \n")
+		escreva("                                                  |         \n")
+		escreva("                                                 /^\\        \n")
+		escreva("                   !_                           /   \\       \n")
+		escreva("                   |*`~-.,                     /,    \\      \n")
+		escreva("                   |.-~^`                     /#\"     \\     \n")
+		escreva("                   |                        _/##_   _  \\_   \n")
+		escreva("              _   _|  _   _   _            [ ]_[ ]_[ ]_[ ]  \n")
+		escreva("             [ ]_[ ]_[ ]_[ ]_[ ]            |_=_-=_ - =_|   \n")
+		escreva("           !_ |_=_ =-_-_  = =_|           !_ |=_= -    |    \n")
+		escreva("           |*`--,_- _        |            |*`~-.,= []  |    \n")
+		escreva("           |.-'|=     []     |   !_       |_.-\"`_-     |    \n")
+		escreva("           |   |_=- -        |   |*`~-.,  |  |=_-      |    \n")
+		escreva("          /^\\  |=_= -        |   |_,-~`  /^\\ |_ - =[]  |    \n")
+		escreva("      _  /   \\_|_=- _   _   _|  _|  _   /   \\|=_-      |    \n")
+		escreva("     [ ]/,    \\[ ]_[ ]_[ ]_[ ]_[ ]_[ ]_/,    \\[ ]=-    |    \n")
+		escreva("      |/#\"     \\_=-___=__=__- =-_ -=_ /#\"     \\| _ []  |    \n")
+		escreva("     _/##_   _  \\_-_ =  _____       _/##_   _  \\_ -    |\\   \n")
+		escreva("    [ ]_[ ]_[ ]_[ ]=_0~{_ _ _}~0   [ ]_[ ]_[ ]_[ ]=-   | \\  \n")
+		escreva("    |=__-_=-_  =_|-=_  |     |     |_=-___-_ =-__|_    |  \\ \n")
+		escreva("     | _- =-     |-_   |     |      |= _=       | -    |___\\ \n")
+		escreva("     |= -_=      |=  _ |     |      |_-=_       |=_    |/+\\|\n")
+		escreva("     | =_  -     |_ = _ `-.-`       | =_ = =    |=_-   ||+||\n")
+		escreva("     |-_=- _     |=_   =            |=_= -_     |  =   ||+||\n")
+		escreva("     |=_- /+\\    | -=               |_=- /+\\    |=_    |^^^|\n")
+		escreva("     |=_ |+|+|   |= -  -_,--,_      |_= |+|+|   |  -_  |=  |\n")
+		escreva("     |  -|+|+|   |-_=  / |  | \\     |=_ |+|+|   |-=_   |_-/ \n")
+		escreva("     |=_=|+|+|   | =_= | |  | |     |_- |+|+|   |_ =   |=/  \n")
+		escreva("     | _ ^^^^^   |= -  | |  <&>     |=_=^^^^^   |_=-   |/   \n")
+		escreva("     |=_ =       | =_-_| |  | |     |   =_      | -_   |    \n")
+		escreva("     |_=-_       |=_=  | |  | |     |=_=        |=-    |    \n")
+	}
+	
 	funcao enterCarta(){
 		escreve("Pressione Enter para continuar.")
 		cadeia next

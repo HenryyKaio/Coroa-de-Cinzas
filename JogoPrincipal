@@ -16,6 +16,8 @@ programa
 		//PrimeiraParte()
 		//QuartoDonzela()
 		//jardim()
+		//jardimCozinha()
+		//checarItens()
 	
 	}
 
@@ -348,11 +350,11 @@ programa
 
 	funcao jardimCozinha(){
 
-		escreve("Você se sente cada vez mais ancioso.")
-		escreve("Ao invés de respostas, você só consegue mais perguntas.")
-		escreve("Será que tem mais coisas por este jardim?")
-		escreve("Ou será que terá mais respostas conversando com uma das criadas?")
-		escreve("O que deve ser feito?")
+		escreve("Você se sente cada vez mais ancioso.\n")
+		escreve("Ao invés de respostas, você só consegue mais perguntas.\n")
+		escreve("Será que tem mais coisas por este jardim?\n")
+		escreve("Ou será que terá mais respostas conversando com uma das criadas?\n")
+		escreve("O que deve ser feito?\n")
 
 		logico continuar = verdadeiro
 		enquanto(continuar==verdadeiro){
@@ -445,6 +447,68 @@ programa
 				escreve("Essa opção é invalida. Escolha uma das opções: \n")
 			}//fim do escolha
 		}//fim do enquanto
+		enter()
+	}
+
+	funcao checarItens(){
+		inteiro opcao
+		itens[0] = "Passe"
+		itens[1] = "Colar"
+		escreve("Você quer checar seus itens? \n")
+		escreva("[ 1 ] Sim \n")
+		escreva("[ 2 ] Não \n")
+		leia(opcao)
+		escreva("\n")
+		se(opcao == 1){
+			escreva("| ")
+			para(inteiro i=0; i < 6; i++){
+			escreva(itens[i], " | ")
+		}
+			escreva(" |")
+		} senao {
+			escreva("Não preciso disso agora")
+			retc(300)
+		}
+	}
+
+	funcao checarVida(){
+		se(vida == 30){
+			escreve("Você se sente perfeitamente bem e está completamente saudável.")
+		} senao se(vida < 30){
+			escreve("Você está bem.")
+		} senao se(vida < 12){ 
+			escreve("Você está machucado. Não dá pra parar agora, mas é bom você tentar se recuperar.")
+		} senao se(vida < 6){
+			escreve("Você está gravemente ferido.")
+		} 
+	}
+
+	funcao GameOver(){
+escreva("  ▄████  ▄▄▄       ███▄ ▄███▓▓█████     ▒█████   ██▒   █▓▓█████  ██▀███  ", "\n")
+u.aguarde(200)
+escreva(" ██▒ ▀█▒▒████▄    ▓██▒▀█▀ ██▒▓█   ▀    ▒██▒  ██▒▓██░   █▒▓█   ▀ ▓██ ▒ ██▒", "\n")
+u.aguarde(200)
+escreva("▒██░▄▄▄░▒██  ▀█▄  ▓██    ▓██░▒███      ▒██░  ██▒ ▓██  █▒░▒███   ▓██ ░▄█ ▒", "\n")
+u.aguarde(200)
+escreva("░▓█  ██▓░██▄▄▄▄██ ▒██    ▒██ ▒▓█  ▄    ▒██   ██░  ▒██ █░░▒▓█  ▄ ▒██▀▀█▄  ", "\n")
+u.aguarde(200)
+escreva("░▒▓███▀▒ ▓█   ▓██▒▒██▒   ░██▒░▒████▒   ░ ████▓▒░   ▒▀█░  ░▒████▒░██▓ ▒██▒", "\n")
+u.aguarde(200)
+escreva(" ░▒   ▒  ▒▒   ▓▒█░░ ▒░   ░  ░░░ ▒░ ░   ░ ▒░▒░▒░    ░ ▐░  ░░ ▒░ ░░ ▒▓ ░▒▓░", "\n")
+u.aguarde(200)
+escreva("  ░   ░   ▒   ▒▒ ░░  ░      ░ ░ ░  ░     ░ ▒ ▒░    ░ ░░   ░ ░  ░  ░▒ ░ ▒░", "\n")
+u.aguarde(200)
+escreva("░ ░   ░   ░   ▒   ░      ░      ░      ░ ░ ░ ▒       ░░     ░     ░░   ░ ", "\n")
+u.aguarde(200)
+escreva("      ░       ░  ░       ░      ░  ░       ░ ░        ░     ░  ░   ░     ", "\n")
+u.aguarde(200)
+escreva("                                                     ░                    ", "\n")
+u.aguarde(200)
+
+	}
+
+	funcao PerolaVermelha(){
+		escreve("Chegando ao pérola vermelha ")
 	}
 	
 	funcao retc(inteiro velocidade) { //É uma função que faz esse efeito de ... mais devagar

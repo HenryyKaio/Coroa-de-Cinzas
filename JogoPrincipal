@@ -8,6 +8,7 @@ programa
 	cadeia itens[6]
 	inteiro vida = 30
 	logico barro = falso
+	logico Faca = falso
 	logico petala = falso
 	
 	funcao inicio()
@@ -447,6 +448,17 @@ programa
 				escreve("Essa opção é invalida. Escolha uma das opções: \n")
 			}//fim do escolha
 		}//fim do enquanto
+		escreve("Antes de você ir, \n")
+		checarItens()
+		se(Faca == verdadeiro){
+			escreve("Você percebeu que esqueceu sua faca em casa. Melhor ir buscar\n")
+			retc(300)
+			itens[2] = "faca"
+			escreve("Pronto, agora sim.")
+		} senao {
+			escreve("Então é hora de ir.")
+		}
+		u.aguarde(300)
 		enter()
 	}
 
@@ -460,6 +472,7 @@ programa
 		leia(opcao)
 		escreva("\n")
 		se(opcao == 1){
+			Faca = verdadeiro
 			escreva("| ")
 			para(inteiro i=0; i < 6; i++){
 			escreva(itens[i], " | ")
@@ -589,6 +602,6 @@ u.aguarde(200)
 		leia(next)
 
 		limpa()
-	}
+	}`
 
 }

@@ -524,13 +524,53 @@ u.aguarde(200)
 	}
 
 	funcao PerolaVermelha(){
+		inteiro opcao
 		retc(500)
 		escreve("Você enfim chega ao pérola vermelha. \n\n")
 		bar()
 		escreva("\n\n")
 		u.aguarde(450)
-		escreve("Você entra no local, mas ninguém percebe sua presença a princípio.\n")
-		escreve("Você se senta e conversa com ")
+		escreve("Você tenta entrar mas é barrado. \n")
+		escreve("Tem um guarda na porta.\n")
+		escreve("G: Você não pode entrar.\n")
+		escreve("- Ah, claro claro. Mas será que isso aqui faz você mudar de ideia?\n")
+		escreve("Você mostra a carta de passe que o Rei te deu.\n")
+		escreve("O guarda fecha a cara, mas deixa você passar.\n")
+		escreve("Não pensei que fosse usar isso tão cedo.\n")
+		enter()
+		escreve("Você entra no local.\n")
+		escreve("Você se senta e conversa com a atendente. Por incrível que pareça é uma mulher.\n")
+		escreve("A: Olá, o que você gostaria?\n")
+		escreve("Só uma bebida por favor, um: \n")
+		
+		
+		logico continuar = verdadeiro
+		enquanto(continuar == verdadeiro){
+		escreve("[ 1 ] Vinho\n")
+		escreve("[ 2 ] Hidromel\n")
+		escreve("[ 3 ] Hipocrás\n")
+		leia(opcao)
+			escolha(opcao){
+			caso 1:
+			escreve("Um copo de vinho, por favor.\n")
+			continuar = falso
+			pare
+
+			caso 2:
+			escreve("Um copo de hidromel, por favor.\n")
+			continuar = falso
+			pare
+
+			caso 3:
+			escreve("Um copo de hipocrás, por favor.\n")
+			continuar = falso
+			pare
+
+			caso contrario:
+			escreve("Informe uma opção válida: \n")
+		}
+		}
+		
 	}
 	
 	funcao retc(inteiro velocidade) { //É uma função que faz esse efeito de ... mais devagar

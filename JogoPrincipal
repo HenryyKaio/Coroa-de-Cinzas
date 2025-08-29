@@ -548,7 +548,7 @@ u.aguarde(200)
 		enquanto(continuar == verdadeiro){
 		escreve("[ 1 ] Vinho\n")
 		escreve("[ 2 ] Hidromel\n")
-		escreve("[ 3 ] Hipocrás\n")
+		escreve("[ 3 ] Hipocraz\n")
 		leia(opcao)
 			escolha(opcao){
 			caso 1:
@@ -562,13 +562,46 @@ u.aguarde(200)
 			pare
 
 			caso 3:
-			escreve("Um copo de hipocrás, por favor.\n")
+			escreve("Um copo de hipocraz, por favor.\n")
 			continuar = falso
 			pare
 
 			caso contrario:
-			escreve("Informe uma opção válida: \n")
+			escreve("Essa opção é invalida. Escolha uma das opções: \n")
 		}
+		}
+
+		escreve("A: Você é novo por aqui não é? Como você entrou?\n")
+		escreve("- Desde quando essa taverna se tornou exclusiva?\n")
+		escreve("A: É por segurança.\n")
+		escreve("- Segurança? Não consigo imaginar quem ganharia invadindo um chalé velho como esse.\n")
+		escreve("Eu preciso perguntar algo de valor logo, sinto a atmosfera um pouco pesada.\n\n")
+
+		enquanto(continuar == verdadeiro){
+			escreve("[ 1 ] Você tem uma boa relação com todos que vem aqui?\n")
+			escreve("[ 2 ] Por acaso notou uma menina estranha vindo aqui?\n")
+			escreve("[ 3 ] Você sabe alguma coisa sobre a filha do rei?\n")
+			//A partir daqui começa a dor de cabeça.
+
+			leia(opcao)
+
+			escolha(opcao){
+				caso 1:
+				escreve("A: Hum, eu diria que sim. Por que você se interessa?\n")
+				pare
+
+				caso 2: //Definitivamente a opção de pergunta errada, direta e suspeita demais
+				escreve("...Menina estranha? O que você quer dizer com isso?")
+				pare
+
+				caso 3: 
+				escreve("A: Filha do rei? Eu não sabia que o rei tinha uma filha\n")
+				retc(300)
+				pare
+
+				caso contrario: 
+				escreve("Essa opção é invalida. Escolha uma das opções: \n")
+			}
 		}
 		
 	}

@@ -470,8 +470,8 @@ programa
 		itens[0] = "Passe"
 		itens[1] = "Colar"
 		escreve("Você quer checar seus itens? \n")
-		escreva("[ 1 ] Sim \n")
-		escreva("[ 2 ] Não \n")
+		escreva("[1] Sim \n")
+		escreva("[2] Não \n")
 		leia(opcao)
 		escreva("\n")
 		se(opcao == 1){
@@ -532,37 +532,37 @@ u.aguarde(200)
 		u.aguarde(450)
 		escreve("Você tenta entrar mas é barrado. \n")
 		escreve("Tem um guarda na porta.\n")
-		escreve("G: Você não pode entrar.\n")
+		escreve("Guarda: Você não pode entrar.\n")
 		escreve("- Ah, claro claro. Mas será que isso aqui faz você mudar de ideia?\n")
 		escreve("Você mostra a carta de passe que o Rei te deu.\n")
 		escreve("O guarda fecha a cara, mas deixa você passar.\n")
-		escreve("Não pensei que fosse usar isso tão cedo.\n")
+		escreve("- Não pensei que fosse usar isso tão cedo.\n")
 		enter()
 		escreve("Você entra no local.\n")
 		escreve("Você se senta e conversa com a atendente. Por incrível que pareça é uma mulher.\n")
-		escreve("A: Olá, o que você gostaria?\n")
-		escreve("Só uma bebida por favor, um: \n")
-		
+		escreve("Atendente: Olá, o que você gostaria?\n")
+		escreve("- Só uma bebida, por favor. \n")
+		escreve("Atendente: Qual bebida você gostaria?\n")
 		
 		logico continuar = verdadeiro
 		enquanto(continuar == verdadeiro){
-		escreve("[ 1 ] Vinho\n")
-		escreve("[ 2 ] Hidromel\n")
-		escreve("[ 3 ] Hipocraz\n")
+		escreve("[1] Vinho\n")
+		escreve("[2] Hidromel\n")
+		escreve("[3] Hipocraz\n")
 		leia(opcao)
 			escolha(opcao){
 			caso 1:
-			escreve("Um copo de vinho, por favor.\n")
+			escreve("- Um copo de vinho, por favor.\n")
 			continuar = falso
 			pare
 
 			caso 2:
-			escreve("Um copo de hidromel, por favor.\n")
+			escreve("- Um copo de hidromel, por favor.\n")
 			continuar = falso
 			pare
 
 			caso 3:
-			escreve("Um copo de hipocraz, por favor.\n")
+			escreve("- Um copo de hipocraz, por favor.\n")
 			continuar = falso
 			pare
 
@@ -571,30 +571,41 @@ u.aguarde(200)
 		}
 		}
 
-		escreve("A: Você é novo por aqui não é? Como você entrou?\n")
+		escreve("Atendente: Você é novo por aqui não é? Como você entrou?\n")
 		escreve("- Desde quando essa taverna se tornou exclusiva?\n")
 		escreve("A: É por segurança.\n")
 		escreve("- Segurança? Não consigo imaginar quem ganharia invadindo um chalé velho como esse.\n")
 		escreve("Eu preciso perguntar algo de valor logo, sinto a atmosfera um pouco pesada.\n\n")
+		escreve("O que seria melhor perguntar?")
 
 		enquanto(continuar == verdadeiro){
-			escreve("[ 1 ] Você tem uma boa relação com todos que vem aqui?\n")
-			escreve("[ 2 ] Por acaso notou uma menina estranha vindo aqui?\n")
-			escreve("[ 3 ] Você sabe alguma coisa sobre a filha do rei?\n")
+			escreve("[1] Você tem uma boa relação com todos que vem aqui?\n")
+			escreve("[2] Por acaso notou uma menina estranha vindo aqui?\n")
+			escreve("[3] Você sabe alguma coisa sobre a filha do rei?\n")
 			//A partir daqui começa a dor de cabeça.
 
 			leia(opcao)
 
 			escolha(opcao){
 				caso 1:
+				escreve("- Então, posso ter perguntar algo?")
+				escreve("A: Pode, só não garanto que terá uma resposta.")
+				escreve("- Você tem uma boa relação com todos que vem aqui?")
 				escreve("A: Hum, eu diria que sim. Por que você se interessa?\n")
+				escreve(" ")
 				pare
 
 				caso 2: //Definitivamente a opção de pergunta errada, direta e suspeita demais
+				escreve("- Então, posso ter perguntar algo?")
+				escreve("A: Pode, só não garanto que terá uma resposta.")
+				escreve("- Por acaso notou uma menina estranha vindo aqui?\n")
 				escreve("...Menina estranha? O que você quer dizer com isso?")
 				pare
 
 				caso 3: 
+				escreve("- Então, posso ter perguntar algo?")
+				escreve("A: Pode, só não garanto que terá uma resposta.")
+				escreve("- Você sabe alguma coisa sobre a filha do rei?\n")
 				escreve("A: Filha do rei? Eu não sabia que o rei tinha uma filha\n")
 				retc(300)
 				pare

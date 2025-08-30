@@ -10,6 +10,9 @@ programa
 	logico barro = falso
 	logico Faca = falso
 	logico petala = falso
+	logico masmorra = falso
+	logico investigacao = falso
+	logico livro = falso
 	
 	funcao inicio()
 	{	
@@ -19,6 +22,7 @@ programa
 		//jardim()
 		//jardimCozinha()
 		PerolaVermelha()
+		
 	
 	}
 
@@ -454,12 +458,12 @@ programa
 		escreve("Antes de você ir, \n")
 		checarItens()
 		se(Faca == verdadeiro){
-			escreve("Você percebeu que esqueceu sua faca em casa. Melhor ir buscar\n")
+			escreve("\nVocê percebeu que esqueceu sua faca em casa. \nMelhor ir buscar\n")
 			retc(300)
 			itens[2] = "faca"
-			escreve("Pronto, agora sim.")
+			escreve("Pronto, agora sim.\n")
 		} senao {
-			escreve("Então é hora de ir.")
+			escreve("Então é hora de ir.\n")
 		}
 		u.aguarde(300)
 		enter()
@@ -499,45 +503,26 @@ programa
 		} 
 	}
 
-	funcao GameOver(){
-escreva("  ▄████  ▄▄▄       ███▄ ▄███▓▓█████     ▒█████   ██▒   █▓▓█████  ██▀███  ", "\n")
-u.aguarde(200)
-escreva(" ██▒ ▀█▒▒████▄    ▓██▒▀█▀ ██▒▓█   ▀    ▒██▒  ██▒▓██░   █▒▓█   ▀ ▓██ ▒ ██▒", "\n")
-u.aguarde(200)
-escreva("▒██░▄▄▄░▒██  ▀█▄  ▓██    ▓██░▒███      ▒██░  ██▒ ▓██  █▒░▒███   ▓██ ░▄█ ▒", "\n")
-u.aguarde(200)
-escreva("░▓█  ██▓░██▄▄▄▄██ ▒██    ▒██ ▒▓█  ▄    ▒██   ██░  ▒██ █░░▒▓█  ▄ ▒██▀▀█▄  ", "\n")
-u.aguarde(200)
-escreva("░▒▓███▀▒ ▓█   ▓██▒▒██▒   ░██▒░▒████▒   ░ ████▓▒░   ▒▀█░  ░▒████▒░██▓ ▒██▒", "\n")
-u.aguarde(200)
-escreva(" ░▒   ▒  ▒▒   ▓▒█░░ ▒░   ░  ░░░ ▒░ ░   ░ ▒░▒░▒░    ░ ▐░  ░░ ▒░ ░░ ▒▓ ░▒▓░", "\n")
-u.aguarde(200)
-escreva("  ░   ░   ▒   ▒▒ ░░  ░      ░ ░ ░  ░     ░ ▒ ▒░    ░ ░░   ░ ░  ░  ░▒ ░ ▒░", "\n")
-u.aguarde(200)
-escreva("░ ░   ░   ░   ▒   ░      ░      ░      ░ ░ ░ ▒       ░░     ░     ░░   ░ ", "\n")
-u.aguarde(200)
-escreva("      ░       ░  ░       ░      ░  ░       ░ ░        ░     ░  ░   ░     ", "\n")
-u.aguarde(200)
-escreva("                                                     ░                    ", "\n")
-u.aguarde(200)
-
-	}
+	
 
 	funcao PerolaVermelha(){
 		inteiro opcao
 		retc(500)
 		escreve("Você enfim chega ao pérola vermelha. \n\n")
 		bar()
+		enterCarta()
 		escreva("\n\n")
 		u.aguarde(450)
 		escreve("Você tenta entrar mas é barrado. \n")
-		escreve("Tem um guarda na porta.\n")
-		escreve("Guarda: Você não pode entrar.\n")
+		escreve("Tem um segurança na porta.\n")
+		escreve("Segurança: Você não pode entrar.\n")
 		escreve("- Ah, claro claro. Mas será que isso aqui faz você mudar de ideia?\n")
 		escreve("Você mostra a carta de passe que o Rei te deu.\n")
-		escreve("O guarda fecha a cara, mas deixa você passar.\n")
+		escreve("O segurança fecha a cara, mas deixa você passar.\n")
 		escreve("- Não pensei que fosse usar isso tão cedo.\n")
 		enter()
+		EntradaBar()
+		enterCarta()
 		escreve("Você entra no local.\n")
 		escreve("Você se senta e conversa com a atendente. Por incrível que pareça é uma mulher.\n")
 		escreve("Atendente: Olá, o que você gostaria?\n")
@@ -568,15 +553,16 @@ u.aguarde(200)
 
 			caso contrario:
 			escreve("Essa opção é invalida. Escolha uma das opções: \n")
-		}
-		}
+			}//fim do escolha
+		}//fim do enquanto
+		continuar = verdadeiro
 
 		escreve("Atendente: Você é novo por aqui não é? Como você entrou?\n")
 		escreve("- Desde quando essa taverna se tornou exclusiva?\n")
 		escreve("A: É por segurança.\n")
 		escreve("- Segurança? Não consigo imaginar quem ganharia invadindo um chalé velho como esse.\n")
 		escreve("Eu preciso perguntar algo de valor logo, sinto a atmosfera um pouco pesada.\n\n")
-		escreve("O que seria melhor perguntar?")
+		escreve("O que seria melhor perguntar?\n")
 
 		enquanto(continuar == verdadeiro){
 			escreve("[1] Você tem uma boa relação com todos que vem aqui?\n")
@@ -588,34 +574,78 @@ u.aguarde(200)
 
 			escolha(opcao){
 				caso 1:
-				escreve("- Então, posso ter perguntar algo?")
-				escreve("A: Pode, só não garanto que terá uma resposta.")
-				escreve("- Você tem uma boa relação com todos que vem aqui?")
+				escreve("- Então, posso ter perguntar algo?\n")
+				escreve("A: Pode, só não garanto que terá uma resposta.\n")
+				escreve("- Você tem uma boa relação com todos que vem aqui?\n")
 				escreve("A: Hum, eu diria que sim. Por que você se interessa?\n")
-				escreve(" ")
+				escreve("- Por nenhum motivo específico.\n")
+				escreve("- Você tem costume de conversar com seus clientes excluidos?\n")
+				escreve("A: Suas perguntas são muito incovinientes sabia?\n")
+				escreve("A: Eu gosto apenas de ter certeza que meus cliente sestão acolidos.\n")
+				escreve("- Veem muitas mulheres aqui?\n")
+				escreve("A: Não, aqui é um bar mais masculino.\n")
+				escreve("A: Alguns dias duas mulheres veem aqui, ficam lendo.\n")
+				escreve("A: Sentadas distante de todos os homens, nunca conversaram com nenhum.\n")
+				escreve("A: São bem estranhas, naverdade.\n")
+				escreve("Pimba, com certeza deve ser a donzela.\n")
+				escreve("E mais alguém. Quem?\n")
+				escreve("- Mulheres costumam ser estranhas mesmo.\n")
+				escreve("Tenho que fingir não saber de nada, é muito arriscado.\n")
+				escreve("- Ei! Eu continuo sendo mulher.\n")
+				escreve("Vocês dois riem, e você diz a ela que deve ir.\n")
+				livro = verdadeiro
+				continuar = falso
 				pare
 
 				caso 2: //Definitivamente a opção de pergunta errada, direta e suspeita demais
-				escreve("- Então, posso ter perguntar algo?")
-				escreve("A: Pode, só não garanto que terá uma resposta.")
+				escreve("- Então, posso ter perguntar algo?\n")
+				escreve("A: Pode, só não garanto que terá uma resposta.\n")
 				escreve("- Por acaso notou uma menina estranha vindo aqui?\n")
-				escreve("...Menina estranha? O que você quer dizer com isso?")
+				escreve("A: ...Menina estranha? O que você quer dizer com isso?\n")
+				escreve("- Uma menina, jovem, que não vem muito a cidade.\n")
+				escreve("- Você está falando da donzela?\n")
+				escreve("A expressão dela muda imediatamente.\n")
+				escreve("Ela sabe que não devia ter falado aquilo.\n")
+				escreve("Ela faz um sinal com as mãos para os seguranças.\n")
+				escreve("Ela acha que eu sei de alguma coisa.\n")
+				escreve("Me viro para tentar fugir a tempo.\n")
+				retc(500)
+				escreve("Sinto um golpe na cabeça.\n")
+				escreve("Caio no chão.\n")
+				escreve("Não vejo mais nada.\n")
+				masmorra = verdadeiro
+				continuar = falso
 				pare
 
 				caso 3: 
-				escreve("- Então, posso ter perguntar algo?")
-				escreve("A: Pode, só não garanto que terá uma resposta.")
+				escreve("- Então, posso ter perguntar algo?\n")
+				escreve("A: Pode, só não garanto que terá uma resposta.\n")
 				escreve("- Você sabe alguma coisa sobre a filha do rei?\n")
 				escreve("A: Filha do rei? Eu não sabia que o rei tinha uma filha\n")
 				retc(300)
+				escreve("A: Você está falando da donzela?\n")
+				escreve("No mesmo momento, você vê a expressão da atendente mudar.\n")
+				escreve("Ela não deveria saber da existência da donzela.\n")
+				escreve("E ela sabe disso.\n")
+				escreve("No mesmo momento, você vê ela fazendo um sinal com as mãos.\n")
+				escreve("Em poucos segundos os seguranças do bar te pegam pelos braços.\n")
+				escreve("- Ei, o que vocês pensam que estão fazendo?\n")
+				escreve("- Me soltem! AGORA!\n")
+				escreve("Segurança: Fique quieto!\n")
+				escreve("S: Antes que jogamos você no lago.\n")
+				escreve("Eles te colocam para fora e fecham a porta na sua cara.\n")
+				investigacao = verdadeiro
+				continuar = falso
 				pare
 
 				caso contrario: 
 				escreve("Essa opção é invalida. Escolha uma das opções: \n")
-			}
-		}
+			}//fim do escolha
+		}//fim do enquanto
 		
-	}
+		enter()
+	
+	}//fim da função
 	
 	funcao retc(inteiro velocidade) { //É uma função que faz esse efeito de ... mais devagar
 		escreve(".")
@@ -685,6 +715,53 @@ u.aguarde(200)
 		escreva("     |_=-_       |=_=  | |  | |     |=_=        |=-    |    \n")
 	}
 
+	funcao GameOver(){
+		escreva("  ▄████  ▄▄▄       ███▄ ▄███▓▓█████     ▒█████   ██▒   █▓▓█████  ██▀███  ", "\n")
+		u.aguarde(200)
+		escreva(" ██▒ ▀█▒▒████▄    ▓██▒▀█▀ ██▒▓█   ▀    ▒██▒  ██▒▓██░   █▒▓█   ▀ ▓██ ▒ ██▒", "\n")
+		u.aguarde(200)
+		escreva("▒██░▄▄▄░▒██  ▀█▄  ▓██    ▓██░▒███      ▒██░  ██▒ ▓██  █▒░▒███   ▓██ ░▄█ ▒", "\n")
+		u.aguarde(200)
+		escreva("░▓█  ██▓░██▄▄▄▄██ ▒██    ▒██ ▒▓█  ▄    ▒██   ██░  ▒██ █░░▒▓█  ▄ ▒██▀▀█▄  ", "\n")
+		u.aguarde(200)
+		escreva("░▒▓███▀▒ ▓█   ▓██▒▒██▒   ░██▒░▒████▒   ░ ████▓▒░   ▒▀█░  ░▒████▒░██▓ ▒██▒", "\n")
+		u.aguarde(200)
+		escreva(" ░▒   ▒  ▒▒   ▓▒█░░ ▒░   ░  ░░░ ▒░ ░   ░ ▒░▒░▒░    ░ ▐░  ░░ ▒░ ░░ ▒▓ ░▒▓░", "\n")
+		u.aguarde(200)
+		escreva("  ░   ░   ▒   ▒▒ ░░  ░      ░ ░ ░  ░     ░ ▒ ▒░    ░ ░░   ░ ░  ░  ░▒ ░ ▒░", "\n")
+		u.aguarde(200)
+		escreva("░ ░   ░   ░   ▒   ░      ░      ░      ░ ░ ░ ▒       ░░     ░     ░░   ░ ", "\n")
+		u.aguarde(200)
+		escreva("      ░       ░  ░       ░      ░  ░       ░ ░        ░     ░  ░   ░     ", "\n")
+		u.aguarde(200)
+		escreva("                                                     ░                    ", "\n")
+		u.aguarde(200)
+
+	}
+	funcao EntradaBar(){
+
+escreva("_______________________________________________________________________________", "\n")
+escreva("                          .-|-|----------------|-|-.", "\n")
+escreva("                          | .-. .-. .  .-. .-. . . |_", "\n")
+escreva("                     .--~~| `-. |-| |  | | | | |/| | ~~--." , "\n")
+escreva("                     |    | `-' ` ' `- `-' `-' ' ' |     |", "\n")
+escreva("                     |    `-.____________________.-'     |", "\n")
+escreva("_______________      |                                   |", "\n")
+escreva("     |         |     |                                   |", "\n")
+escreva("  /  |   /  /  |     |                                   |", "\n")
+escreva("/    |     /   |     | _______                   _______ |", "\n")
+escreva("_____|_________|     ||       ~---_         _---~       ||", "\n")
+escreva("     |    /    |     ||           ~---. .---~           ||", "\n")
+escreva(" / / |         |     ||               | |               ||", "\n")
+escreva("  /  |  /   /  |     ||               | |               ||", "\n")
+escreva("_____|_________|     ||               | |               ||", "\n")
+escreva("---------------'     ||               |  |               ||", "\n")
+escreva("                     ||               | |               ||", "\n")
+escreva("                     ||               | |               ||", "\n")
+escreva("                     ||           .---' `---.           ||", "\n")
+escreva("                     |`.______.---'         `---.______.'|", "\n")
+escreva("               ______|                                   |______", "\n")
+}
 	funcao bar(){
 
 escreva("                                                                                          ##########MM                                      \n")
@@ -736,6 +813,7 @@ escreva("                                                                       
 		escreve("Pressione Enter para continuar.")
 		cadeia next
 		leia(next)
+		escreva("\n")
 	}
 	funcao enter(){
 		cadeia next

@@ -647,6 +647,24 @@ programa
 	
 	}//fim da função
 	
+	funcao livrosCs1(){ //funcao do caso1
+		escreve("Você sai do Pérola Vermelha, em rumo a um único lugar.")
+		escreve("Biblioteca Real.")
+		escreve("Este é o unico lugar que ela poderia ter achado um livro.")
+		escreve("Se for mesmo a donzela.")
+
+		escreve("Você se dirige então novamente ao castelo.")
+		escreve("Dentro da biblioteca, várias pretileiras vazias.")
+		escreve("Há apenas uma com várias coisas.")
+		estante()
+		escreve("Você percebe tudo em seu devido lugar.")
+		escreve("Há um livro em cima da mesa.")
+		escreve("Contos do reino de Aolis.")
+		escreve("Escrito há mais de 5 décadas!")
+		escreve("Será que")
+		
+		
+	}
 	funcao retc(inteiro velocidade) { //É uma função que faz esse efeito de ... mais devagar
 		escreve(".")
 		u.aguarde(velocidade)
@@ -809,6 +827,30 @@ escreva("                                                                      #
 escreva("                                                                                --##MM                  ##..        ######                  \n")
 	}
 	
+	funcao estante(){
+		escreva("        _________________________________________________________","\n")
+		escreva("       ||-------------------------------------------------------||","\n")
+		escreva("       ||.--.    .-._                        .----.             ||","\n")
+		escreva("       |||==|____| |H|___            .---.___|\"\"\"\"|_____.--.___ ||","\n")
+		escreva("       |||  |====| | |xxx|_          |+++|=-=|_  _|-=+=-|==|---|||","\n")
+		escreva("       |||==|    | | |   | \\         |   |   |_\\/_|Reino|  | ^ |||","\n")
+		escreva("       |||  |    | | |   |\\ \\   .--. |   |=-=|_/\\_|-=+=-|  | ^ |||","\n")
+		escreva("       |||  |    | | |   |_\\ \\_( oo )|   |   |    |Fabul|  | ^ |||","\n")
+		escreva("       |||==|====| |H|xxx|  \\ \\ |''| |+++|=-=|\"\"\"\"|-=+=-|==|---|||","\n")
+		escreva("       ||`--^----'-^-^---'   `-' \"\"  '---^---^----^-----^--^---^||","\n")
+		escreva("       ||-------------------------------------------------------||","\n")
+		escreva("       ||-------------------------------------------------------||","\n")
+		escreva("       ||               ___                   .-.__.-----. .---.||","\n")
+		escreva("       ||              |===| .---.   __   .---| |XX|<(*)>|_|^^^|||","\n")
+		escreva("       ||         ,  /(|   |_|III|__|''|__|:x:|=|  |     |=| Q |||","\n")
+		escreva("       ||      _a'{ / (|===|+|   |++|  |==|   | |  |Story| | R |||","\n")
+		escreva("       ||       '/\\/ _(|===|-|   |  |''|  |:x:|=|  |ReiXV| | Y |||","\n")
+		escreva("       ||_____  -\\{___(|   |-|   |  |  |  |   | |  |     | | Z |||","\n")
+		escreva("       ||       _(____)|===|+|[I]|DK|''|==|:x:|=|XX|<(*)>|=|^^^|||","\n")
+		escreva("       ||              `---^-^---^--^--'--^---^-^--^-----^-^---^||","\n")
+		escreva("       ||-------------------------------------------------------||","\n")
+		escreva("       ||_______________________________________________________||","\n")
+	}
 	funcao enterCarta(){
 		escreve("Pressione Enter para continuar.")
 		cadeia next

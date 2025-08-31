@@ -22,6 +22,12 @@ programa
 		//jardim()
 		//jardimCozinha()
 		PerolaVermelha()
+		se(livro == verdadeiro){
+			livrosCs1()
+		}
+		se(masmorra == verdadeiro){
+			masmorraCs2()
+		}
 		
 	
 	}
@@ -648,22 +654,62 @@ programa
 	}//fim da função
 	
 	funcao livrosCs1(){ //funcao do caso1
-		escreve("Você sai do Pérola Vermelha, em rumo a um único lugar.")
-		escreve("Biblioteca Real.")
-		escreve("Este é o unico lugar que ela poderia ter achado um livro.")
-		escreve("Se for mesmo a donzela.")
+		escreve("Você sai do Pérola Vermelha, em rumo a um único lugar.\n")
+		escreve("Biblioteca Real.\n")
+		escreve("Este é o unico lugar que ela poderia ter achado um livro.\n")
+		escreve("Se for mesmo a donzela.\n")
 
-		escreve("Você se dirige então novamente ao castelo.")
-		escreve("Dentro da biblioteca, várias pretileiras vazias.")
-		escreve("Há apenas uma com várias coisas.")
+		escreve("Você se dirige então novamente ao castelo.\n")
+		escreve("Dentro da biblioteca, várias pretileiras vazias.\n")
+		escreve("Há apenas uma com várias coisas.\n")
 		estante()
-		escreve("Você percebe tudo em seu devido lugar.")
-		escreve("Há um livro em cima da mesa.")
-		escreve("Contos do reino de Aolis.")
-		escreve("Escrito há mais de 5 décadas!")
-		escreve("Será que")
+		enterCarta()
+		escreve("Você percebe tudo em seu devido lugar.\n")
+		escreve("Há um livro em cima da mesa.\n")
+		escreve("Contos do reino de Aolis.\n")
+		escreve("Escrito há mais de 5 décadas!\n")
+		escreve("Será que a donzela realmente se interessaria por isso?\n")
+		escreve("Todos do reino já devem ter lido este livro.\n")
+		escreve("Mais de 50% dele é apenas sobre a guerra dos plebeus e atlântianos.\n")
+		escreve("Os atlântianos, como eram chamados, eram uma espécie de monstros.\n")
+		escreve("Eles se alimentavam de sangue.\n")
+		escreve("O sangue de crianças pequenas.\n")
+		escreve("Eles viviam em um reino chamado Atlanta, cerca de 5 dias de viagem do reino.\n")
+		escreve("Toda lua cheia, eles vinham.\n")
+		escreve("Durante a noite, eles entravam escondidos nas casas.\n")
+		escreve("E tomavam o sangue das crianças.\n")
+		escreve("As famílias sofriam para defender suas crianças.\n")
+		escreve("Os guardas ficavam dias sem dormir tentando caça-los.\n")
+		escreve("Era um completo banho de sangue.\n")
+		escreve("Cerca de 6 décadas atrás, o rei da época se juntou com muitos reinos.\n")
+		escreve("E dezimaram toda a população de atlântianos.\n")
+		escreve("Essa história é passada de geração em geração.\n")
+		escreve("Tudo que sabemos sobre eles, é que eles tinham um líder.\n")
+		escreve("Príncipe Castell.\n")
+		escreve("Eles, inclusive o príncipe, tem uma aparência muito similar a nossa.\n")
+		escreve("Unica coisa que nos difere deles é sua sede por sangue.\n")
+		escreve("Por que a donzela estaria interessada nisso?\n")
 		
 		
+		
+	}
+	funcao masmorraCs2(){
+		escreve("- O que é isso?\n")
+		escreve("Sua visão está muito embaçada, e sua cabeça lateja de dor.\n")
+		masmorraIm()
+		enterCarta()
+		escreve("Você está em uma masmorra.\n")
+		escreve("Com janelas que dão pra ver apenas outras masmorras.\n")
+		escreve("Está muito frio e nemhum sinal de vento.\n")
+		escreve("Você deve estar no subsolo.\n")
+		escreve("Sem nenhum sinal de escapatória evidente.\n")
+		escreve("Seu companheiro esqueleto é uma prova disso.\n")
+		escreve("Pelo menos você está solto, sem cordas amarrando você.\n")
+		escreve("Você anda de um lado para o outro, pensativo.\n")
+		escreve("As horas estão passando e eu tenho cada vez menos tempo.\n")
+
+		escreve("Poucos minutos depois, a atendente aparece.\n")
+		escreve("Ela saiu de alguma porta pela esquerda.\n")
 	}
 	funcao retc(inteiro velocidade) { //É uma função que faz esse efeito de ... mais devagar
 		escreve(".")
@@ -851,6 +897,35 @@ escreva("                                                                       
 		escreva("       ||-------------------------------------------------------||","\n")
 		escreva("       ||_______________________________________________________||","\n")
 	}
+	funcao masmorraIm(){
+		escreva(" ---.----.__..----.----| _|_||___||___||___||___||___||___||_|_ |","\n")
+		escreva("    |        |    |    | -.-..---..---..---..---..---..---..-.- |--.-","\n")
+		escreva(" ---'--.-----'----'--.-|  | ||   ||   ||   ||   ||   ||   || |  | `|","\n")
+		escreva("       |:           (| |  | ||   ||   ||   ||   ||   ||   || |  |--'-","\n")
+		escreva("       |:.           | | _|_||___||___||___||___||___||___||_|_ |","\n")
+		escreva(" ------'----.-.,----.'-| -.-..---..---..---..---..---..---..-.- |-.--","\n")
+		escreva("        ,/) |       |  |  | ||   ||   ||   ||   ||   ||   || |  | |`","\n")
+		escreva(" ----.---8--'--.----'--|  | ||   ||   ||   ||   ||   ||   || |  | |","\n")
+		escreva("     |   8     |:      | _|_||___||___||___||___||___||___||_|_ |-'--","\n")
+		escreva("     | ,)//    |:.     | -.-..---..---..---..---..---..---..-.- |:.","\n")
+		escreva(" ----'-`=;'--.-'-.----.|  | ||   ||   ||   ||   ||   ||   || |  |--.-","\n")
+		escreva("       //   /_ _( \\    |  | ||   ||   ||   ||   ||   ||   || |  | /|","\n")
+		escreva(" ---.-//----)/\\,'_/----| _|_||___||___||___||___||___||___||_|_ | `|","\n")
+		escreva("    |/|     `;=.(      | -.-..---..---..---..---..---..---..-.- |--'-","\n")
+		escreva(" (  |`.`.   |`,-/      |,-'-||---||---||---||---||---||---||-'-.|","\n")
+		escreva(" -`-'-.`.`-.';'=`.-..--'-.--------.-------------.--.-------.----'--.-","\n")
+		escreva("      |  `-./.}{-'\\.)    |        )             |   `)     |       \\","\n")
+		escreva("      |    :`-}{-''||    |:.      |   ,_        |          |:.     |","\n")
+		escreva(" ---'`'-.--|`-}{-'||)----'-.------'--'.,`--.----'--------.-'-------'-","\n")
+		escreva("        |  :`-`'-'/)|      |               |:.           |","\n")
+		escreva(" -.-----'--;`.}{,`.||----,-'--------.------'---.--------,'--.,-------","\n")
+		escreva("  |:     ,'/.`..'_(/(    |:         |          |             \\","\n")
+		escreva("  |:.  ,',' |`--`.('))   |:.        |          |             |:","\n")
+		escreva(" -'--,' <.._|__,. >`,----'----------'--------.,'-------------'----SSt","\n")
+		escreva("     ``----....(','","\n")
+		escreva("            _,'>'","\n")
+		escreva("            )/","\n")
+			}
 	funcao enterCarta(){
 		escreve("Pressione Enter para continuar.")
 		cadeia next

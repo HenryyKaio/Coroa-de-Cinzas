@@ -693,6 +693,35 @@ programa
 		
 		
 	}
+	funcao diarioCs1(){
+		escreve("Você começa a vasculhar outros itens da estante. \n")
+		escreve("Tem diversas deorações e livros diferentes. \n")
+		escreve("Voce ve um livro deitado, atras de outros na estante. \n")
+		escreve("Do lado uma caixinha de madeira com um simbolo de caveira. \n")
+		escreve("Qual item vasculhar? \n")
+
+		logico continuar = verdadeiro
+		enquanto(continuar == verdadeiro){
+			
+			escreve("[1] - Livro escondido.\n")
+			escreve("[2] - Caixa misteriosa. \n")
+			inteiro opcao
+			leia(opcao)
+
+			escolha(opcao){
+				caso 1:
+				escreve("Ao pegar o livro, voce ve algo bem incomum. \n")
+				escreve("O nome Stella na capa. \n")
+				escreve("Sera um livro da donzela? \n")
+				escreve("Ou será um diário? \n")
+				inteiro pagina = u.sorteia(20, 21)
+				escreve("Voce abre o livro na pagina " + pagina + ". \n")
+				se (pagina == 20){
+					
+				}
+			}
+		}// fim do enquanto
+	}// fim da funcao
 	funcao masmorraCs2(){
 		escreve("- O que é isso?\n")
 		escreve("Sua visão está muito embaçada, e sua cabeça lateja de dor.\n")

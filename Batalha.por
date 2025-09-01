@@ -1,11 +1,12 @@
 programa
 {
-	
+	inteiro vida = 30
+	inclua biblioteca Util --> u
 	funcao inicio()
-	{
+	{
 	batalha()
 	}
-	funcao batalha(){
+	funcao batalha(inteiro vidaInimigo ){
 		escreva("                              _.--\"\"-._                     \n")
 		escreva("  .                         .\"         \".                   \n")
 		escreva(" / \\    ,^.         /(     Y             |      )\\          \n")
@@ -46,24 +47,43 @@ programa
 		escreva("                                             |||||    \n")
 		u.aguarde(500)
 
-		escreva("Você deu de cara com um esqueleto, ele aparenta estar muito bravo por algum motivo. ")
-		escreva("Ele te atacou com uma lança muito velha, mas bem afiada.")
+		escreva("Você deu de cara com um esqueleto, ele aparenta estar muito bravo por algum motivo.\n ")
+		escreva("Ele te atacou com um machado muito velho, mas bem afiado.\n")
 		
-			escreve("[1] - Tentar fugir\n")
-			escreve("[2] - Atacar devolta\n")
+			escreva("[1] - Tentar fugir\n")
+			escreva("[2] - Atacar devolta\n")
+			escreva("[3] - Desviar do ataque\n")
+			escreva("[4] - Defender o ataque\n")
 			inteiro opcao 
 			leia(opcao)
 
 			escolha(opcao){
 				caso 1:
-					escreva("Você, desvia da lança, mas escorrega no piso liso.") 
-					escreva("No chão, tenta deseperadamente se levantar. ")
-					escreva("Mas é tarde demais, o esquelto se aproxima rapidamenteẼ")
+					escreva("Você corre, mas escorrega no lodo do chão, acaba se ferindo levemente.\n")
+					vida += -5 
+					escreva("No chão, tenta deseperadamente se levantar.\n ")
+					escreva("Mas é tarde demais, o esquelto se aproxima rapidamente.\n")
+					escreva("Você, tem apenas uma alternativa, se quiser sobreviver.\n")
+				caso 2:
+					escreva("Você ataca novamente, com sua adaga.\n") 
+					escreva("Você foi ferido, por um golpe em cheio.\n ")
+					vida -= 10
+					escreva("Consegue golpeia-lo.\n")
+					vidaInimigo -= 10
+					escreva("Depois, começam a se encarar um ao outro.\n ")
+					escreva("Tentando prever, quem se ousa atacar primeiro.")
+				caso 3:
+					escreva("Você consegue desviar.\n") 
+					escreva("Por muita sorte, não foi ferido.\n ")
+					escreva("Agora, você consegue observar algo. \n")
+					escreva("Seu inimigo mostra uma fragilidade nas costelas.\n ")
+					escreva("Você
+					
+					
 				}
 			}
 
 			
-	}
 	
 }
 
@@ -72,7 +92,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 3525; 
+ * @POSICAO-CURSOR = 4365; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

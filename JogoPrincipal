@@ -21,14 +21,15 @@ programa
 		//QuartoDonzela()
 		//jardim()
 		//jardimCozinha()
-		PerolaVermelha()
-		se(livro == verdadeiro){
-			livrosCs1()
-		}
-		se(masmorra == verdadeiro){
-			masmorraCs2()
-		}
-		
+		//PerolaVermelha()
+		//se(livro == verdadeiro){
+//			livrosCs1()
+//			diarioCs1()
+//		}
+		//se(masmorra == verdadeiro){
+//			masmorraCs2()
+//		}
+		diarioCs1()
 	
 	}
 
@@ -509,8 +510,6 @@ programa
 		} 
 	}
 
-	
-
 	funcao PerolaVermelha(){
 		inteiro opcao
 		retc(500)
@@ -670,24 +669,25 @@ programa
 		escreve("Escrito há mais de 5 décadas!\n")
 		escreve("Será que a donzela realmente se interessaria por isso?\n")
 		escreve("Todos do reino já devem ter lido este livro.\n")
-		escreve("Mais de 50% dele é apenas sobre a guerra dos plebeus e atlântianos.\n")
-		escreve("Os atlântianos, como eram chamados, eram uma espécie de monstros.\n")
+		escreve("Mais de 50% dele é apenas sobre a guerra dos plebeus contra os ubarianos.\n")
+		escreve("Os ubarianos, como eram chamados, eram uma espécie de monstros.\n")
 		escreve("Eles se alimentavam de sangue.\n")
 		escreve("O sangue de crianças pequenas.\n")
-		escreve("Eles viviam em um reino chamado Atlanta, cerca de 5 dias de viagem do reino.\n")
+		escreve("Eles viviam em um reino chamado Ubar, cerca de 5 dias de viagem do reino.\n")
 		escreve("Toda lua cheia, eles vinham.\n")
 		escreve("Durante a noite, eles entravam escondidos nas casas.\n")
 		escreve("E tomavam o sangue das crianças.\n")
-		escreve("As famílias sofriam para defender suas crianças.\n")
+		escreve("As famílias sofriam para se defender. \n")
 		escreve("Os guardas ficavam dias sem dormir tentando caça-los.\n")
 		escreve("Era um completo banho de sangue.\n")
 		escreve("Cerca de 6 décadas atrás, o rei da época se juntou com muitos reinos.\n")
-		escreve("E dezimaram toda a população de atlântianos.\n")
+		escreve("E dezimaram toda a população de ubarianos.\n")
 		escreve("Essa história é passada de geração em geração.\n")
+		escreve("\nTodos os ubarianos são fácies de indentificar.\n")
+		escreve("Eles tem cerca de 2 metros, um corpo definido e um rosto terrível.\n")
 		escreve("Tudo que sabemos sobre eles, é que eles tinham um líder.\n")
-		escreve("Príncipe Castell.\n")
-		escreve("Eles, inclusive o príncipe, tem uma aparência muito similar a nossa.\n")
-		escreve("Unica coisa que nos difere deles é sua sede por sangue.\n")
+		escreve("Príncipe Azlond.\n")
+		escreve("Unica coisa que difere ele dos demais, é o seu enorme par de asas. \n\n")
 		escreve("Por que a donzela estaria interessada nisso?\n")
 		
 		
@@ -714,12 +714,41 @@ programa
 				escreve("O nome Stella na capa. \n")
 				escreve("Sera um livro da donzela? \n")
 				escreve("Ou será um diário? \n")
-				inteiro pagina = u.sorteia(20, 21)
+				inteiro pagina = u.sorteia(110, 111)
 				escreve("Voce abre o livro na pagina " + pagina + ". \n")
-				se (pagina == 20){
-					
+				se (pagina == 110){
+					pagina110()
+				} senao {
+					pagina111()
 				}
-			}
+				escreve("- Isso sim é uma resposta e tanto.\n")
+				escreve("Você não pode mais perder tempo.\n")
+				escreve("Você decide então ir para casa organizar suas coisas.\n")
+				escreve("Você vai para floresta sangrenta.\n")
+				continuar = falso
+				pare
+
+				caso 2:
+				escreve("Ao pegar a caixa, você encontra nada muito interessante.\n")
+				escreve("Lápis, ampolas, algumas plantas mortas...\n")
+				escreve("No meio de tudo isso, você enconta pedaços de papel.\n")
+				escreve("Muitos pedaços.\n")
+				escreve("Você pega os pedaços maiores para tentar algo.\n")
+				pedacosCarta()
+				escreve("- Uou.\n")
+				escreve("Isso já ajuda, e muito\n")
+				escreve("Você não pode mais perder tempo.\n")
+				escreve("Você decide então ir para casa organizar suas coisas.\n")
+				escreve("Você vai para floresta sangrenta.\n")
+				continuar = falso
+				pare
+				
+
+				caso contrario:
+				escreve("Essa opção é invalida. Escolha uma das opções: \n")
+
+				
+			}//fim do escolha
 		}// fim do enquanto
 	}// fim da funcao
 	funcao masmorraCs2(){
@@ -750,6 +779,69 @@ programa
 		escreva("\n")
 	}
 	
+	funcao pagina110(){
+		escreva("╭────────────────────────────────────────────╮", "\n")
+		escreva("│                                            │", "\n")
+		escreva("│  Querido diário,                           │", "\n")
+		escreva("│  não sei mais o que fazer,                 │", "\n")
+		escreva("│  minhas mudanças de humor estão            │", "\n")
+		escreva("│  me matando. Não tenho apetite             │", "\n")
+		escreva("│  para nada, isso esta me preocupando.      │", "\n")
+		escreva("│  Vou ir para a floresta sangrenta          │", "\n")
+		escreva("│  procurar a erva Tocrunda, os livros       │", "\n")
+		escreva("│  dizem que cura tudo. Deve curar tudo      │", "\n")
+		escreva("│  isso que estou sentindo também.           │", "\n")
+		escreva("│                                            │", "\n")
+		escreva("│                                            │", "\n")
+		escreva("│                                            │", "\n")
+		escreva("│                                            │", "\n")
+		escreva("│  Página 110                                │", "\n")
+		escreva("│                                            │", "\n")
+		escreva("╰────────────────────────────────────────────╯", "\n")
+		enterCarta()
+	}
+	funcao pagina111(){
+		escreva("╭────────────────────────────────────────────╮", "\n")
+		escreva("│                                            │", "\n")
+		escreva("│  Querido diário,                           │", "\n")
+		escreva("│  os testes deram positivo.                 │", "\n")
+		escreva("│  Estou com medo da minha                   │", "\n")
+		escreva("│  transformação acontecer a qualquer        │", "\n")
+		escreva("│  momento. Vou procurar respostas           │", "\n")
+		escreva("│  com uma bruxa na floresta sangrenta,      │", "\n")
+		escreva("│  é a minha única chance.                   │", "\n")
+		escreva("│                                            │", "\n")
+		escreva("│                                            │", "\n")
+		escreva("│                                            │", "\n")
+		escreva("│                                            │", "\n")
+		escreva("│                                            │", "\n")
+		escreva("│  Página 111                                │", "\n")
+		escreva("│                                            │", "\n")
+		escreva("╰────────────────────────────────────────────╯", "\n")
+		enterCarta()
+	}
+	funcao pedacosCarta(){
+		
+		escreva("╭────────────╮", "\n")
+		escreva("│ Querido di │", "\n")
+		escreva("│ ...        │", "\n")
+		escreva("╰────────────╯", "\n")
+		escreva("\n")
+
+		escreva("╭────────────────────╮", "\n")
+		escreva("│ ...s deram posit...│", "\n")
+		escreva("│ Estou com medo...  │", "\n")
+		escreva("╰────────────────────╯", "\n")
+		escreva("\n")
+
+		escreva("╭────────────────────────────╮", "\n")
+		escreva("│ ...u procurar  ...         │", "\n")
+		escreva("│ com uma bruxa na floresta  │", "\n")
+		escreva("│ sangrenta...               │", "\n")
+		escreva("╰────────────────────────────╯", "\n")
+		enterCarta()
+
+	}
 	funcao flor(){
 			escreva("\n")
 			escreva("╭────────────────────────────────────────────╮", "\n")

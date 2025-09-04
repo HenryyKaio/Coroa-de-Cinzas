@@ -29,7 +29,7 @@ programa
 		//se(masmorra == verdadeiro){
 //			masmorraCs2()
 //		}
-	
+		diarioCs1()
 	
 	}
 
@@ -718,10 +718,18 @@ programa
 				escreve("Voce abre o livro na pagina " + pagina + ". \n")
 				se (pagina == 110){
 					pagina110()
+					escreve("Ela tem que ser resgatada antes que aconteca o pior.\n")
+					escreve("A floresta sangrenta é muito perigosa.\n")
+					escreve("O que ela estava pensando?\n")
 				} senao {
 					pagina111()
+					escreve("O que ela quis dizer com transformção?\n")
+					escreve("Deve ser o dia que ela é chamada pelos Deuses.\n")
+					escreve("Ela deve estar com medo.\n")
+					escreve("Tenho que resgata-la antes que aconteca o pior.\n")
+					escreve("A floresta sangrenta é muito perigosa.\n")
+					escreve("O que ela estava pensando?\n")
 				}
-				escreve("- Isso sim é uma resposta e tanto.\n")
 				escreve("Você não pode mais perder tempo.\n")
 				escreve("Você decide então ir para casa organizar suas coisas.\n")
 				escreve("Você vai para floresta sangrenta.\n")
@@ -747,10 +755,43 @@ programa
 				caso contrario:
 				escreve("Essa opção é invalida. Escolha uma das opções: \n")
 
-				
 			}//fim do escolha
 		}// fim do enquanto
+	
+		enter()
+	
 	}// fim da funcao
+	
+	funcao casaCs1(){
+
+		escreve("Você começa a preparar sua mochila.")
+		escreve("Precisa organizar tudo para sua viagem.")
+		
+		se(itens[2] == "faca"){
+			escreve("Você já esta com sua faca. Não precisa de outra arma.")
+		} senao {
+			escreve("Você precisa de uma arma para viagem.")
+			escreve("Você pega sua melhor faca.")
+			escreve("Agora sim.")
+		}
+
+		escreve("Você não pode levar muitas coisas.")
+		escreve("Caso alguma coisa vier te atacar, você tem que ser agil.")
+		escreve("Uma mochila pesada irá te atraplhar.")
+		escreve("Qual item vocÊ quer levar mais?")
+
+		logico continuar = verdadeiro
+		enquanto(continuar == verdadeiro){
+			
+			escreve("[1] - Opcao 1.\n")
+			escreve("[2] - Opcao 2. \n")
+			inteiro opcao
+			leia(opcao)
+		}// fim do enquanto
+		
+	
+	}// fim da função
+	
 	funcao masmorraCs2(){
 		escreve("- O que é isso?\n")
 		escreve("Sua visão está muito embaçada, e sua cabeça lateja de dor.\n")

@@ -7,12 +7,23 @@ programa
 
 	cadeia itens[6]
 	inteiro vida = 30
+	
+	// Logicos Quarto Donzela
 	logico barro = falso
-	logico Faca = falso
 	logico petala = falso
+
+	// Logico para ver se estava ou não com a faca
+	logico Faca = falso
+	
+	// Logicos Perola Vermelha
 	logico masmorra = falso
 	logico investigacao = falso
 	logico livro = falso
+	
+	// logicos Caso 1
+	logico pocaoForca = falso
+	logico pocaoCura = falso
+	logico pocaoResistencia = falso
 	
 	funcao inicio()
 	{	
@@ -25,11 +36,12 @@ programa
 		//se(livro == verdadeiro){
 //			livrosCs1()
 //			diarioCs1()
+			casaCs1()
 //		}
 		//se(masmorra == verdadeiro){
 //			masmorraCs2()
 //		}
-		diarioCs1()
+		
 	
 	}
 
@@ -693,6 +705,7 @@ programa
 		
 		
 	}
+	
 	funcao diarioCs1(){
 		escreve("Você começa a vasculhar outros itens da estante. \n")
 		escreve("Tem diversas deorações e livros diferentes. \n")
@@ -764,31 +777,65 @@ programa
 	
 	funcao casaCs1(){
 
-		escreve("Você começa a preparar sua mochila.")
-		escreve("Precisa organizar tudo para sua viagem.")
+		escreve("Você começa a preparar sua mochila.\n")
+		escreve("Precisa organizar tudo para sua missão.\n")
 		
 		se(itens[2] == "faca"){
-			escreve("Você já esta com sua faca. Não precisa de outra arma.")
+			escreve("Você já esta com sua faca. Não precisa de outra arma.\n")
 		} senao {
-			escreve("Você precisa de uma arma para viagem.")
-			escreve("Você pega sua melhor faca.")
-			escreve("Agora sim.")
+			escreve("Você precisa de uma arma.\n")
+			escreve("Você pega sua melhor faca.\n")
+			Faca = verdadeiro
+			escreve("Agora sim.\n")
 		}
 
-		escreve("Você não pode levar muitas coisas.")
-		escreve("Caso alguma coisa vier te atacar, você tem que ser agil.")
-		escreve("Uma mochila pesada irá te atraplhar.")
-		escreve("Qual item vocÊ quer levar mais?")
+		escreve("Você não pode levar muitas coisas.\n")
+		escreve("Caso alguma coisa vier te atacar, você tem que ser agil.\n")
+		escreve("Uma mochila pesada irá te atrapalhar.\n")
+		escreve("Você pega sua tocha, e pode levar mais alguma coisa.\n")
+		itens[3] = "tocha"
+		escreve("É sempre bom estar prevenido.\n\n")
+		escreve("Qual item você quer levar?\n")
 
 		logico continuar = verdadeiro
 		enquanto(continuar == verdadeiro){
 			
-			escreve("[1] - Opcao 1.\n")
-			escreve("[2] - Opcao 2. \n")
+			escreve("[1] - Poção de Força\n")
+			escreve("[2] - Poção de Cura \n")
+			escreve("[3] - Poção de Resistência\n")
 			inteiro opcao
 			leia(opcao)
+
+			escolha(opcao){
+				caso 1: 
+				itens[4] = "Poção de Força"
+				escreve("Você coloca a poção de força na sua mochila.\n")
+				pocaoForca = verdadeiro
+				continuar = falso
+				pare
+
+				caso 2: 
+				itens[4] = "Poção de Cura"
+				escreve("Você coloca a poção de cura na sua mochila.\n")
+				pocaoCura = verdadeiro
+				continuar = falso
+				pare
+
+				caso 3: 
+				itens[4] = "Poção de Resistência"
+				escreve("Você coloca a poção de resistência na sua mochila.\n")
+				pocaoResistencia = verdadeiro
+				continuar = falso
+				pare
+
+				caso contrario:
+				escreve("Essa opção é invalida. Escolha uma das opções: \n")
+				
+			}// fim do escolha
 		}// fim do enquanto
-		
+
+		escreve("Agora sim, tudo pronto.\n")
+		enter()
 	
 	}// fim da função
 	
@@ -810,6 +857,21 @@ programa
 		escreve("Poucos minutos depois, a atendente aparece.\n")
 		escreve("Ela saiu de alguma porta pela esquerda.\n")
 	}
+	
+	funcao enterCarta(){
+		escreve("Pressione Enter para continuar.")
+		cadeia next
+		leia(next)
+		escreva("\n")
+	}
+	
+	funcao enter(){
+		cadeia next
+		leia(next)
+
+		limpa()
+	}
+	
 	funcao retc(inteiro velocidade) { //É uma função que faz esse efeito de ... mais devagar
 		escreve(".")
 		u.aguarde(velocidade)
@@ -841,6 +903,7 @@ programa
 		escreva("╰────────────────────────────────────────────╯", "\n")
 		enterCarta()
 	}
+	
 	funcao pagina111(){
 		escreva("╭────────────────────────────────────────────╮", "\n")
 		escreva("│                                            │", "\n")
@@ -861,6 +924,7 @@ programa
 		escreva("╰────────────────────────────────────────────╯", "\n")
 		enterCarta()
 	}
+	
 	funcao pedacosCarta(){
 		
 		escreva("╭────────────╮", "\n")
@@ -883,6 +947,7 @@ programa
 		enterCarta()
 
 	}
+	
 	funcao flor(){
 			escreva("\n")
 			escreva("╭────────────────────────────────────────────╮", "\n")
@@ -964,77 +1029,79 @@ programa
 		u.aguarde(200)
 
 	}
+	
 	funcao EntradaBar(){
 
-escreva("_______________________________________________________________________________", "\n")
-escreva("                          .-|-|----------------|-|-.", "\n")
-escreva("                          | .-. .-. .  .-. .-. . . |_", "\n")
-escreva("                     .--~~| `-. |-| |  | | | | |/| | ~~--." , "\n")
-escreva("                     |    | `-' ` ' `- `-' `-' ' ' |     |", "\n")
-escreva("                     |    `-.____________________.-'     |", "\n")
-escreva("_______________      |                                   |", "\n")
-escreva("     |         |     |                                   |", "\n")
-escreva("  /  |   /  /  |     |                                   |", "\n")
-escreva("/    |     /   |     | _______                   _______ |", "\n")
-escreva("_____|_________|     ||       ~---_         _---~       ||", "\n")
-escreva("     |    /    |     ||           ~---. .---~           ||", "\n")
-escreva(" / / |         |     ||               | |               ||", "\n")
-escreva("  /  |  /   /  |     ||               | |               ||", "\n")
-escreva("_____|_________|     ||               | |               ||", "\n")
-escreva("---------------'     ||               |  |               ||", "\n")
-escreva("                     ||               | |               ||", "\n")
-escreva("                     ||               | |               ||", "\n")
-escreva("                     ||           .---' `---.           ||", "\n")
-escreva("                     |`.______.---'         `---.______.'|", "\n")
-escreva("               ______|                                   |______", "\n")
-}
+		escreva("_______________________________________________________________________________", "\n")
+		escreva("                          .-|-|----------------|-|-.", "\n")
+		escreva("                          | .-. .-. .  .-. .-. . . |_", "\n")
+		escreva("                     .--~~| `-. |-| |  | | | | |/| | ~~--." , "\n")
+		escreva("                     |    | `-' ` ' `- `-' `-' ' ' |     |", "\n")
+		escreva("                     |    `-.____________________.-'     |", "\n")
+		escreva("_______________      |                                   |", "\n")
+		escreva("     |         |     |                                   |", "\n")
+		escreva("  /  |   /  /  |     |                                   |", "\n")
+		escreva("/    |     /   |     | _______                   _______ |", "\n")
+		escreva("_____|_________|     ||       ~---_         _---~       ||", "\n")
+		escreva("     |    /    |     ||           ~---. .---~           ||", "\n")
+		escreva(" / / |         |     ||               | |               ||", "\n")
+		escreva("  /  |  /   /  |     ||               | |               ||", "\n")
+		escreva("_____|_________|     ||               | |               ||", "\n")
+		escreva("---------------'     ||               |  |               ||", "\n")
+		escreva("                     ||               | |               ||", "\n")
+		escreva("                     ||               | |               ||", "\n")
+		escreva("                     ||           .---' `---.           ||", "\n")
+		escreva("                     |`.______.---'         `---.______.'|", "\n")
+		escreva("               ______|                                   |______", "\n")
+		}
+	
 	funcao bar(){
 
-escreva("                                                                                          ##########MM                                      \n")
-escreva("                                                                                        @@############                                      \n")
-escreva("                                                                                        ################      ############@@                \n")
-escreva("                                                                                      MM################        ##########++                \n")
-escreva("                                                                                      ##################MM      ####++####                  \n")
-escreva("                                                                                    ######################      ##mm++##..                  \n")
-escreva("                                                                                  ++######################      ##::++##                    \n")
-escreva("                                                                                  ##########################    ##::++++                    \n")
-escreva("                                                                                ..##########################mm  ####++++                    \n")
-escreva("                                                                                ##############################  ####MM::                    \n")
-escreva("                                                                              mm##########++####MM####################++..                  \n")
-escreva("                                                                              ############++mmMM########################++                  \n")
-escreva("                                                                            ############@@@@mm############################                  \n")
-escreva("                                    --      ..                            ##############MM++@@@@##########################                  \n")
-escreva("                              ..##############################@@@@####################@@@@@@@@@@##########################                  \n")
-escreva("                              ##mmmmmm##mmmmmmmm##mmmmmmmm##mmmmmmmm##mm############@@@@@@@@@@@@@@########################                  \n")
-escreva("                            ##@@@@@@@@##@@MM@@####@@@@@@##@@@@MM@@@@##@@############@@@@@@@@@@##@@########################                  \n")
-escreva("                          --##@@@@@@##@@@@@@@@##@@@@@@@@##@@@@@@MM##@@############@@@@@@@@@@######@@################@@####                  \n")
-escreva("                          ##@@@@@@##@@@@@@@@####@@@@@@##@@@@@@@@MM##@@############@@@@@@@@@@######@@##############@@####                    \n")
-escreva("                        ##@@mm@@@@##@@@@@@@@##MM@@@@@@##@@@@@@@@##@@####@@######@@@@@@@@@@@@########@@##########@@########                  \n")
-escreva("                      ::##@@@@MM##@@@@@@@@##@@@@@@@@##@@@@@@@@@@##@@##@@######@@@@@@@@@@@@@@######@@@@########@@##########                  \n")
-escreva("                      ##@@@@@@@@mm@@@@@@####@@@@@@@@##@@@@@@@@##MM##@@########@@@@@@@@@@@@@@######@@@@@@####@@##############                \n")
-escreva("                    ##@@@@@@@@##@@MM@@@@##@@@@@@@@##@@@@@@@@##@@@@##########@@@@##@@##@@@@@@######@@@@@@##@@################                \n")
-escreva("                  ++##@@@@@@@@@@@@@@MM##@@@@@@@@####@@@@@@@@################MM##@@@@@@##@@@@######@@@@@@MM####################              \n")
-escreva("                  ########################################################@@@@##########@@@@@@@@@@@@@@MM@@####################              \n")
-escreva("                ############################################@@##########@@@@@@@@MM@@@@@@@@@@@@@@@@@@MM@@@@@@####################            \n")
-escreva("              ##########################################################@@MMmmmmMMmmMMMMMM@@MMmmmmMMMMmmmmmm####################++          \n")
-escreva("              ######..mm######@@MMMMMM++::..--@@MM..++MMMMmm..----::++############################################################          \n")
-escreva("                ####@@##..------------------------########..--------mm####MMmm++--MM@@######@@##MM::@@####@@##@@--..++--##                  \n")
-escreva("                ####::++..----..----..------------########----------++##    --------------..####::----------------------##                  \n")
-escreva("                --##        ..######..                          ----::##@@####::          ########--          --##########                  \n")
-escreva("                ..##++    @@##@@##@@##            ..        mmmm----::##++++@@::        ##@@  ##  ####        --##########                  \n")
-escreva("                --##::    ##MM@@##@@MMMM        ####        ####..----########        ####    ##    ####      --##########                  \n")
-escreva("                --##::    ##@@@@##@@@@##        ####        ####------##            ::@@      ##      ####    --------::##..                \n")
-escreva("                --##      ##@@@@##@@@@##        ####        ####------####          ##        ##      MM####  ----MM######--                \n")
-escreva("                ..##      ##@@@@##@@@@##        ####        MM##------::++        ##          ##        MM####----########..                \n")
-escreva("                  ######  @@@@@@##@@@@##                        ----####MM      ##            ##          mm####--########                  \n")
-escreva("                  ######  @@@@@@##@@MM##                        @@####MM      ##              ##              ####--++..##                  \n")
-escreva("                ..##      @@MM@@##MM@@##                        ::######    ##                ##              ..##::--..##                  \n")
-escreva("                ..##@@##################################################::##                  ##              ----##++..##                  \n")
-escreva("                    --MM####@@@@@@@@##MMMMMMMMMM        MMMM          @@##                    ##              ..----######                  \n")
-escreva("                                                                      ############################::######################                  \n")
-escreva("                                                                                --##MM                  ##..        ######                  \n")
-	}
-	
+		escreva("                                                                                          ##########MM                                      \n")
+		escreva("                                                                                        @@############                                      \n")
+		escreva("                                                                                        ################      ############@@                \n")
+		escreva("                                                                                      MM################        ##########++                \n")
+		escreva("                                                                                      ##################MM      ####++####                  \n")
+		escreva("                                                                                    ######################      ##mm++##..                  \n")
+		escreva("                                                                                  ++######################      ##::++##                    \n")
+		escreva("                                                                                  ##########################    ##::++++                    \n")
+		escreva("                                                                                ..##########################mm  ####++++                    \n")
+		escreva("                                                                                ##############################  ####MM::                    \n")
+		escreva("                                                                              mm##########++####MM####################++..                  \n")
+		escreva("                                                                              ############++mmMM########################++                  \n")
+		escreva("                                                                            ############@@@@mm############################                  \n")
+		escreva("                                    --      ..                            ##############MM++@@@@##########################                  \n")
+		escreva("                              ..##############################@@@@####################@@@@@@@@@@##########################                  \n")
+		escreva("                              ##mmmmmm##mmmmmmmm##mmmmmmmm##mmmmmmmm##mm############@@@@@@@@@@@@@@########################                  \n")
+		escreva("                            ##@@@@@@@@##@@MM@@####@@@@@@##@@@@MM@@@@##@@############@@@@@@@@@@##@@########################                  \n")
+		escreva("                          --##@@@@@@##@@@@@@@@##@@@@@@@@##@@@@@@MM##@@############@@@@@@@@@@######@@################@@####                  \n")
+		escreva("                          ##@@@@@@##@@@@@@@@####@@@@@@##@@@@@@@@MM##@@############@@@@@@@@@@######@@##############@@####                    \n")
+		escreva("                        ##@@mm@@@@##@@@@@@@@##MM@@@@@@##@@@@@@@@##@@####@@######@@@@@@@@@@@@########@@##########@@########                  \n")
+		escreva("                      ::##@@@@MM##@@@@@@@@##@@@@@@@@##@@@@@@@@@@##@@##@@######@@@@@@@@@@@@@@######@@@@########@@##########                  \n")
+		escreva("                      ##@@@@@@@@mm@@@@@@####@@@@@@@@##@@@@@@@@##MM##@@########@@@@@@@@@@@@@@######@@@@@@####@@##############                \n")
+		escreva("                    ##@@@@@@@@##@@MM@@@@##@@@@@@@@##@@@@@@@@##@@@@##########@@@@##@@##@@@@@@######@@@@@@##@@################                \n")
+		escreva("                  ++##@@@@@@@@@@@@@@MM##@@@@@@@@####@@@@@@@@################MM##@@@@@@##@@@@######@@@@@@MM####################              \n")
+		escreva("                  ########################################################@@@@##########@@@@@@@@@@@@@@MM@@####################              \n")
+		escreva("                ############################################@@##########@@@@@@@@MM@@@@@@@@@@@@@@@@@@MM@@@@@@####################            \n")
+		escreva("              ##########################################################@@MMmmmmMMmmMMMMMM@@MMmmmmMMMMmmmmmm####################++          \n")
+		escreva("              ######..mm######@@MMMMMM++::..--@@MM..++MMMMmm..----::++############################################################          \n")
+		escreva("                ####@@##..------------------------########..--------mm####MMmm++--MM@@######@@##MM::@@####@@##@@--..++--##                  \n")
+		escreva("                ####::++..----..----..------------########----------++##    --------------..####::----------------------##                  \n")
+		escreva("                --##        ..######..                          ----::##@@####::          ########--          --##########                  \n")
+		escreva("                ..##++    @@##@@##@@##            ..        mmmm----::##++++@@::        ##@@  ##  ####        --##########                  \n")
+		escreva("                --##::    ##MM@@##@@MMMM        ####        ####..----########        ####    ##    ####      --##########                  \n")
+		escreva("                --##::    ##@@@@##@@@@##        ####        ####------##            ::@@      ##      ####    --------::##..                \n")
+		escreva("                --##      ##@@@@##@@@@##        ####        ####------####          ##        ##      MM####  ----MM######--                \n")
+		escreva("                ..##      ##@@@@##@@@@##        ####        MM##------::++        ##          ##        MM####----########..                \n")
+		escreva("                  ######  @@@@@@##@@@@##                        ----####MM      ##            ##          mm####--########                  \n")
+		escreva("                  ######  @@@@@@##@@MM##                        @@####MM      ##              ##              ####--++..##                  \n")
+		escreva("                ..##      @@MM@@##MM@@##                        ::######    ##                ##              ..##::--..##                  \n")
+		escreva("                ..##@@##################################################::##                  ##              ----##++..##                  \n")
+		escreva("                    --MM####@@@@@@@@##MMMMMMMMMM        MMMM          @@##                    ##              ..----######                  \n")
+		escreva("                                                                      ############################::######################                  \n")
+		escreva("                                                                                --##MM                  ##..        ######                  \n")
+			}
+			
 	funcao estante(){
 		escreva("        _________________________________________________________","\n")
 		escreva("       ||-------------------------------------------------------||","\n")
@@ -1059,6 +1126,7 @@ escreva("                                                                       
 		escreva("       ||-------------------------------------------------------||","\n")
 		escreva("       ||_______________________________________________________||","\n")
 	}
+	
 	funcao masmorraIm(){
 		escreva(" ---.----.__..----.----| _|_||___||___||___||___||___||___||_|_ |","\n")
 		escreva("    |        |    |    | -.-..---..---..---..---..---..---..-.- |--.-","\n")
@@ -1088,17 +1156,6 @@ escreva("                                                                       
 		escreva("            _,'>'","\n")
 		escreva("            )/","\n")
 			}
-	funcao enterCarta(){
-		escreve("Pressione Enter para continuar.")
-		cadeia next
-		leia(next)
-		escreva("\n")
-	}
-	funcao enter(){
-		cadeia next
-		leia(next)
+	
 
-		limpa()
-	}
-
-}
+}// fim do programa

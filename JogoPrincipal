@@ -36,10 +36,11 @@ programa
 		//se(livro == verdadeiro){
 //			livrosCs1()
 //			diarioCs1()
-			casaCs1()
+			//casaCs1() 
 //		}
 		//se(masmorra == verdadeiro){
-//			masmorraCs2()
+			//masmorraCs2()
+			SaindoMasmorra()
 //		}
 		
 	
@@ -849,13 +850,51 @@ programa
 		escreve("Está muito frio e nemhum sinal de vento.\n")
 		escreve("Você deve estar no subsolo.\n")
 		escreve("Sem nenhum sinal de escapatória evidente.\n")
-		escreve("Seu companheiro esqueleto é uma prova disso.\n")
 		escreve("Pelo menos você está solto, sem cordas amarrando você.\n")
 		escreve("Você anda de um lado para o outro, pensativo.\n")
 		escreve("As horas estão passando e eu tenho cada vez menos tempo.\n")
+		escreve("Você verifica e perceb que sua faca ainda está com você.\n")
+		escreve("Felizmente, anos de experiência te deram a habilidade de esconder armas como ninguém.\n")
+		escreve("Você serra as grades e remove-as com muito cuidado. Hora de sair daqui.\n")
+		u.aguarde(300)
+		escreve("No entanto")
+		retc(200)
+		//Batalha contra o esqueleto que o estevão fez.
+		
+		
+	}
 
-		escreve("Poucos minutos depois, a atendente aparece.\n")
-		escreve("Ela saiu de alguma porta pela esquerda.\n")
+	funcao SaindoMasmorra(){
+		escreve("Como pode um homem morto voltar à vida assim? Assustador mas, de qualquer forma, hora de ir.\n")
+		enterCarta()
+		escreve("Você caminha por grandes corredores até se deparar com um guarda cuidando a saída.\n")
+		escreve("Ele está de costas e não te viu, o que fazer?\n")
+		escreve("[ 1 ] Atacar furtivamente\n")
+		escreve("[ 2 ] Gritar e ir pra cima\n")
+		inteiro opcao
+		leia(opcao)
+		logico continuar = verdadeiro
+
+		enquanto(continuar == verdadeiro){
+			escolha(opcao){
+				caso 1:
+				pare
+
+				caso 2:
+				escreve("Você dá um grito intimidador e vai pra cima do guarda com tudo\n")
+				escreve("Antes que você conseguisse acertar qualquer golpe nele, ele crava a espada em você.\n")
+				retc(300)
+				escreve("\nÉ, não foi uma boa ideia.")
+				limpa()
+				GameOver()
+				escreve("Final Inteligente: correr para morte.")
+				continuar = falso
+				pare
+
+				caso contrario: 
+				escreve("Essa opção é invalida. Escolha uma das opções: \n")
+			}
+		}
 	}
 	
 	funcao enterCarta(){

@@ -5,8 +5,10 @@ programa
 	inclua biblioteca Texto --> tx
 	inclua biblioteca Util --> u
 
+	//Variáveis globais
 	cadeia itens[6]
 	inteiro vida = 30
+	inteiro dinheiro = 350
 	
 	// Logicos Quarto Donzela
 	logico barro = falso
@@ -27,6 +29,9 @@ programa
 	logico pocaoForca = falso
 	logico pocaoCura = falso
 	logico pocaoResistencia = falso
+
+	// Logicos caso 2
+	logico florestaCs2 = falso
 	
 	funcao inicio()
 	{	
@@ -36,15 +41,19 @@ programa
 		//Jardim()
 		//JardimCozinha()
 		//PerolaVermelha()
+		loja()
 		//se(livro == verdadeiro){
 //			LivrosCs1()
 //			DiarioCs1()
-			CasaCs1() 
-			FlorestaSangrentaCs1()
+//			CasaCs1() 
+//			FlorestaSangrentaCs1()
 //		}
 		//se(masmorra == verdadeiro){
 			//MasmorraCs2()
-//			SaindoMasmorraCs2()
+			//SaindoMasmorraCs2()
+			//se(florestaCs2 == verdadeiro){
+			//	florestaSangrentaCs2()
+			//}
 //		}
 		
 	
@@ -547,6 +556,9 @@ programa
 			escreve("Essa opção é invalida. Escolha uma das opções: \n")
 			}//fim do escolha
 		}//fim do enquanto
+
+
+		
 		continuar = verdadeiro
 
 		escreve("Atendente: Você é novo por aqui não é? Como você entrou?\n")
@@ -638,6 +650,51 @@ programa
 		enter()
 	
 	}//fim da função
+
+	funcao loja(){
+		logico continuar = verdadeiro
+		escreve("A: Você gostaria de mais alguma coisa?\n")
+		enquanto(continuar == verdadeiro){
+			escreve("[ 1 ] É claro\n")
+			escreve("[ 2 ] Não no momento.\n")
+			inteiro opcao
+			leia(opcao)
+			escolha(opcao){
+				caso 1:
+				limpa()
+				escreva("================================================================\n")
+				escreve("| Saldo:" + dinheiro + "G                                                   |\n")
+				escreva("|                                                              |\n")
+				escreva("[ 1 ]       Pão          |  Recupera um pouco de vida  |  45G  |\n")
+				escreva("[ 2 ]      Elixir        |  Um elixir quase milagroso  |  320G |\n")
+				escreva("[ 3 ]  Pólvora explosiva |          Explode            |  250G |\n")
+				escreva("[ 4 ]     Bandagens      |  Cuidam dos seus ferimentos |  100G |\n")
+				escreva("[ 5 ]     Manoplas       | Vai doer mais quando bater  |  300G |\n")
+				escreva("[ 0 ]      Sair   \n")
+				leia(opcao)
+				escolha(opcao){
+					caso 1:
+					se(dinheiro < 45){
+						escreve("Você não tem dinheiro o suficiente para comprar isso.")
+					} senao {
+						
+					}
+				}
+				continuar = falso
+				pare
+
+				caso 2:
+				escreve("Ela te olha com desgosto.\n")
+				continuar = falso
+				pare
+
+				caso contrario:
+				escreve("Essa opção é invalida. Escolha uma das opções: \n")
+				
+			}
+			
+		}
+	}
 	
 	funcao LivrosCs1(){ //funcao do caso1
 		escreve("Você sai do Pérola Vermelha, em rumo a um único lugar.\n")
@@ -930,6 +987,13 @@ programa
 		
 			escolha(opcao){
 				caso 1:
+				escreve("Você se aproxima furtivamente e o golpeia sem ele perceber.\n")
+				escreve("-Me assusta o quão conveniente fácil foi escapar daqui.\n")
+				escreve("Você então abre a porta e sai pra fora.")
+				enterCarta()
+				limpa()
+				continuar = falso
+				florestaCs2 = verdadeiro
 				pare
 
 				caso 2:
@@ -939,7 +1003,7 @@ programa
 				escreve("Não foi uma boa ideia.")
 				limpa()
 				GameOver()
-				escreve("Final Inteligente: correr para morte.")
+				escreve("Dica: Na maioria das vezes a solução mais idiota é a pior.")
 				continuar = falso
 				pare
 
@@ -948,6 +1012,11 @@ programa
 			}// fim do escolha
 		}// fim do enquanto
 	}// fim da função
+
+	funcao florestaSangrentaCs2(){
+		FlorestaIm()
+		escreve("Parece que você está em uma floresta.")
+	}
 	
 	funcao escreve(cadeia texto)
 	

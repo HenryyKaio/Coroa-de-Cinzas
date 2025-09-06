@@ -21,64 +21,38 @@ programa
 	logico livro = falso
 	
 	// logicos Caso 1
+	logico bruxa = falso
+	logico doente = falso
+	
 	logico pocaoForca = falso
 	logico pocaoCura = falso
 	logico pocaoResistencia = falso
 	
 	funcao inicio()
 	{	
-		//introducao()
+		//Introducao()
 		//PrimeiraParte()
 		//QuartoDonzela()
-		//jardim()
-		//jardimCozinha()
+		//Jardim()
+		//JardimCozinha()
 		//PerolaVermelha()
 		//se(livro == verdadeiro){
-//			livrosCs1()
-//			diarioCs1()
-			//casaCs1() 
+//			LivrosCs1()
+//			DiarioCs1()
+			CasaCs1() 
+			FlorestaSangrentaCs1()
 //		}
 		//se(masmorra == verdadeiro){
-			//masmorraCs2()
-			SaindoMasmorra()
+			//MasmorraCs2()
+//			SaindoMasmorraCs2()
 //		}
 		
 	
 	}
 
-	funcao escreve(cadeia texto)
 	
-	{ //uma espécie de "escreva()" porém pausadamente. 
-							
-		caracter letra
-		inteiro velocidade = 20 //pausa padrão entre um caracter e outro.
-		
-		para(inteiro i = 0 ; i < tx.numero_caracteres(texto) ; i++){ //repete enquanto a frase inteiro não for escrita.
 
-			letra = tx.obter_caracter(texto, i) //obtem o caracter da frase.
-			
-			escreva(letra)
-
-			u.aguarde(velocidade)
-			
-			escolha(letra){ //verifica diferentes tipos de caracter para efetuar (ou não) determinadas pausas.
-
-				caso ' ': u.aguarde(0) pare				
-				caso ',': u.aguarde(velocidade * 3) pare	
-				caso ':': u.aguarde(velocidade * 3) pare	
-				caso ';': u.aguarde(velocidade * 3) pare		
-				caso '.': u.aguarde(velocidade * 5) pare			
-				caso '!': u.aguarde(velocidade * 5) pare				
-				caso '?': u.aguarde(velocidade * 6) pare				
-				caso contrario: u.aguarde(velocidade) pare
-				
-			}
-			
-			
-		}
-	}
-
-	funcao introducao(){
+	funcao Introducao(){
 		
 	// Faz uma breve introdução da história.
 
@@ -298,7 +272,7 @@ programa
 		
 	}// fim da função
 
-	funcao jardim(){
+	funcao Jardim(){
 		
 		escreve("Você desce as escadas com cuidado, até chegar ao jardim.\n")
 		escreve("É estupidamente e desnecessáriamente grande.\n")
@@ -373,7 +347,7 @@ programa
 	
 	}// fim da função
 
-	funcao jardimCozinha(){
+	funcao JardimCozinha(){
 
 		escreve("Você se sente cada vez mais ancioso.\n")
 		escreve("Ao invés de respostas, você só consegue mais perguntas.\n")
@@ -665,7 +639,7 @@ programa
 	
 	}//fim da função
 	
-	funcao livrosCs1(){ //funcao do caso1
+	funcao LivrosCs1(){ //funcao do caso1
 		escreve("Você sai do Pérola Vermelha, em rumo a um único lugar.\n")
 		escreve("Biblioteca Real.\n")
 		escreve("Este é o unico lugar que ela poderia ter achado um livro.\n")
@@ -707,7 +681,7 @@ programa
 		
 	}
 	
-	funcao diarioCs1(){
+	funcao DiarioCs1(){
 		escreve("Você começa a vasculhar outros itens da estante. \n")
 		escreve("Tem diversas deorações e livros diferentes. \n")
 		escreve("Voce ve um livro deitado, atras de outros na estante. \n")
@@ -735,6 +709,8 @@ programa
 					escreve("Ela tem que ser resgatada antes que aconteca o pior.\n")
 					escreve("A floresta sangrenta é muito perigosa.\n")
 					escreve("O que ela estava pensando?\n")
+
+					doente = verdadeiro
 				} senao {
 					pagina111()
 					escreve("O que ela quis dizer com transformção?\n")
@@ -743,6 +719,8 @@ programa
 					escreve("Tenho que resgata-la antes que aconteca o pior.\n")
 					escreve("A floresta sangrenta é muito perigosa.\n")
 					escreve("O que ela estava pensando?\n")
+
+					bruxa = verdadeiro
 				}
 				escreve("Você não pode mais perder tempo.\n")
 				escreve("Você decide então ir para casa organizar suas coisas.\n")
@@ -776,7 +754,7 @@ programa
 	
 	}// fim da funcao
 	
-	funcao casaCs1(){
+	funcao CasaCs1(){
 
 		escreve("Você começa a preparar sua mochila.\n")
 		escreve("Precisa organizar tudo para sua missão.\n")
@@ -839,8 +817,78 @@ programa
 		enter()
 	
 	}// fim da função
+
+	funcao FlorestaSangrentaCs1(){
+		
+		escreve("Você sai de sua casa em rumo aos portões do reino.\n")
+		escreve("Já está entardecendo, logo ficará de noite.\n")
+		escreve("Melhor apressar o passo.\n")
+		escreve("Você chega aos imensos portões do reino.\n")
+		escreve("Guarda: Para onde esta indo senhor?\n")
+		escreve("Você apenas mostra o passe para o guarda e ele se cala.\n")
+		escreve("Tudo certo, rumo a floresta sangrenta.\n\n")
+		escreve("A floresta não fica longe do reino, cerca de duas horas caminhando.\n")
+		escreve("Seu corpo pede algo para comer e beber.\n")
+		retc(600)
+		escreve("Você finalmente chega.\n")
+		FlorestaIm()
+		enterCarta()
+
+		escreve("A floresta é imensa e assombrosa.\n")
+		escreve("Mesmo com todos seus anos de serviço, essa é sua primeira vez em território desconhecido.\n")
+		escreve("Você precisa tomar muito cuidado.\n")
+		escreve("- Onde a donzela pode estar?\n")
+		escreve("Vai ser dificil encontra-la, principalmente a noite.\n")
+		escreve("Você começa a adentrar a floresta.\n")
+		escreve("O que deve ser feito primeiro?\n")
+
+		logico continuar = verdadeiro
+		enquanto(continuar == verdadeiro){
+			
+			escreve("[1] - Procurar comida\n")
+			escreve("[2] - Procurar abrigo\n")
+			inteiro opcao
+			leia(opcao)
+
+			escolha(opcao){
+				caso 1: 
+				escreve("Você continua andando para dentro da floresta.\n")
+				escreve("Nenhum sinal de animais evidentes.\n")
+				escreve("Está tudo um completo silencio.\n")
+				retc(600)
+				escreve("Após uns 10 minutos caminhando, você escuta um riacho.\n")
+				escreve("Você segue em direção ao som e o encontra.\n")
+				escreve("Rapidamente você se agacha e verifica se a água é doce.\n")
+				escreve("Graças a Deus sim.\n")
+				escreve("Você toma bastante água e tenta pegar algum peixe.\n")
+				retc(500)
+				escreve("Tudo funciona como o plenajedo.\n")
+				escreve("Agora você volta para floresta para fazer um abrigo.\n")
+				continuar = falso
+				pare
+
+				caso 2:
+				escreve("Você continua andando para dentro da floresta.\n")
+				escreve("Encontra um lugar supostamente seguro e amplo para fazer o abrigo.\n ")
+				continuar = falso
+				pare
+				
+
+				caso contrario:
+				escreve("Essa opção é invalida. Escolha uma das opções: \n")
+				
+			}// fim do escolha
+		} // fim do enquanto
+
+		escreve("Você procura folhas e começa a organiza-las como uma cama.\n")
+		escreve("Não ascende nenhuma fogueira para não chamar predadores.\n")
+		escreve("Não tem como saber o que existe aqui.\n")
+		
+
+		
+	}// fim da funcao
 	
-	funcao masmorraCs2(){
+	funcao MasmorraCs2(){
 		escreve("- O que é isso?\n")
 		escreve("Sua visão está muito embaçada, e sua cabeça lateja de dor.\n")
 		masmorraIm()
@@ -853,9 +901,10 @@ programa
 		escreve("Pelo menos você está solto, sem cordas amarrando você.\n")
 		escreve("Você anda de um lado para o outro, pensativo.\n")
 		escreve("As horas estão passando e eu tenho cada vez menos tempo.\n")
-		escreve("Você verifica e perceb que sua faca ainda está com você.\n")
+		escreve("Você verifica e percebe que sua faca ainda está com você.\n")
 		escreve("Felizmente, anos de experiência te deram a habilidade de esconder armas como ninguém.\n")
-		escreve("Você serra as grades e remove-as com muito cuidado. Hora de sair daqui.\n")
+		escreve("Você serra as grades e remove-as com muito cuidado.")
+		escreve("Hora de sair daqui.\n")
 		u.aguarde(300)
 		escreve("No entanto")
 		retc(200)
@@ -864,27 +913,30 @@ programa
 		
 	}
 
-	funcao SaindoMasmorra(){
-		escreve("Como pode um homem morto voltar à vida assim? Assustador mas, de qualquer forma, hora de ir.\n")
-		enterCarta()
+	funcao SaindoMasmorraCs2(){
+		escreve("Como pode um homem morto voltar à vida assim?")
+		escreve("Assustador mas, de qualquer forma, hora de ir.\n")
 		escreve("Você caminha por grandes corredores até se deparar com um guarda cuidando a saída.\n")
 		escreve("Ele está de costas e não te viu, o que fazer?\n")
-		escreve("[ 1 ] Atacar furtivamente\n")
-		escreve("[ 2 ] Gritar e ir pra cima\n")
-		inteiro opcao
-		leia(opcao)
+		
+		
 		logico continuar = verdadeiro
-
 		enquanto(continuar == verdadeiro){
+
+			escreve("[1] - Atacar furtivamente\n")
+			escreve("[2] - Gritar e ir pra cima\n")
+			inteiro opcao
+			leia(opcao)
+		
 			escolha(opcao){
 				caso 1:
 				pare
 
 				caso 2:
-				escreve("Você dá um grito intimidador e vai pra cima do guarda com tudo\n")
+				escreve("Você dá um grito intimidador e vai pra cima do guarda com tudo.\n")
 				escreve("Antes que você conseguisse acertar qualquer golpe nele, ele crava a espada em você.\n")
 				retc(300)
-				escreve("\nÉ, não foi uma boa ideia.")
+				escreve("Não foi uma boa ideia.")
 				limpa()
 				GameOver()
 				escreve("Final Inteligente: correr para morte.")
@@ -893,9 +945,39 @@ programa
 
 				caso contrario: 
 				escreve("Essa opção é invalida. Escolha uma das opções: \n")
-			}
-		}
-	}
+			}// fim do escolha
+		}// fim do enquanto
+	}// fim da função
+	
+	funcao escreve(cadeia texto)
+	
+	{ //uma espécie de "escreva()" porém pausadamente. 
+							
+		caracter letra
+		inteiro velocidade = 20 //pausa padrão entre um caracter e outro.
+		
+		para(inteiro i = 0 ; i < tx.numero_caracteres(texto) ; i++){ //repete enquanto a frase inteiro não for escrita.
+
+			letra = tx.obter_caracter(texto, i) //obtem o caracter da frase.
+			
+			escreva(letra)
+
+			u.aguarde(velocidade)
+			
+			escolha(letra){ //verifica diferentes tipos de caracter para efetuar (ou não) determinadas pausas.
+
+				caso ' ': u.aguarde(0) pare				
+				caso ',': u.aguarde(velocidade * 3) pare	
+				caso ':': u.aguarde(velocidade * 3) pare	
+				caso ';': u.aguarde(velocidade * 3) pare		
+				caso '.': u.aguarde(velocidade * 5) pare			
+				caso '!': u.aguarde(velocidade * 5) pare				
+				caso '?': u.aguarde(velocidade * 6) pare				
+				caso contrario: u.aguarde(velocidade) pare
+				
+			}// fim do escolha
+		}// fim do para
+	}// fim da funcao
 	
 	funcao enterCarta(){
 		escreve("Pressione Enter para continuar.")
@@ -921,6 +1003,41 @@ programa
 		escreva("\n")
 	}
 	
+	funcao FlorestaIm(){
+	
+		escreva("████████████▓▓██████████████████████████████████████████████████████████████████▓▓████████████████▓▓▓▓████████████████████████████████████████████████████▓▓████████\n")
+		escreva("██████████████████▓▓██▓▓████████████▓▓▒▒▓▓██████████████▓▓██▓▓▓▓████▓▓▓▓██████████████████████▓▓▓▓▓▓▓▓▓▓▓▓████████████████████████████████████████████▓▓██████████▓▓\n")
+		escreva("██▓▓▓▓████████████████▓▓██████▓▓▓▓████▒▒██▓▓██▓▓▓▓▓▓▓▓████████▓▓▓▓▓▓████▓▓██▓▓████████▓▓▓▓▓▓██▓▓████████████████▓▓████████████████████████████▓▓██████████████████▓▓\n")
+		escreva("▓▓██████▓▓▓▓▓▓██▓▓▓▓████▓▓██▓▓██▓▓▒▒██▓▓████████▓▓▓▓▓▓██▓▓██▒▒▓▓██▓▓▓▓▓▓▓▓▓▓▓▓██████████▓▓▓▓▓▓▓▓▓▓██░░▒▒▓▓▒▒▓▓▓▓██▓▓██████▓▓██████████████▓▓████████▓▓██▓▓▓▓██▓▓████\n")
+		escreva("▓▓░░▓▓████▓▓██▓▓▓▓██████▓▓▓▓░░▓▓░░░░██▒▒▓▓██▓▓▓▓██▓▓██▓▓▓▓██████▓▓▓▓▓▓▒▒▓▓▓▓▓▓▓▓▓▓████▓▓██▓▓▓▓▓▓░░██░░▓▓░░▒▒▓▓▓▓██▓▓▒▒▓▓██▓▓▓▓████▓▓██████▓▓▓▓▓▓▒▒▒▒▓▓██▓▓██▓▓██▓▓▓▓\n")
+		escreva("▓▓▒▒▒▒▓▓▒▒▓▓██▓▓▓▓▓▓▓▓▓▓▒▒░░▒▒▒▒▓▓░░░░▓▓████▓▓▓▓▓▓██▓▓▓▓▓▓██████▓▓▒▒▒▒▒▒▒▒▓▓▒▒██▓▓████▓▓▓▓▓▓▓▓▒▒░░██▒▒▓▓░░▒▒▓▓░░▓▓▓▓██▓▓▓▓▓▓██▓▓▓▓██▓▓██████░░▒▒▒▒░░▓▓▓▓██▓▓▓▓██▓▓▓▓\n")
+		escreva("▒▒▒▒░░██░░▓▓▓▓██▒▒████░░░░░░░░░░▒▒░░░░▓▓████░░▒▒▒▒░░▓▓▓▓▓▓██████▓▓▒▒░░▒▒░░▓▓▓▓▓▓▓▓▓▓██▓▓▓▓░░░░████▓▓██▓▓▓▓░░░░░░░░░░▒▒░░░░░░░░▓▓▓▓▓▓██▓▓▓▓██░░▒▒▓▓░░██░░▓▓▓▓██▒▒██░░\n")
+		escreva("▒▒▒▒▒▒██▓▓░░▒▒▒▒░░░░░░░░░░░░░░░░░░██▓▓▓▓██▓▓░░░░░░░░░░░░██▓▓██▓▓▒▒░░░░▓▓░░██▓▓████▓▓████░░░░░░▒▒██▓▓▓▓▒▒░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓▓▓██▓▓▒▒░░░░▓▓░░▓▓▒▒░░▒▒▒▒░░░░░░\n")
+		escreva("░░██▒▒██░░░░░░░░░░░░░░░░░░░░░░░░░░▒▒██▓▓██▓▓░░░░░░░░░░░░░░░░░░▒▒░░░░░░██▒▒▓▓░░░░▓▓░░▓▓░░░░░░░░░░██▓▓▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▒▒▒▒░░  ░░██▒▒▓▓░░░░░░░░░░░░░░\n")
+		escreva("▓▓████▓▓░░░░░░░░░░░░░░░░░░▓▓▒▒░░░░░░▓▓████▓▓▓▓████▓▓▓▓██░░░░░░░░░░  ▓▓████▓▓░░    ░░      ▒▒▒▒  ▓▓████  ░░▓▓▓▓████▒▒░░░░          ░░░░░░    ░░▓▓████▒▒░░░░░░░░░░░░░░\n")
+		escreva("▒▒████▓▓░░░░░░░░░░░░░░░░▓▓▓▓▓▓██▓▓░░██████▓▓▓▓▓▓████▓▓▓▓░░  ░░    ░░░░████▓▓░░░░      ░░      ▓▓▓▓████░░░░██▓▓▓▓▓▓▓▓▓▓░░        ░░▒▒██░░▓▓░░  ▒▒████▒▒░░░░░░░░░░░░░░\n")
+		escreva("░░▓▓██▓▓░░░░░░░░░░░░░░▒▒▓▓▓▓▓▓▓▓▓▓  ▒▒████▓▓▓▓▓▓██▓▓██▒▒░░  ░░  ░░    ████▓▓░░                ░░████▓▓░░░░░░▓▓▓▓░░  ░░░░        ░░▓▓▓▓▓▓▓▓▒▒░░░░████▒▒░░░░░░░░░░░░░░\n")
+		escreva("░░▓▓██▓▓░░░░    ░░  ░░░░▓▓▓▓▓▓▓▓▓▓  ▒▒████▒▒▒▒▒▒▓▓░░░░  ░░  ░░        ▓▓██▓▓░░                  ▓▓████▓▓░░        ░░░░░░        ░░▓▓▓▓▓▓██▓▓░░  ▓▓██▒▒░░░░░░  ░░░░░░\n")
+		escreva("░░████▓▓  ░░  ░░  ░░░░░░░░▓▓░░░░░░████▓▓████░░  ░░░░░░  ░░░░          ▓▓██▓▓░░        ░░        ▓▓████░░░░          ░░░░        ░░▒▒▓▓▓▓██░░░░░░▓▓██▓▓  ░░░░░░    ░░\n")
+		escreva("░░▓▓██▓▓  ░░░░░░  ░░░░░░░░░░  ░░░░░░████████  ░░░░      ░░░░░░        ▓▓████░░        ░░        ▓▓████░░░░░░    ░░░░░░░░      ░░░░░░░░░░▒▒  ▓▓░░▓▓██▓▓  ░░░░    ░░░░\n")
+		escreva("██████▓▓  ░░░░░░░░  ░░░░░░          ▓▓██████  ░░░░      ░░  ░░        ▓▓██▓▓░░        ░░        ▒▒████░░░░        ░░░░░░      ░░░░░░        ░░▓▓▓▓██▓▓  ░░░░░░░░  ░░\n")
+		escreva("▓▓██████  ░░░░  ░░    ░░░░          ▓▓██████  ░░░░      ░░            ██████░░        ░░        ▒▒████░░░░        ░░░░░░      ░░░░░░          ▒▒████▓▓  ░░░░      ░░\n")
+		escreva("▒▒▓▓██▓▓  ░░░░  ░░    ░░░░          ▓▓████▓▓  ░░░░      ░░            ▓▓████░░        ░░        ░░████░░░░          ░░░░      ░░░░░░          ░░▓▓██▓▓  ░░░░      ░░\n")
+		escreva("░░▓▓██▓▓  ░░░░        ░░░░          ▒▒████▓▓  ░░░░░░    ░░  ░░░░      ▓▓██▓▓░░        ░░        ▒▒████░░░░          ░░░░      ░░░░░░░░      ░░  ▓▓██▓▓  ░░░░      ░░\n")
+		escreva("░░▓▓██▓▓  ░░░░░░░░  ░░░░░░          ▓▓██████  ░░░░░░  ░░░░░░░░      ░░▓▓████░░  ░░          ░░░░▓▓████░░░░        ░░░░░░      ░░░░░░░░  ░░░░░░░░██████░░░░░░    ░░░░\n")
+		escreva("░░▓▓████░░░░░░    ░░░░░░░░          ▓▓██████░░░░░░░░░░  ░░░░░░░░░░    ▒▒████▒▒░░░░░░░░░░        ▒▒████░░░░        ░░░░░░      ░░░░░░░░░░        ▓▓████  ░░░░    ░░░░\n")
+		escreva("░░██████░░░░░░░░░░░░░░░░░░░░░░  ░░  ▓▓██████░░░░░░░░░░░░░░░░░░░░░░    ██████░░░░░░░░░░░░░░░░    ▓▓████░░░░░░      ░░░░░░  ░░░░░░░░░░░░░░░░░░    ▓▓████░░░░░░░░  ░░░░\n")
+		escreva("░░██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██████░░░░░░░░░░░░░░░░░░░░░░░░░░██████░░░░░░░░░░░░░░░░░░░░██████░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓████░░░░░░░░░░░░░░\n")
+		escreva("░░▓▓██▓▓░░░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓██████░░░░░░░░░░░░░░░░░░░░░░░░░░▓▓████▒▒░░░░░░░░░░░░░░░░░░▓▓██▓▓░░░░░░░░░░░░░░▒▒░░  ░░░░░░░░░░░░░░░░░░░░░░▓▓████░░░░░░░░░░░░  \n")
+		escreva("░░▓▓████▒▒▒▒░░░░░░░░░░░░▒▒▒▒▒▒▒▒▒▒▒▒████████░░░░░░░░░░░░░░░░▒▒░░░░░░▒▒▓▓████▒▒▒▒▒▒▒▒░░░░░░▒▒▒▒░░▓▓████▒▒▒▒░░▒▒▒▒▒▒▒▒▒▒▒▒░░░░░░░░░░▒▒░░░░░░░░░░░░▓▓████░░▒▒▒▒░░▒▒░░▒▒\n")
+		escreva("░░▓▓████▒▒▒▒░░▒▒▒▒▒▒▒▒░░▒▒▒▒▒▒▒▒▒▒▒▒▓▓████▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓████▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓██▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒████▒▒▒▒░░▒▒▒▒▒▒░░\n")
+		escreva("▒▒██████▓▓▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒▒▒▒▒▒▒▒▒▒▒▓▓██████▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓▒▒▓▓████▓▓▒▒▒▒▓▓▒▒▒▒▒▒▒▒▒▒▒▒▓▓▓▓▓▓▒▒▓▓▒▒▓▓▒▒▒▒▓▓▓▓▒▒▒▒▒▒▒▒▓▓▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▒▓▓██▓▓▒▒▒▒▒▒▒▒▒▒▒▒▓▓\n")
+		escreva("▓▓██████▓▓▓▓▓▓▒▒▓▓▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓▓▓▓▓▓██▓▓▓▓▓▓▓▓▓▓▒▒▒▒▓▓▓▓▒▒▓▓██▓▓▓▓▓▓▓▓████▓▓▓▓██▓▓▓▓▓▓▒▒▓▓▓▓▓▓▓▓▓▓▓▓▓▓██▓▓▓▓██▓▓▓▓▒▒▓▓▓▓▓▓██▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓▓████▓▓▓▓▓▓▒▒▓▓▓▓▓▓\n")
+		escreva("██▓▓██▓▓████████▓▓██▓▓▓▓████▓▓██▓▓██▓▓▓▓▓▓████▓▓▓▓▓▓▓▓████▓▓██▓▓▓▓▓▓▓▓████▓▓▓▓██▓▓██▓▓██████▓▓████████▓▓▓▓▓▓▓▓▓▓▓▓████▓▓▓▓██▓▓██████▓▓████▓▓██▓▓██▓▓▓▓██████▓▓▓▓██▓▓\n")
+	
+
+	}
+
 	funcao pagina110(){
 		escreva("╭────────────────────────────────────────────╮", "\n")
 		escreva("│                                            │", "\n")
@@ -1009,7 +1126,7 @@ programa
 	}
 	
 	funcao castelo(){
-		escreva("!_        \n")
+		
 		escreva("                                                  |*~=-.,   \n")
 		escreva("                                                  |_,-'`    \n")
 		escreva("                                                  |         \n")
@@ -1046,6 +1163,7 @@ programa
 	}
 
 	funcao GameOver(){
+		
 		escreva("  ▄████  ▄▄▄       ███▄ ▄███▓▓█████     ▒█████   ██▒   █▓▓█████  ██▀███  ", "\n")
 		u.aguarde(200)
 		escreva(" ██▒ ▀█▒▒████▄    ▓██▒▀█▀ ██▒▓█   ▀    ▒██▒  ██▒▓██░   █▒▓█   ▀ ▓██ ▒ ██▒", "\n")
@@ -1142,6 +1260,7 @@ programa
 			}
 			
 	funcao estante(){
+		
 		escreva("        _________________________________________________________","\n")
 		escreva("       ||-------------------------------------------------------||","\n")
 		escreva("       ||.--.    .-._                        .----.             ||","\n")
@@ -1167,6 +1286,7 @@ programa
 	}
 	
 	funcao masmorraIm(){
+		
 		escreva(" ---.----.__..----.----| _|_||___||___||___||___||___||___||_|_ |","\n")
 		escreva("    |        |    |    | -.-..---..---..---..---..---..---..-.- |--.-","\n")
 		escreva(" ---'--.-----'----'--.-|  | ||   ||   ||   ||   ||   ||   || |  | `|","\n")
@@ -1196,5 +1316,4 @@ programa
 		escreva("            )/","\n")
 			}
 	
-
 }// fim do programa

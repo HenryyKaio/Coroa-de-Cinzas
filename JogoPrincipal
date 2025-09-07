@@ -30,30 +30,36 @@ programa
 	logico pocaoCura = falso
 	logico pocaoResistencia = falso
 
+	logico LutaUbariano = falso
+
 	// Logicos caso 2
 	logico florestaCs2 = falso
 	
 	funcao inicio()
 	{	
-		//Introducao()
-		//PrimeiraParte()
-		//QuartoDonzela()
-		//Jardim()
-		//JardimCozinha()
-		//PerolaVermelha()
-		loja()
-		//se(livro == verdadeiro){
+//		Introducao()
+//		PrimeiraParte()
+//		QuartoDonzela()
+//		Jardim()
+//		JardimCozinha()
+//		PerolaVermelha()
+//	
+//		se(livro == verdadeiro){
 //			LivrosCs1()
 //			DiarioCs1()
-//			CasaCs1() 
-//			FlorestaSangrentaCs1()
+			CasaCs1() 
+			FlorestaSangrentaCs1()
+
+			se(LutaUbariano == verdadeiro){
+				LutaCs1()
+			}
 //		}
-		//se(masmorra == verdadeiro){
-			//MasmorraCs2()
-			//SaindoMasmorraCs2()
-			//se(florestaCs2 == verdadeiro){
-			//	florestaSangrentaCs2()
-			//}
+//		se(masmorra == verdadeiro){
+//			MasmorraCs2()
+//			SaindoMasmorraCs2()
+//			se(florestaCs2 == verdadeiro){
+//			florestaSangrentaCs2()
+//			}
 //		}
 		
 	
@@ -655,8 +661,8 @@ programa
 		logico continuar = verdadeiro
 		escreve("A: Você gostaria de mais alguma coisa?\n")
 		enquanto(continuar == verdadeiro){
-			escreve("[ 1 ] É claro\n")
-			escreve("[ 2 ] Não no momento.\n")
+			escreve("[1] - É claro\n")
+			escreve("[2] - Não no momento.\n")
 			inteiro opcao
 			leia(opcao)
 			escolha(opcao){
@@ -926,13 +932,13 @@ programa
 
 				caso 2:
 				escreve("Você continua andando para dentro da floresta.\n")
-				escreve("Encontra um lugar supostamente seguro e amplo para fazer o abrigo.\n ")
+				escreve("Encontra um lugar supostamente seguro e amplo para fazer o abrigo.\n")
 				continuar = falso
 				pare
 				
 
 				caso contrario:
-				escreve("Essa opção é invalida. Escolha uma das opções: \n")
+				escreve("Essa opção é invalida. Escolha uma das opções:\n")
 				
 			}// fim do escolha
 		} // fim do enquanto
@@ -940,10 +946,63 @@ programa
 		escreve("Você procura folhas e começa a organiza-las como uma cama.\n")
 		escreve("Não ascende nenhuma fogueira para não chamar predadores.\n")
 		escreve("Não tem como saber o que existe aqui.\n")
+		retc(600)
+		escreve("Você cochila de forma suave.\n")
+		escreve("Escutando tudo ao seu redor.\n")
+		escreve("Você escuta galhos se quebrando perto de você.\n")
+		escreve("Muito estranho. O que deve ser feito?\n")
+
+		continuar = verdadeiro
+		enquanto(continuar == verdadeiro){
+
+			escreve("[1] - Continuar dormindo.\n")
+			escreve("[2] - Ir investigar o barulho.\n")
+			inteiro opcao
+			leia(opcao)
+
+			escolha(opcao){
+				
+				caso 1:
+				escreve("Você ignora completamente o barulho.\n")
+				escreve("Se vira de lado e tenta cochilar novamente.\n")
+				escreve("Você sente o barulho se aproximando.\n")
+				escreve("Quando levanta a cabeça e olha para o lado...\n")
+				escreve("Você vê um enorme Ubariano.\n")
+				escreve("E não um qualquer.\n")
+				escreve("Um Ubariano da realeza.\n")
+				Ubariano2()
+				GameOver()
+				continuar = falso
+				pare
+
+				caso 2:
+				escreve("Você levanta devagar, sem fazer barulho.\n")
+				escreve("Rapidamente pega sua mochila.\n")
+				escreve("Você apunhala sua faca por precaução.\n")
+				escreve("Devagar você anda em direção ao barulho.\n")
+				escreve("Adentrando os arbustos, entre duas árvores...\n")
+				escreve("você o ve. Um enorme Ubariano.\n")
+				escreve("E não um qualquer, um da realeza.\n")
+				Ubariano2()
+				escreve("Ele é enorme. E está te encarando.\n")
+				continuar = falso
+				LutaUbariano = verdadeiro
+				pare
+
+				caso contrario:
+				escreve("Essa opção é invalida. Escolha uma das opções: \n")
+			}// fim do escolha
+			
+		}// fim do enquanto	
 		
+		enter()
 
 		
 	}// fim da funcao
+	
+	funcao LutaCs1(){
+		
+	}
 	
 	funcao MasmorraCs2(){
 		escreve("- O que é isso?\n")
@@ -960,7 +1019,7 @@ programa
 		escreve("As horas estão passando e eu tenho cada vez menos tempo.\n")
 		escreve("Você verifica e percebe que sua faca ainda está com você.\n")
 		escreve("Felizmente, anos de experiência te deram a habilidade de esconder armas como ninguém.\n")
-		escreve("Você serra as grades e remove-as com muito cuidado.")
+		escreve("Você serra as grades e remove-as com muito cuidado.\n")
 		escreve("Hora de sair daqui.\n")
 		u.aguarde(300)
 		escreve("No entanto")
@@ -988,9 +1047,9 @@ programa
 			escolha(opcao){
 				caso 1:
 				escreve("Você se aproxima furtivamente e o golpeia sem ele perceber.\n")
-				escreve("-Me assusta o quão conveniente fácil foi escapar daqui.\n")
+				escreve("- Me assusta o quão conveniente fácil foi escapar daqui.\n")
 				escreve("Você então abre a porta e sai pra fora.")
-				enterCarta()
+				enter()
 				limpa()
 				continuar = falso
 				florestaCs2 = verdadeiro
@@ -1009,13 +1068,14 @@ programa
 
 				caso contrario: 
 				escreve("Essa opção é invalida. Escolha uma das opções: \n")
+			
 			}// fim do escolha
 		}// fim do enquanto
 	}// fim da função
 
 	funcao florestaSangrentaCs2(){
 		FlorestaIm()
-		escreve("Parece que você está em uma floresta.")
+		escreve("\nParece que você está em uma floresta.\n")
 	}
 	
 	funcao escreve(cadeia texto)
@@ -1174,24 +1234,24 @@ programa
 	}
 	
 	funcao flor(){
-			escreva("\n")
-			escreva("╭────────────────────────────────────────────╮", "\n")
-			escreva("│                                            │", "\n")
-			escreva("│            /\\^/`\\                          │", "\n")
-			escreva("│           | \\/   ||                        │", "\n")
-			escreva("│           | |    ||                        │", "\n")
-			escreva("│            \\ \\   /                         │", "\n")
-			escreva("│             '\\\\//'                         │", "\n")
-			escreva("│               ||                           │", "\n")
-			escreva("│               ||                           │", "\n")
-			escreva("│               ||                           │", "\n")
-			escreva("│               ||                           │", "\n")
-			escreva("│          |\\   ||  |\\                       │", "\n")
-			escreva("│           | | ||  | |                      │", "\n")
-			escreva("│           | | || / /                       │", "\n")
-			escreva("│           \\  \\||/ /                        │", "\n")
-			escreva("│                                            │", "\n")
-			escreva("╰────────────────────────────────────────────╯", "\n")
+		escreva("\n")
+		escreva("╭────────────────────────────────────────────╮", "\n")
+		escreva("│                                            │", "\n")
+		escreva("│            /\\^/`\\                          │", "\n")
+		escreva("│           | \\/   ||                        │", "\n")
+		escreva("│           | |    ||                        │", "\n")
+		escreva("│            \\ \\   /                         │", "\n")
+		escreva("│             '\\\\//'                         │", "\n")
+		escreva("│               ||                           │", "\n")
+		escreva("│               ||                           │", "\n")
+		escreva("│               ||                           │", "\n")
+		escreva("│               ||                           │", "\n")
+		escreva("│          |\\   ||  |\\                       │", "\n")
+		escreva("│           | | ||  | |                      │", "\n")
+		escreva("│           | | || / /                       │", "\n")
+		escreva("│           \\  \\||/ /                        │", "\n")
+		escreva("│                                            │", "\n")
+		escreva("╰────────────────────────────────────────────╯", "\n")
 	}
 	
 	funcao castelo(){
@@ -1231,6 +1291,93 @@ programa
 		escreva("     |_=-_       |=_=  | |  | |     |=_=        |=-    |    \n")
 	}
 
+		funcao Ubariano(){
+		
+		escreva("                        _.-.", "\n")
+		escreva("                       ._.-.\\", "\n")
+		escreva("                     _.-'=. \\\\", "\n")
+		escreva("                 .-._.-=-..' \\'.", "\n")
+		escreva("               _.--._-='.'   |  `.", "\n")
+		escreva("              _`.-.`=-./'.-. / .-.\\", "\n")
+		escreva("              _.-=-=-/ | '._)`(_.'|", "\n")
+		escreva("              _.--=.'  `. (.-v-.)/", "\n")
+		escreva("              _.-.' \\-.' `-..-..'", "\n")
+		escreva("             .-.'      `.'  \" \".", "\n")
+		escreva("            /   )        \\  /   \\", "\n")
+		escreva("           /   /\\                \\", "\n")
+		escreva("         .'  .'\\ `.        .'     \\", "\n")
+		escreva("        /   /   \\  `-    -' .`.    .", "\n")
+		escreva("      .''\\.'    | `.      .'   `.   \\", "\n")
+		escreva("     /   |      |      .'/       `.- `.", "\n")
+		escreva("    |   /       / `.    |         \\   |", "\n")
+		escreva("    |  /       |       .'.         `. |", "\n")
+		escreva("    / /       /           \\          \\ \\", "\n")
+		escreva("   /  |      /             \\         |  `.", "\n")
+		escreva("  /   `.     |      `   .'  \\        /    \\", "\n")
+		escreva(" ///.-'.\\    |       \\ /    `\\      / /-.  \\", "\n")
+		escreva(" \\\\\\   `     \\.-     |    `-.\\     '/   \\\\\\", "\n")
+		escreva("  \\\\|        |      / \\      |          ////", "\n")
+		escreva("   '''        |     /   \\     |          |//", "\n")
+		escreva("              |.-  |     \\  .-|          ''", "\n")
+		escreva("              /    |    / ` ../", "\n")
+		escreva("              |'   /    |    /", "\n")
+		escreva("              \\\\.'  |    | `./", "\n")
+		escreva("              /    \\   /    \\", "\n")
+		escreva("              \\ `. /   \\    /", "\n")
+		escreva("               |  |     '. '", "\n")
+		escreva("               /  |      |  \\", "\n")
+		escreva("              /   |      /   `.", "\n")
+		escreva("             | | | \\   .'  `.. \\", "\n")
+		escreva("            / / / ._`. \\\\.'-. \\`/", "\n")
+		escreva("            |/ / /  `'  `  |/|/", "\n")
+		escreva("             \\\\|\\|", "\n")
+
+	}
+
+	funcao Ubariano2(){
+		escreva("                                  _.-.", "\n")
+		escreva("                                 ._.-.\\", "\n")
+		escreva("                    .^         _.-'=. \\\\", "\n")
+		escreva("                  .'  )    .-._.-=-..' \\'.", "\n")
+		escreva("               .'   .'   _.--._-='.'   |  `.  ^.", "\n")
+		escreva("             .'   .'    _`.-.`=-./'.-. / .-.\\ `. `.", "\n")
+		escreva("           .'    /      _.-=-=-/ | '._)`(_.'|   \\  `.", "\n")
+		escreva("          /    /|       _.--=.'  `. (.-v-.)/    |\\   \\", "\n")
+		escreva("        .'    / \\       _.-.' \\-.' `-..-..'     / \\   `.", "\n")
+		escreva("       /     /   `-.._ .-.'      `.'  \" \". _..-'  |    |", "\n")
+		escreva("      '      |    |   /   )        \\  /   \\   \\    \\    `.", "\n")
+		escreva("     /      /    /   /   /\\                \\   \\   |      \\", "\n")
+		escreva("    /      /    /  .'  .'\\ `.        .'     \\   |   \\      \\", "\n")
+		escreva("   /      /    /  /   /   \\  `-    -' .`.    .  \\    \\     |", "\n")
+		escreva("  |      /    / .''\\.'    | `.      .'   `.   \\  |    |    |", "\n")
+		escreva(" .'     /    / /   |      |      .'/       `.- `./    /    |", "\n")
+		escreva(" |     /    .-|   /--.    / `.    |    _.-''\\   |     |    \\", "\n")
+		escreva(".'    /  .-'  |  /    `-.|       .'\\_.'      `. |`.   |    |", "\n")
+		escreva("|    |.-'     / /       /           \\          \\ \\ `. \\     \\", "\n")
+		escreva("|    /       /  |      /             \\         |  `. `.|    |", "\n")
+		escreva("|   |       /   `.     |      `   .'  \\        /    \\  \\    /", "\n")
+		escreva("|   |      ///.-'.\\    |       \\ /    `\\      / /-.  \\ |    |", "\n")
+		escreva("|   /      \\\\\\\\    `    \\.-     |    `-.\\     |/   \\\\\\\\'.   |", "\n")
+		escreva(" \\ |        \\\\\\|        |      / \\      |          //// |  /", "\n")
+		escreva(" | |         '''        |     /   \\     |          |//  |  \\", "\n")
+		escreva(" \\ |                    |.-  |     \\  .-|          ''   |  /", "\n")
+		escreva("  \\|                    /    |    / ` ../               / /", "\n")
+		escreva("                        |'   /    |    /               | /", "\n")
+		escreva("                        \\\\.'  |    | `./                |/", "\n")
+		escreva("                        /    \\   /    \\", "\n")
+		escreva("                        \\ `. /   \\    /", "\n")
+		escreva("                         |  |     '. '", "\n")
+		escreva("                         /  |      |  \\", "\n")
+		escreva("                        /   |      /   `.", "\n")
+		escreva("                       | | | \\   .'  `.. \\", "\n")
+		escreva("                      / / / ._`. \\\\.'-. \\`/", "\n")
+		escreva("                      |/ / /  `'  `  |/|/", "\n")
+		escreva("                       \\\\|\\|", "\n")
+
+}
+
+
+	
 	funcao GameOver(){
 		
 		escreva("  ▄████  ▄▄▄       ███▄ ▄███▓▓█████     ▒█████   ██▒   █▓▓█████  ██▀███  ", "\n")

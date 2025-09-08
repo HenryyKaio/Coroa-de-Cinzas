@@ -8,7 +8,7 @@ programa
 	//Variáveis globais
 	cadeia itens[6]
 	inteiro vida = 100
-	inteiro dinheiro = 350
+	inteiro dinheiro = 345
 	
 	// Logicos Quarto Donzela
 	logico barro = falso

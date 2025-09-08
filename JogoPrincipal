@@ -7,7 +7,7 @@ programa
 
 	//Variáveis globais
 	cadeia itens[6]
-	inteiro vida = 30
+	inteiro vida = 100
 	inteiro dinheiro = 350
 	
 	// Logicos Quarto Donzela
@@ -43,16 +43,18 @@ programa
 //		Jardim()
 //		JardimCozinha()
 //		PerolaVermelha()
+		loja()
+
 //	
 //		se(livro == verdadeiro){
 //			LivrosCs1()
 //			DiarioCs1()
-			CasaCs1() 
-			FlorestaSangrentaCs1()
+//			CasaCs1() 
+			//FlorestaSangrentaCs1()
 
-			se(LutaUbariano == verdadeiro){
-				LutaCs1()
-			}
+			//se(LutaUbariano == verdadeiro){
+			//	LutaCs1()
+			//}
 //		}
 //		se(masmorra == verdadeiro){
 //			MasmorraCs2()
@@ -493,7 +495,7 @@ programa
 			para(inteiro i=0; i < 6; i++){
 			escreva(itens[i], " | ")
 		}
-			escreva(" |")
+			
 		} senao {
 			escreva("Não preciso disso agora")
 			retc(300)
@@ -501,15 +503,17 @@ programa
 	}
 
 	funcao checarVida(){
-		se(vida == 30){
+		se(vida == 100){
 			escreve("Você se sente perfeitamente bem e está completamente saudável.")
-		} senao se(vida < 30){
+		} senao se(vida < 100){
 			escreve("Você está bem.")
-		} senao se(vida < 12){ 
+		} senao se(vida < 65){ 
 			escreve("Você está machucado. Não dá pra parar agora, mas é bom você tentar se recuperar.")
-		} senao se(vida < 6){
+		} senao se(vida < 30){
 			escreve("Você está gravemente ferido.")
-		} 
+		} senao se(vida < 10){
+			escreve("Só um milagre pode te salvar agora.")
+		}
 	}
 
 	funcao PerolaVermelha(){
@@ -562,6 +566,8 @@ programa
 			escreve("Essa opção é invalida. Escolha uma das opções: \n")
 			}//fim do escolha
 		}//fim do enquanto
+
+		
 
 
 		
@@ -659,45 +665,137 @@ programa
 
 	funcao loja(){
 		logico continuar = verdadeiro
+		inteiro contador = 0
 		escreve("A: Você gostaria de mais alguma coisa?\n")
-		enquanto(continuar == verdadeiro){
+		
+		enquanto(continuar == verdadeiro) {
+			
 			escreve("[1] - É claro\n")
 			escreve("[2] - Não no momento.\n")
 			inteiro opcao
 			leia(opcao)
-			escolha(opcao){
+			
+			escolha(opcao)
+			{
 				caso 1:
-				limpa()
-				escreva("================================================================\n")
-				escreve("| Saldo:" + dinheiro + "G                                                   |\n")
-				escreva("|                                                              |\n")
-				escreva("[ 1 ]       Pão          |  Recupera um pouco de vida  |  45G  |\n")
-				escreva("[ 2 ]      Elixir        |  Um elixir quase milagroso  |  320G |\n")
-				escreva("[ 3 ]  Pólvora explosiva |          Explode            |  250G |\n")
-				escreva("[ 4 ]     Bandagens      |  Cuidam dos seus ferimentos |  100G |\n")
-				escreva("[ 5 ]     Manoplas       | Vai doer mais quando bater  |  300G |\n")
-				escreva("[ 0 ]      Sair   \n")
-				leia(opcao)
-				escolha(opcao){
-					caso 1:
-					se(dinheiro < 45){
-						escreve("Você não tem dinheiro o suficiente para comprar isso.")
-					} senao {
+					enquanto(continuar == verdadeiro){
+					limpa()
+					escreva("================================================================\n")
+					escreve("| Saldo:" + dinheiro + "G")
+					escreva("                                                   |\n")
+					escreva("|                                                              |\n")
+					escreva("[ 1 ]       Pão          |  Recupera um pouco de vida  |  45G  |\n")
+					escreva("[ 2 ]      Elixir        |  Um elixir quase milagroso  |  320G |\n")
+					escreva("[ 3 ]  Pólvora explosiva |          Explode            |  250G |\n")
+					escreva("[ 4 ]     Bandagens      |  Cuidam dos seus ferimentos |  100G |\n")
+					escreva("[ 5 ]     Manoplas       | Vai doer mais quando bater  |  300G |\n")
+					escreva("[ 0 ]                             Sair   \n")
+					leia(opcao)
+					
+					escolha(opcao)
+					{
+						caso 1:
+							contador++
+							
+							se(dinheiro < 320){
+								escreve("Você não tem dinheiro o suficiente para comprar isso.")
+							} senao se(contador > 3){
+								escreve("Você não tem espaço suficiente no inventário para comprar isso.")
+							} senao {
+								dinheiro -= 320
+								escreve("Muito obrigado pela compra!")
+								itens[2+contador] = "Elixir"
+								checarItens()
+								enter()
+							}
+							pare
+	
+						caso 2:
+							
+							contador++
+							se(dinheiro < 45){
+								escreve("Você não tem dinheiro o suficiente para comprar isso.")
+							} senao se(contador > 3){
+								escreve("Você não tem espaço suficiente no inventário para comprar isso.")
+							} senao {
+								dinheiro -= 45
+								escreve("Muito obrigado pela compra!")
+								itens[2+contador] = "Pão"
+								checarItens()
+								enter()
+							}
+							pare
+	
+						caso 3:
+							contador++
+							se(dinheiro < 250){
+								escreve("Você não tem dinheiro o suficiente para comprar isso.")
+							} senao se(contador > 3){
+								escreve("Você não tem espaço suficiente no inventário para comprar isso.")
+							} senao {
+								dinheiro -= 250
+								escreve("Muito obrigado pela compra!")
+								itens[2+contador] = "Pólvora explosiva"
+								checarItens()
+								enter()
+							}
+							pare
+	
+						caso 4:
+							contador++
+							se(dinheiro < 100){
+								escreve("Você não tem dinheiro o suficiente para comprar isso.")
+							} senao se(contador > 3){
+								escreve("Você não tem espaço suficiente no inventário para comprar isso.")
+							} senao {
+								dinheiro -= 100
+								escreve("Muito obrigado pela compra!")
+								itens[2+contador] = "Bandagens"
+								checarItens()
+								enter()
+							}
+							pare
+	
+						caso 5:
+							contador++
+							se(dinheiro < 300){
+								escreve("Você não tem dinheiro o suficiente para comprar isso.")
+							} senao se(contador > 3){
+								escreve("Você não tem espaço suficiente no inventário para comprar isso.")
+							} senao {
+								dinheiro -= 300
+								escreve("Muito obrigado pela compra!")
+								itens[2+contador] = "Manoplas"
+								checarItens()
+								enter()
+							}
+							pare
+	
+						caso 0:
+							escreve("Até logo então.")
+							continuar = falso
+							pare
+		
+							caso contrario:
+							escreve("Essa opção é invalida. Escolha uma das opções: \n")
+							pare
 						
+						
+						}
 					}
-				}
-				continuar = falso
-				pare
+					
+					continuar = falso
+					pare
 
 				caso 2:
-				escreve("Ela te olha com desgosto.\n")
-				continuar = falso
-				pare
+					escreve("Ela te olha com desgosto.\n")
+					continuar = falso
+					pare
 
 				caso contrario:
-				escreve("Essa opção é invalida. Escolha uma das opções: \n")
-				
-			}
+					escreve("Essa opção é invalida. Escolha uma das opções: \n")
+					pare
+			}//fim mais alguma coisa
 			
 		}
 	}

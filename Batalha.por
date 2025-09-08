@@ -1,10 +1,12 @@
 programa
 {
-	inteiro vida = 30
 	inclua biblioteca Util --> u
+	
+	inteiro vida = 30
+	
 	funcao inicio()
 	{
-	batalha()
+	batalha(20)
 	}
 	funcao batalha(inteiro vidaInimigo ){
 		escreva("                              _.--\"\"-._                     \n")
@@ -45,9 +47,15 @@ programa
 		escreva("                                             |  \\           \n")
 		escreva("                                             |lllj          \n")
 		escreva("                                             |||||    \n")
+		
 		u.aguarde(500)
+		
+		logico continuar = verdadeiro
 
-		escreva("Você deu de cara com um esqueleto, ele aparenta estar muito bravo por algum motivo.\n ")
+		enquanto(continuar == verdadeiro){
+			
+		
+		escreva("Você deu de cara com um esqueleto, ele aparenta estar muito bravo por algum motivo.\n")
 		escreva("Ele te atacou com um machado muito velho, mas bem afiado.\n")
 		
 			escreva("[1] - Tentar fugir\n")
@@ -61,30 +69,84 @@ programa
 				caso 1:
 					escreva("Você corre, mas escorrega no lodo do chão, acaba se ferindo levemente.\n")
 					vida += -5 
-					escreva("No chão, tenta deseperadamente se levantar.\n ")
+					escreva("No chão, tenta deseperadamente se levantar.\n")
 					escreva("Mas é tarde demais, o esquelto se aproxima rapidamente.\n")
 					escreva("Você, tem apenas uma alternativa, se quiser sobreviver.\n")
+					
+					continuar = falso
+					
+					pare
+					
 				caso 2:
 					escreva("Você ataca novamente, com sua adaga.\n") 
-					escreva("Você foi ferido, por um golpe em cheio.\n ")
+					escreva("Você foi ferido, por um golpe em cheio.\n")
 					vida -= 10
 					escreva("Consegue golpeia-lo.\n")
 					vidaInimigo -= 10
-					escreva("Depois, começam a se encarar um ao outro.\n ")
+					escreva("Depois, começam a se encarar um ao outro.\n")
 					escreva("Tentando prever, quem se ousa atacar primeiro.")
+					
+					continuar = falso
+
+					pare
+					
 				caso 3:
 					escreva("Você consegue desviar.\n") 
-					escreva("Por muita sorte, não foi ferido.\n ")
-					escreva("Agora, você consegue observar algo. \n")
-					escreva("Seu inimigo mostra uma fragilidade nas costelas.\n ")
-					escreva("Você
+					escreva("Por muita sorte, não foi ferido.\n")
+					escreva("Agora, você consegue observar algo.\n")
+					escreva("Seu inimigo mostra uma fragilidade nas costelas.\n")
+					escreva("Você sabe agora onde seu ataque fará mais efeito.\n")
+
+					continuar = falso
+
+					pare
 					
+				caso 4:
+					escreva("Vooê se deu mal, ao tentar se defender.\n")
+					escreva("Você foi atingido e sofreu um ferimento grave.\n")
+					vida -= 10
+					escreva("Mas em compensação.\n")
+					escreva("Você conseguiu achar um ponto com maior fragilidade.")
+					escreva("Bem no fêmur do esqueleto.")
+
+					continuar = falso
+
+					pare
 					
 				}
 			}
-
 			
-	
+				u.aguarde(500)
+				
+				continuar = verdadeiro
+
+				escreva("Depois de agir, você agora tem poucos segundos para pensar em algo.\n")
+				escreva("Enquanto o tempo parece passar mais devagar.\n")
+				escreva("Você lembra de diversas batalhas que teve, e como venceu elas.\n")
+				escreva("Agora você tem que escolher onde atacar.\n")
+				escreva("\n\n")
+
+				escreva("[1] - Atacar o fêmur\n")
+				escreva("[2] - Atacar o crânio \n")
+				escreva("[3] - Atacar as costelas\n")
+				escreva("[4] - Atacar aleatorio\n")
+				
+				enquanto(continuar == verdadeiro){
+
+					escolha(opcao){
+
+						caso 1:
+							escreva("Você acerta um golpe certeiro.\n")
+							escreva("Acabou rachando o fêmur do esqueleto.\n")
+							escreva("Conseguiu deixar o esqueleto muito debilitado")
+							escreva("Mas ao fazer isso, te causou uma ferida, por causa de pedaços que voaram.\n ")
+
+							vidaEsqueleto -= 7 
+							vida -= 3
+							
+					}
+				}
+		}	
 }
 
 /* $$$ Portugol Studio $$$ 
@@ -92,7 +154,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 4365; 
+ * @POSICAO-CURSOR = 5917; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

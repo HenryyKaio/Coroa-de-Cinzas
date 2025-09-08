@@ -1,0 +1,28 @@
+funcao LutaCs1(){
+
+		escreve("Voce rapidamente pega sua adaga. \n")
+		escreve("Está muito escuro, você precisa acender sua tocha.")
+		escreve("Sem movimentos bruscos, você se move até a mochila.")
+		escreve("Acende a tocha e a deixa encostada em uma pedra.")
+
+		escreve("O ubariano comeca a se aproximar.")
+		
+
+		logico continuar = verdadeiro
+		enquanto(continuar == verdadeiro){
+
+			Ubariano2()
+			escreve("Vida do Ubariano: " + vidaUbariano2)
+			
+			escreve("O que você vai fazer? ")
+
+			escreve("[1] - Atacar \n")
+			escreve("[2] - Se defender\n")
+			escreve("[3] - Tentar fugir.\n")
+			escreve("[4] - Checar itens.\n")
+
+			
+		}
+		
+		
+	}

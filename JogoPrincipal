@@ -1,14 +1,14 @@
 programa
 {
-
+	inclua biblioteca Util --> u
 	inclua biblioteca Tipos --> t
 	inclua biblioteca Texto --> tx
-	inclua biblioteca Util --> u
 
 	//Variáveis globais
 	cadeia itens[6]
 	inteiro vida = 100
 	inteiro dinheiro = 345
+	inteiro vidaUbariano2= 200
 	
 	// Logicos Quarto Donzela
 	logico barro = falso
@@ -43,7 +43,7 @@ programa
 //		Jardim()
 //		JardimCozinha()
 //		PerolaVermelha()
-		loja()
+//		loja()
 
 //	
 //		se(livro == verdadeiro){
@@ -53,7 +53,7 @@ programa
 			//FlorestaSangrentaCs1()
 
 			//se(LutaUbariano == verdadeiro){
-			//	LutaCs1()
+				LutaCs1()
 			//}
 //		}
 //		se(masmorra == verdadeiro){
@@ -503,6 +503,7 @@ programa
 	}
 
 	funcao checarVida(){
+		
 		se(vida == 100){
 			escreve("Você se sente perfeitamente bem e está completamente saudável.")
 		} senao se(vida < 100){
@@ -681,15 +682,16 @@ programa
 					enquanto(continuar == verdadeiro){
 					limpa()
 					escreva("================================================================\n")
-					escreve("| Saldo:" + dinheiro + "G")
-					escreva("                                                   |\n")
+					escreva("|                       Seu Saldo:   "+  dinheiro + "D                      " )
+					escreva("|                                                              |\n")
 					escreva("|                                                              |\n")
 					escreva("[ 1 ]       Pão          |  Recupera um pouco de vida  |  45G  |\n")
 					escreva("[ 2 ]      Elixir        |  Um elixir quase milagroso  |  320G |\n")
 					escreva("[ 3 ]  Pólvora explosiva |          Explode            |  250G |\n")
 					escreva("[ 4 ]     Bandagens      |  Cuidam dos seus ferimentos |  100G |\n")
 					escreva("[ 5 ]     Manoplas       | Vai doer mais quando bater  |  300G |\n")
-					escreva("[ 0 ]                             Sair   \n")
+					escreva("[ 0 ]                    |            Sair             |       |     \n")
+					escreva("================================================================\n")
 					leia(opcao)
 					
 					escolha(opcao)
@@ -1097,10 +1099,57 @@ programa
 
 		
 	}// fim da funcao
-	
+
 	funcao LutaCs1(){
+
+		escreve("Voce rapidamente pega sua adaga. \n")
+		escreve("Está muito escuro, você precisa acender sua tocha.\n")
+		escreve("Sem movimentos bruscos, você se move até a mochila.\n")
+		escreve("Acende a tocha e a deixa encostada em uma pedra.\n")
+
+		escreve("O ubariano comeca a se aproximar.\n")
+		
+
+		logico continuar = verdadeiro
+		enquanto(continuar == verdadeiro){
+
+			Ubariano2()
+			escreve("Vida do Ubariano: " + vidaUbariano2+ "\n" )
+			escreve("Sua vida: " + vida + "\n\n")
+			
+			escreve("O que você vai fazer? \n")
+
+			escreve("[1] - Atacar. \n")
+			escreve("[2] - Se defender.\n")
+			escreve("[3] - Tentar fugir.\n")
+			escreve("[4] - Checar itens.\n")
+
+			se(livro == verdadeiro){
+				escreve("[5] - Usar Poção.\n")
+			}
+
+			inteiro opcao
+			leia(opcao)
+			cadeia frasesAtaque[3] = {"boca do estomâgo!", "costela!", "perna!"} // Fiz para gerarmos frases aleatorias, essa por exemplo, é de onde o caçador golpeou o ubariano.
+			
+			escolha(opcao){
+
+				caso 1: 
+				escreve("Você golpeia o Ubariano na " + frasesAtaque[u.sorteia(0,2)] + "\n")
+				escreve("Isso já te da vantagem.\n")
+				vidaUbariano2 += -u.sorteia(5, 10)
+				escreve("Vida do Ubariano: " + vidaUbariano2 + "\n\n" )
+
+				escreve("Ele parece não ter gostado nada disso.\n")
+				escreve("Ele corre mais rápido ainda em sua direção.\n")
+				
+			}// fim do escolha
+			
+		}// fim do enquanto
+		
 		
 	}
+	
 	
 	funcao MasmorraCs2(){
 		escreve("- O que é isso?\n")

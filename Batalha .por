@@ -6,16 +6,17 @@ programa
 	
 	funcao inicio()
 	{
-	batalha(70)
-	escreva()
+	batalha()
+
 	}
-	funcao batalha(inteiro vidaInimigo ){
+	funcao batalha( ){
 		
+		inteiro vidaInimigo = 70
 		logico continuar = verdadeiro
 		
 		enquanto(continuar == verdadeiro ){
 			
-			escreva("Vida: ", vidaInmigo, "hp")ã
+			escreva("Vida: ", vidaInimigo, "hp")
 			escreva("                              _.--\"\"-._                     \n")
 			escreva("  .                         .\"         \".                   \n")
 			escreva(" / \\    ,^.         /(     Y             |      )\\          \n")
@@ -55,7 +56,7 @@ programa
 			escreva("                                             |lllj          \n")
 			escreva("                                             |||||    \n")
 		
-			u.aguarde(500)
+			u.aguarde(1000)
 		
 		
 
@@ -65,8 +66,7 @@ programa
 				escreva("[2] - Atacar devolta\n")
 				escreva("[3] - Checar itens\n")
 				escreva("[4] - Checar vida\n")
-				escreva("[5] - Defender o ataque\n")
-				escreva("\n\n")
+				escreva("[5] - Defender o ataque\n\n")
 				
 				inteiro opcao 
 				leia(opcao)
@@ -78,24 +78,29 @@ programa
 					inteiro num2 = u.sorteia(1, 5)
 					se(num1 == num2){
 						continuar = falso
-						escreva("Você consegue fugir.\n")
+						escreva("\nVocê consegue fugir.\n")
+						u.aguarde(500)
 					}
 					senao{
-						escreva("sua fuga, deu errado.\n")
-						vida -= 20
+						escreva("\nSua fuga, deu errado.\n")
+						vida -= 40
+						u.aguarde(500)
 					}
-						pare
+					pare
+						
 					
 				caso 2:
-					inteiro num1 = u.sorteia(1, 2)
-					inteiro num2 = u.sorteia(1, 2)
+					inteiro num3 = u.sorteia(1, 2)
 					
-					se(num1 == num2){
-						escreva("Vocẽ consegue atacar.\n")
-						vidainimigo -= 10
+					se(num3 == 1){
+						escreva("\nVocê consegue atacar.\n")
+						vidaInimigo -= 15
+						u.aguarde(1000)
 					}
 					senao{
-						escreva("Você não acertou o ataque.\n")
+						escreva("\nVocê não acertou o ataque.\n")
+						vida -= 10
+						u.aguarde(1000)
 					}
 		
 					pare
@@ -104,10 +109,34 @@ programa
 	
 
 					pare
-					
+
+				caso 4:
 			
+					pare
+
+				caso 5:
+					inteiro num4 = u.sorteia(1, 2)
 					
+					se(num4 == 2){
+						escreva("\nVocê defendeu.\n")
+						u.aguarde(1000)
+					}
+					senao{
+						escreva("\nVocê não conseguiu defender.\n")
+						vida -= 20
+						u.aguarde(1000)
+					}
+				
 				}
+				se(vidaInimigo <= 0){
+					continuar = falso
+					escreva("\nVocê venceu essa batalha.\n")
+				}
+				senao se(vida <= 0){
+					continuar = falso
+					escreva("\nVocê perdeu essa batalha.\n ")
+				}
+				
 			}
 	}
 }
@@ -119,7 +148,7 @@ programa
  * Esta seção do arquivo guarda informações do Portugol Studio.
  * Você pode apagá-la se estiver utilizando outro editor.
  * 
- * @POSICAO-CURSOR = 270; 
+ * @POSICAO-CURSOR = 4549; 
  * @PONTOS-DE-PARADA = ;
  * @SIMBOLOS-INSPECIONADOS = ;
  * @FILTRO-ARVORE-TIPOS-DE-DADO = inteiro, real, logico, cadeia, caracter, vazio;

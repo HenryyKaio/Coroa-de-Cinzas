@@ -1107,11 +1107,13 @@ programa
 		escreve("Sem movimentos bruscos, você se move até a mochila.\n")
 		escreve("Acende a tocha e a deixa encostada em uma pedra.\n")
 
-		escreve("O ubariano comeca a se aproximar.\n")
+		escreve("O ubariano começa a se aproximar.\n")
 		
-
+		inteiro contador = 0
 		logico continuar = verdadeiro
 		enquanto(continuar == verdadeiro){
+
+			contador++
 
 			Ubariano2()
 			escreve("Vida do Ubariano: " + vidaUbariano2+ "\n" )
@@ -1135,13 +1137,140 @@ programa
 			escolha(opcao){
 
 				caso 1: 
-				escreve("Você golpeia o Ubariano na " + frasesAtaque[u.sorteia(0,2)] + "\n")
-				escreve("Isso já te da vantagem.\n")
-				vidaUbariano2 += -u.sorteia(5, 10)
-				escreve("Vida do Ubariano: " + vidaUbariano2 + "\n\n" )
+				
+				se(contador == 1){
+					
+					escreve("Você golpeia o Ubariano na " + frasesAtaque[u.sorteia(0,2)] + "\n")
+					escreve("Isso já te da vantagem.\n")
+					vidaUbariano2 += -u.sorteia(5, 10)
+					escreve("Vida do Ubariano: " + vidaUbariano2 + "\n\n" )
+	
+					escreve("Ele parece não ter gostado nada disso.\n")
+					escreve("Ele corre mais rápido ainda em sua direção.\n")
+					escreve("Ele tenta cravar as garras perto de suas pernas.\n")
+					escreve("Você desvia do golpe, mas acaba caindo em pedras\n")
+					vida += -u.sorteia(2,5)
+					escreve("Você se levanta rapidamente, apenas com alguns ralados.\n")
+					escreve("O ubariano te olha agressivamente, e levanta voo.\n")		
+				}// fim do se
+				pare
+				// FIM DO CASO 1
+				caso 2: 
+				
+				se (contador == 1){
+					escreve("Você pega um pedaço de tronco do chão, e se defende das garras do ubariano.\n")
+					escreve("Ele parece não ter gostado da sua ousadia.\n")
+					escreve("Ele golpeia seu galho e o quebra em pedaços.\n")
+					escreve("Você tenta procurar outra coisa para se defender.\n")
+					escreve("Ao desviar sua atenção, o ubariano te da um chute na " + frasesAtaque[u.sorteia(0,2)] + "\n")
+					vida += -u.sorteia(5,13)
+	
+					escreve("A dor é terrível.\n")
+					escreve("Você levanta rapidamente e o ubariano começa a levantar voo.\n")
+				}// fim do se
+				pare
+				//FIM DO CASO 2
 
-				escreve("Ele parece não ter gostado nada disso.\n")
-				escreve("Ele corre mais rápido ainda em sua direção.\n")
+				caso 3:
+
+				se (contador == 1){
+					
+					escreve("Você olha para todos os lados procurando uma rota de fuga.\n")
+					escreve("Você avisa um tronco enorme no chão, e corre para se esconder dentro dele.\n")
+					escreve("Obviamente o Ubariano viu exatamente para onde foi.\n")
+					escreve("Ele pega o tronco com as mãos e te chacoalha, até você cair.\n")
+					escreve("Seu pé é torcido ao cair.\n")
+					vida += -u.sorteia(5, 10)
+					escreve("Você levanta com dificuldade.\n")
+					escreve("O ubariano fica cada vez mais feroz e começa a levantar voo.\n")
+					
+					
+				}// fim do se
+				pare
+				// FIM DO CASO 3
+				caso 4:
+				
+				escreva("| ")
+				para(inteiro i=0; i < 6; i++){
+				escreva(i, "- ", itens[i], " | ")}
+
+				escreve("Quer usar um de seus itens?")
+				escreve("[1] - Sim. \n")
+				escreve("[2] - Não.\n")
+				leia(opcao)
+
+				logico continuar2 = verdadeiro
+				enquanto(continuar2 == verdadeiro){
+					escolha(opcao){
+					caso 1:
+
+					escreve("Digite o número do item que você quer utilizar.\n")
+					inteiro item
+					leia(item)
+					}// fim do escolha
+				}// fim do enquanto
+				pare
+				// FIM DO CASO 4
+				caso 5:
+				se(pocaoForca == verdadeiro){
+					
+					se(contador == 1){
+						escreve("Você toma a sua poção de força e corre para o Ubariano.\n")
+						escreve("Você o golpeia na " + frasesAtaque[u.sorteia(0,2)] + "\n")
+						escreve("O ubariano sente seu golpe muito forte.\n")
+						escreve("Ele está meio desnorteado.\n")
+						vidaUbariano2 += -u.sorteia(10, 20)
+
+						escreve("Você começa a se sentir normal novamente.\n")
+						escreve("Era uma poção de 1 minuto, que inutil.\n")
+						escreve("O Ubariano se zanga e levanta voo em sua direção\n")
+
+						pocaoForca = falso
+					}// fim do se contador
+				}// fim do se pocao força
+				
+				senao se (pocaoCura == verdadeiro){
+					se(contador == 1){
+						escreve("Você toma a poção em um gole.\n")
+						escreve("Mas nada acontece, você não havia levado dano.\n")
+						escreve("Você tomou a poção atoa.\n")
+						pocaoCura = falso
+						escreve("O ubariano vem em sua direção muito bravo.\n")
+						escreve("Você desvia do movimento e cai em pedras.\n ")
+						vida += -u.sorteia(2,5)
+						escreve("Você se levanta rapidamente, apenas com alguns ralados.\n")
+						escreve("O ubariano te olha agressivamente, e levanta voo.\n")
+						
+					}// fim do se contador
+				}// fim do se pocao Cura
+
+				senao se(pocaoResistencia == verdadeiro){
+
+					se(contador == 1){
+						escreve("Você toma a poção rapidamente.\n")
+						escreve("Distraido com isso, o Ubariano te golpeia fortemente na "+ frasesAtaque[u.sorteia(0,2)] + "\n")
+						escreve("Você não sente nada, isso é ótimo.\n")
+						escreve("Você tenta revidar o golpe, dando um soco nele.\n")
+						escreve("Sua mão é quase esmagada ao atingir a pele ríspida do ubariano.\n")
+						escreve("Que dor.")
+						vida += -u.sorteia(5, 10)
+						escreve("Era uma poção de 1 minuto, que inutil.\n")
+						escreve("O Ubariano se zanga e levanta voo em sua direção\n")
+					}// fim do se contador
+				
+				}// fim do se pocao resistencia
+
+					senao {
+						escreve("Você não possui mais poções.\n")
+						
+						se(contador == 2){
+							// no contador 1 ele sempre vai ter uma poção, por isso começa pelo contador 2.
+						}
+					}
+					pare 
+				// FIM DO CASO 5
+				caso contrario:
+				escreve("Essa opção é invalida. O Ubariano esta vindo até você. \n")
 				
 			}// fim do escolha
 			

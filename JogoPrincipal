@@ -1111,6 +1111,9 @@ programa
 		
 		inteiro contador = 0
 		logico continuar = verdadeiro
+		
+		para(inteiro h=0; h < 6; h++){
+
 		enquanto(continuar == verdadeiro){
 
 			contador++
@@ -1133,6 +1136,7 @@ programa
 			inteiro opcao
 			leia(opcao)
 			cadeia frasesAtaque[3] = {"boca do estomâgo!", "costela!", "perna!"} // Fiz para gerarmos frases aleatorias, essa por exemplo, é de onde o caçador golpeou o ubariano.
+			cadeia frasesAtaque2[3] = {"no quadril!", "na coxa!", "no peito!"}
 			
 			escolha(opcao){
 
@@ -1142,7 +1146,7 @@ programa
 					
 					escreve("Você golpeia o Ubariano na " + frasesAtaque[u.sorteia(0,2)] + "\n")
 					escreve("Isso já te da vantagem.\n")
-					vidaUbariano2 += -u.sorteia(5, 10)
+					vidaUbariano2 += -u.sorteia(10, 20)
 					escreve("Vida do Ubariano: " + vidaUbariano2 + "\n\n" )
 	
 					escreve("Ele parece não ter gostado nada disso.\n")
@@ -1153,6 +1157,32 @@ programa
 					escreve("Você se levanta rapidamente, apenas com alguns ralados.\n")
 					escreve("O ubariano te olha agressivamente, e levanta voo.\n")		
 				}// fim do se
+
+				se(contador == 2){
+					
+					escreve("Você corre para o ubariano não pousar em você.\n")
+					escreve("Ele vem em sua direção e tenta te agarrar.\n")
+					escreve("Você crava a sua adaga "+ frasesAtaque2[u.sorteia(0,2)] + "\n\n")
+					escreve("O sangue dele é azul, eca.\n")
+					escreve("Ele urge de dor.\n")
+					vidaUbariano2 += -u.sorteia(15, 23)
+					escreve("Você tenta correr dele, mas ele consegue te dar um chute!\n")
+					escreve("Você cai no chão tremendo de dor.\n")
+					vida += -u.sorteia(7, 14)
+					escreve("Ele parece que esta vindo pra cima de você novamente.\n")
+					
+				}// fim do se contador 2
+
+				se(contador == 3){
+					escreve("VocÊ tenta surpreende-lo, levanta super rapido.\n")
+					escreve("Corre na direção dele, desvia para a esquerda e vai para trás dele.\n")
+					escreve("Antes que ele consiga se virar, você pula em cima dele.\n")
+					escreve("Crava a adaga perto do pescoço dele.\n")
+					vidaUbariano2 += -u.sorteia(20, 30)
+					escreve("Ele grita e você corre para longe.\n")
+					escreve("Parece ter doido bastante, ele cai no chão de dor.\n")
+				}
+				
 				pare
 				// FIM DO CASO 1
 				caso 2: 
@@ -1167,7 +1197,28 @@ programa
 	
 					escreve("A dor é terrível.\n")
 					escreve("Você levanta rapidamente e o ubariano começa a levantar voo.\n")
-				}// fim do se
+				}// fim do se contador 1
+
+				se(contador == 2){
+					escreve("Ele vem voando em sua direção.\n")
+					escreve("Você pega pedras e do chão e atira nele para se defender.\n")
+					escreve("Uma das pedras pega nas asas dele com força e ele cai no chão.\n")
+					vidaUbariano2 += -u.sorteia(20, 27)
+					escreve("Você tenta ir para mais longe dele, mas ele se arrasta pelo chão e te derruba.\n")
+					escreve("Você cai em um arbusto cheio de espinhos dolorosos.\n")
+					vida += -u.sorteia(10, 15)
+					escreve("Ele se levanta e parece estar vindo para cima de você novamente.\n")
+				}// fim do se contador 2
+
+				se(contador == 3){
+					escreve("Ele vem com as garras para cima de você.\n")
+					escreve("Você se levanta e da um mortal para trás. Ele fica todo confuso.\n")
+					escreve("Nunca deixe ele saber seu próximo passo.\n")
+					escreve("Você pula e da um chute na garganta dele.Parece ter doido.\n")
+					vidaUbariano2 += -u.sorteia(15, 23)
+					escreve("Ele bate em uma árvore atrás dele e cai.\n")
+				}
+				
 				pare
 				//FIM DO CASO 2
 
@@ -1183,9 +1234,29 @@ programa
 					vida += -u.sorteia(5, 10)
 					escreve("Você levanta com dificuldade.\n")
 					escreve("O ubariano fica cada vez mais feroz e começa a levantar voo.\n")
-					
-					
-				}// fim do se
+				
+				}// fim do se contador 1
+				
+				se (contador == 2){
+					escreve("Ele voa em sua direção e você corre desesperadamente.\n")
+					escreve("Você corre olhando para trás para não perde-lo de vista.\n")
+					escreve("Ao se virar, você da de cara em uma árvore.\n")
+					escreve("Você cai no chão com a força do impacto.\n")
+					vida += -u.sorteia(5, 13)
+					escreve("Ele pousa e parece estar vindo em sua direção.\n")
+				}// fim do se contador 2
+
+				se(contador == 3){
+					escreve("Você tenta rastejar para fugir dele.\n")
+					escreve("Ele te pega pelo pé e te joga longe.\n")
+					escreve("Isso doi muito.\n")
+					vida += -u.sorteia(10, 17)
+					escreve("Você se levanta com difuldade e pega uma enorme pedra no chão.\n")
+					escreve("Você atira e acerta a cabeça dele.\n")
+					escreve("Ele fica meio tonto e cai no chão.\n")
+					vidaUbariano2 += -u.sorteia(15, 25)
+				}// fim do se contador 3
+				
 				pare
 				// FIM DO CASO 3
 				caso 4:
@@ -1194,7 +1265,7 @@ programa
 				para(inteiro i=0; i < 6; i++){
 				escreva(i, "- ", itens[i], " | ")}
 
-				escreve("Quer usar um de seus itens?")
+				escreve("Quer usar um de seus itens?\n")
 				escreve("[1] - Sim. \n")
 				escreve("[2] - Não.\n")
 				leia(opcao)
@@ -1225,8 +1296,22 @@ programa
 						escreve("Era uma poção de 1 minuto, que inutil.\n")
 						escreve("O Ubariano se zanga e levanta voo em sua direção\n")
 
-						pocaoForca = falso
 					}// fim do se contador
+
+					se(contador == 2){
+						
+						escreve("Você toma sua poção e corre para o ubariano não pousar em você.\n")
+						escreve("Ele vem em sua direção e tenta te agarrar.\n")
+						escreve("Você crava a sua adaga "+ frasesAtaque2[u.sorteia(0,2)] + "\n")
+						escreve("O sangue dele é azul, eca.")
+						escreve("Ele urge de dor por conta da força com que a adaga entrou em sua pele.\n")
+						vidaUbariano2 += -u.sorteia(15, 25)
+						escreve("Você se sente voltando ao normal. A poção era de 1 minuto.\n")
+						escreve("Você tenta correr dele, mas ele consegue te dar um chute!\n")
+						escreve("Você cai no chão tremendo de dor.\n")
+						escreve("Ele parece que esta vindo pra cima de você novamente.\n")
+					}
+					pocaoForca = falso
 				}// fim do se pocao força
 				
 				senao se (pocaoCura == verdadeiro){
@@ -1234,14 +1319,28 @@ programa
 						escreve("Você toma a poção em um gole.\n")
 						escreve("Mas nada acontece, você não havia levado dano.\n")
 						escreve("Você tomou a poção atoa.\n")
-						pocaoCura = falso
+						
 						escreve("O ubariano vem em sua direção muito bravo.\n")
 						escreve("Você desvia do movimento e cai em pedras.\n ")
 						vida += -u.sorteia(2,5)
 						escreve("Você se levanta rapidamente, apenas com alguns ralados.\n")
 						escreve("O ubariano te olha agressivamente, e levanta voo.\n")
 						
-					}// fim do se contador
+					}// fim do se contador 1
+
+					se(contador == 2){
+					escreve("Você toma a poção para se recuperar.\n")
+					vida += u.sorteia(10, 15)
+					escreve("Ele vem voando em sua direção.\n")
+					escreve("Você pega pedras e do chão e atira nele para se defender.\n")
+					escreve("Uma das pedras pega nas asas dele com força e ele cai no chão.\n")
+					vidaUbariano2 += -u.sorteia(15, 20)
+					escreve("Você tenta ir para mais longe dele, mas ele se arrasta pelo chão e te derruba.\n")
+					escreve("Você cai em um arbusto cheio de espinhos dolorosos.\n")
+					vida += -u.sorteia(10, 15)
+					}
+				
+				pocaoCura = falso
 				}// fim do se pocao Cura
 
 				senao se(pocaoResistencia == verdadeiro){
@@ -1256,8 +1355,20 @@ programa
 						vida += -u.sorteia(5, 10)
 						escreve("Era uma poção de 1 minuto, que inutil.\n")
 						escreve("O Ubariano se zanga e levanta voo em sua direção\n")
-					}// fim do se contador
-				
+					}// fim do se contador 1
+
+					se(contador == 2){
+					escreve("Ele voa em sua direção e você corre desesperadamente.\n")
+					escreve("Você toma a poção em um unico gole.\n")
+					escreve("Você corre olhando para trás para não perde-lo de vista.\n")
+					escreve("Ao se virar, você da de cara em uma árvore.\n")
+					escreve("Você cai no chão com a força do impacto.\n")
+					escreve("Mas não sente nada. Essa poção é muito boa.\n")
+					escreve("A poção é de um minuto, então o efeito passa muito rapido.\n")
+					escreve("Ele pousa e parece estar vindo em sua direção.\n")
+						
+					}// fim do se contador 2
+				pocaoResistencia = falso
 				}// fim do se pocao resistencia
 
 					senao {
@@ -1276,6 +1387,7 @@ programa
 			
 		}// fim do enquanto
 		
+		}// fim do para
 		
 	}
 	

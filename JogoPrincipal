@@ -53,7 +53,7 @@ programa
 			//FlorestaSangrentaCs1()
 
 			//se(LutaUbariano == verdadeiro){
-				LutaCs1()
+//				LutaCs1()
 			//}
 //		}
 //		se(masmorra == verdadeiro){
@@ -61,6 +61,7 @@ programa
 //			SaindoMasmorraCs2()
 //			se(florestaCs2 == verdadeiro){
 //			florestaSangrentaCs2()
+			
 //			}
 //		}
 		
@@ -1412,7 +1413,7 @@ programa
 		u.aguarde(300)
 		escreve("No entanto")
 		retc(200)
-		//Batalha contra o esqueleto que o estevão fez.
+		batalhaEsqueleto()
 		
 		
 	}
@@ -1461,9 +1462,85 @@ programa
 		}// fim do enquanto
 	}// fim da função
 
-	funcao florestaSangrentaCs2(){
+			funcao florestaSangrentaCs2(){
 		FlorestaIm()
 		escreve("\nParece que você está em uma floresta.\n")
+		escreve("Ao que parece, está de noite, e você não faz a menor ideia de onde está.\n")
+		escreve("Isso é péssimo.")
+		retc(400)
+		enter()
+		limpa()
+		escreve("\nVocê consegue ouvir barulhos. Seguindo a direção deles você encontra uma menina amarrada.\n")
+		escreve("O que você vai fazer?\n")
+		logico continuar = verdadeiro
+		enquanto(continuar == verdadeiro){
+			escreve("[ 1 ] Checar.\n")
+			escreve("[ 2 ] Deixar quieto.\n")
+			inteiro opcao
+			leia(opcao)
+
+			escolha(opcao){
+				caso 1:
+					escreve("Você vai até ela e começa a desamarrá-la.\n")
+					escreve("Ela parece inconsciente.\n")
+					escreve("Ao olhar para trás você percebe a atendente e um homem estranho.\n")
+					escreve("?: Você está se metendo em algo muito grande sabia?\n")
+					escreve("?: Meu nome é Azlond e eu não deixarei você levar nossa garantia.\n")
+					escreve("A: Agora, te dou a chance de ir embora e viver a sua vida, onde quer que seja.\n")
+						enquanto(continuar == verdadeiro){
+							escreve("[ 1 ] Ir embora.\n")
+							escreve("[ 2 ] Ficar.\n")
+							leia(opcao)
+								escolha(opcao){
+									caso 1:
+										escreve("Você vira as costas pra ir embora mas é atingido nas costas.")
+										limpa()
+										GameOver()
+										escreve("\nFinal x/x: Nunca confie numa pessoa armada")
+										continuar = falso
+									pare
+
+									caso 2:
+										escreve("- Não vou sem a garota.\n")
+										escreve("A: Entendo, então você é muito imprudente.\n")
+										escreve("- O que vocês querem com ela?\n")
+										escreve("A: Ela é a chave para a nossa vitória, nossa liberdade. Seremos um povo superior com ela.\n")
+										escreve("A: Mas antes, preciso dar um jeito em você.")
+										escreve("Ele tira o capacete e vem em sua direção.\n")
+										continuar = falso
+									pare
+
+									caso contrario:
+										escreve("Essa opção é inválida. Escolha uma das opções:\n")
+
+									
+
+								}//fim do escolha
+						}//fim do enquanto ir embora
+						
+				continuar = falso
+				pare
+
+				caso 2:
+					escreve("Você decide deixar ela lá e seguir seu caminho.\n")
+					escreve("Você segue em frente mas")
+					retc(300)
+					escreve("Os barulhos que você escuta em seguida ficarão marcados em sua memória.\n")
+					retc(800)
+					escreve("De repente, você sente um mau presságio. Talvez aquela menina amarrada fosse a própria donzela.\n")
+					escreve("Pelo que você ouviu na floresta mais cedo, ela já não está mais viva. ")
+					limpa()
+					GameOver()
+					escreve("\nFinal x/x: Final Ruim.")
+					continuar = falso
+				pare
+
+				caso contrario:
+					escreve("Essa opção é inválida. Escolha uma das opções:\n")
+				pare
+				
+			} //Fim do escolha checar
+		}// fim do enquanto 
 	}
 	
 	funcao escreve(cadeia texto)
@@ -1553,6 +1630,126 @@ programa
 		escreva("██▓▓██▓▓████████▓▓██▓▓▓▓████▓▓██▓▓██▓▓▓▓▓▓████▓▓▓▓▓▓▓▓████▓▓██▓▓▓▓▓▓▓▓████▓▓▓▓██▓▓██▓▓██████▓▓████████▓▓▓▓▓▓▓▓▓▓▓▓████▓▓▓▓██▓▓██████▓▓████▓▓██▓▓██▓▓▓▓██████▓▓▓▓██▓▓\n")
 	
 
+	}
+
+	funcao batalhaEsqueleto( ){
+		
+		inteiro vidaInimigo = 70
+		logico continuar = verdadeiro
+		inteiro danoInimigo = 15
+		inteiro dano = u.sorteia(10,20)
+		
+		enquanto(continuar == verdadeiro ){
+			
+			escreva("Vida: ", vidaInimigo, "hp")
+			escreva("                              _.--\"\"-._                     \n")
+			escreva("  .                         .\"         \".                   \n")
+			escreva(" / \\    ,^.         /(     Y             |      )\\          \n")
+			escreva("/   `---. |--'\\    (  \\__..'--   -   -- -'\"\"-.-'  )         \n")
+			escreva("|        :|    `>   '.     l_..-------.._l      .'          \n")
+			escreva("|      __l;__ .'      \"-.__.||_.-'v'-._||`\"----\"            \n")
+			escreva(" \\  .-' | |  `              l._       _.'                   \n")
+			escreva("  \\/    | |                   l`^^'^^'j                     \n")
+			escreva("        | |                _   \\_____/     _                \n")
+			escreva("        j |               l `--__)-'(__.--' |               \n")
+			escreva("        | |               | /`---``-----'\"1 |  ,-----.      \n")
+			escreva("        | |               )/  `--' '---'   \\'-'  ___  `-.   \n")
+			escreva("        | |              //  `-'  '`----'  /  ,-'   I`.  \\  \n")
+			escreva("      _ L |_            //  `-.-.'`-----' /  /  |   |  `. \\ \n")
+			escreva("     '._' / \\         _/(   `/   )- ---' ;  /__.J   L.__.\\ :\n")
+			escreva("      `._;/7(-.......'  /        ) (     |  |            | |\n")
+			escreva("      `._;l _'--------_/        )-'/     :  |___.    _._./ ;\n")
+			escreva("        | |                 .__ )-'\\  __  \\  \\  I   1   / / \n")
+			escreva("        `-'                /   `-\\-(-'   \\ \\  `.|   | ,' /  \n")
+			escreva("                           \\__  `-'    __/  `-. `---'',-'   \n")
+			escreva("                              )-._.-- (        `-----'      \n")
+			escreva("                             )(  l\\ o ('..-.                \n")
+			escreva("                       _..--' _'-' '--'.-. |                \n")
+			escreva("                __,,-'' _,,-''            \\ \\               \n")
+			escreva("               f'. _,,-'                   \\ \\              \n")
+			escreva("              ()--  |                       \\ \\             \n")
+			escreva("                \\.  |                       /  \\            \n")
+			escreva("                  \\ \\                      |._  |           \n")
+			escreva("                   \\ \\                     |  ()|           \n")
+			escreva("                    \\ \\                     \\  /            \n")
+			escreva("                     ) `-.                   | |            \n")
+			escreva("                    // .__)                  | |            \n")
+			escreva("                 _.//7'                      | |            \n")
+			escreva("               '---'                         j_| `          \n")
+			escreva("                                            (| |            \n")
+			escreva("                                             |  \\           \n")
+			escreva("                                             |lllj          \n")
+			escreva("                                             |||||    \n")
+		
+			u.aguarde(1000)
+		
+		
+
+			
+				
+				escreva("[1] - Tentar fugir\n")
+				escreva("[2] - Atacar\n")
+				escreva("[3] - Usar itens\n")
+				escreva("[4] - Checar vida\n")
+				escreva("[5] - Defender\n\n")
+				
+				inteiro opcao 
+				leia(opcao)
+				
+				escolha(opcao){
+					
+				caso 1:
+					escreve("Não tem pra onde fugir. É uma cela.")
+					pare
+						
+					
+				caso 2:
+					inteiro desviar = u.sorteia(1, 12)
+					
+					
+					se(desviar == 5){
+						escreve("\nVocê não acertou o ataque.\n")
+						escreve("Ele contraatacou.")
+						vida -= dano
+						u.aguarde(1000)
+					}
+					senao{
+						escreve("\nVocê acerta um ataque nele.\n")
+						vidaInimigo -= dano
+						u.aguarde(1000)
+						
+					}
+		
+					pare
+					
+				caso 3:
+					checarItens()
+					escreve("Qual item você quer usar?")
+					
+
+					pare
+
+				caso 4:
+					checarVida()
+					pare
+
+				caso 5:
+					
+					escreve("Você bloqueia o próximo ataque do esqueleto.")
+					inteiro percentual = u.sorteia(5,15)/100
+					vida -= danoInimigo - (danoInimigo*percentual)
+				
+				}
+				se(vidaInimigo <= 0){
+					continuar = falso
+					escreva("\nVocê venceu essa batalha.\n")
+				}
+				senao se(vida <= 0){
+					continuar = falso
+					escreva("\nVocê perdeu essa batalha.\n ")
+				}
+				
+			}
 	}
 
 	funcao pagina110(){

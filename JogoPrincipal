@@ -9,6 +9,9 @@ programa
 	inteiro vida = 100
 	inteiro dinheiro = 345
 	inteiro vidaUbariano2= 200
+	inteiro danoInimigo = 15
+	inteiro dano = u.sorteia(10,20)
+	inteiro vidaInimigo = 70
 	
 	// Logicos Quarto Donzela
 	logico barro = falso
@@ -43,7 +46,8 @@ programa
 //		Jardim()
 //		JardimCozinha()
 //		PerolaVermelha()
-//		loja()
+		loja()
+		batalhaEsqueleto()
 
 //	
 //		se(livro == verdadeiro){
@@ -686,12 +690,12 @@ programa
 					escreva("|                       Seu Saldo:   "+  dinheiro + "D                      " )
 					escreva("|                                                              |\n")
 					escreva("|                                                              |\n")
-					escreva("[ 1 ]       Pão          |  Recupera um pouco de vida  |  45G  |\n")
-					escreva("[ 2 ]      Elixir        |  Um elixir quase milagroso  |  320G |\n")
+					escreva("[ 1 ]       Elixir       |   Um elixir quase milagroso |  320G |\n")
+					escreva("[ 2 ]        Pão         |  Recupera um pouco de vida  |  45G  |\n")
 					escreva("[ 3 ]  Pólvora explosiva |          Explode            |  250G |\n")
 					escreva("[ 4 ]     Bandagens      |  Cuidam dos seus ferimentos |  100G |\n")
 					escreva("[ 5 ]     Manoplas       | Vai doer mais quando bater  |  300G |\n")
-					escreva("[ 0 ]                    |            Sair             |       |     \n")
+					escreva("[ 0 ]                         Sair                             |     \n")
 					escreva("================================================================\n")
 					leia(opcao)
 					
@@ -1634,10 +1638,7 @@ programa
 
 	funcao batalhaEsqueleto( ){
 		
-		inteiro vidaInimigo = 70
 		logico continuar = verdadeiro
-		inteiro danoInimigo = 15
-		inteiro dano = u.sorteia(10,20)
 		
 		enquanto(continuar == verdadeiro ){
 			
@@ -1690,8 +1691,7 @@ programa
 				escreva("[1] - Tentar fugir\n")
 				escreva("[2] - Atacar\n")
 				escreva("[3] - Usar itens\n")
-				escreva("[4] - Checar vida\n")
-				escreva("[5] - Defender\n\n")
+				escreva("[4] - Defender\n\n")
 				
 				inteiro opcao 
 				leia(opcao)
@@ -1724,16 +1724,38 @@ programa
 					
 				caso 3:
 					checarItens()
-					escreve("Qual item você quer usar?")
+					escreve("\nQual item você quer usar?\n")
+					logico continuar2 = verdadeiro
+					enquanto(continuar2 == verdadeiro){
+						escreve("[ 1 ] " + itens[3] + "\n")
+						escreve("[ 2 ] " + itens[4] + "\n")
+						escreve("[ 3 ] " + itens[5] + "\n")
+						escreve("[ 4 ] Deixa pra lá.\n")
+						leia(opcao)
+						escolha(opcao){
+							caso 1:
+								usarItens(1)
+								continuar2 = falso
+							pare
+
+							caso 2:
+								usarItens(2)
+								continuar2 = falso
+							pare
+
+							caso 3:
+								usarItens(3)
+								continuar2 = falso
+							pare
+							
+						}//fim do escolha itens
+					}
+					
 					
 
 					pare
 
 				caso 4:
-					checarVida()
-					pare
-
-				caso 5:
 					
 					escreve("Você bloqueia o próximo ataque do esqueleto.")
 					inteiro percentual = u.sorteia(5,15)/100
@@ -1751,6 +1773,40 @@ programa
 				
 			}
 	}
+
+		funcao usarItens(inteiro slot){
+		se(itens[2+slot] == "Pão"){
+			escreve("Você comeu o pão. Agora se sente melhor.\n")
+			vida += 20
+			itens[2+slot] = " "
+		} senao se(itens[2+slot] == "Elixir"){
+			escreve("Você usou o elixir. Você se sente muito muito bem.\n")
+			se(vida > 80){
+				vida = 130
+			} senao {
+				vida = 100
+			}
+			danoInimigo = 15 - 6
+			itens[2+slot] = " "
+		} senao se(itens[2+slot] == "Pólvora explosiva"){
+			escreve("Você usou a pólvora. Ela explodiu.\n")
+			vidaInimigo -= 30
+			vida -= 30
+			itens[2+slot] = " "
+		} senao se(itens[2+slot] == "Bandagens"){
+			escreve("Você se esconde e usa as bandagens\n")
+			vida += 10
+			danoInimigo = 15 - 2
+			itens[2+slot] = " "
+		} senao se(itens[2+slot] == "Manoplas"){
+			escreve("Você equipou as manoplas e agora pode bater mais forte.\n")
+			dano = u.sorteia(10, 20) + 10
+			itens[2+slot] = " "
+		} senao {
+			escreve("Não há nada para usar.")
+		}
+	}
+
 
 	funcao pagina110(){
 		escreva("╭────────────────────────────────────────────╮", "\n")

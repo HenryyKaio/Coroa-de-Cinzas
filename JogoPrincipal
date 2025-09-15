@@ -5,7 +5,7 @@ programa
 	inclua biblioteca Texto --> tx
 
 	//Variáveis globais
-	cadeia itens[6]
+	cadeia itens[6] = {"vazio", "vazio", "vazio", "vazio", "vazio", "vazio"}
 	inteiro vida = 100
 	inteiro dinheiro = 345
 	inteiro vidaUbariano2= 200
@@ -47,29 +47,34 @@ programa
 //		JardimCozinha()
 //		PerolaVermelha()
 		
-//		batalhaEsqueleto()
 
-		se(livro == verdadeiro){
-			
-			LivrosCs1()
-			DiarioCs1()
-			CasaCs1() 
-			FlorestaSangrentaCs1()
-			
-			se(LutaUbariano == verdadeiro){
-					LutaCs1()
-					FinalCs1()
-					
-			}
-		}
+//		se(livro == verdadeiro){
+//			
+//			LivrosCs1()
+//			DiarioCs1()
+//			CasaCs1() 
+//			FlorestaSangrentaCs1()
+//			
+//			se(LutaUbariano == verdadeiro){
+//					LutaCs1(1)
+//					FinalCs1()
+//					
+//			}
+//		}
 //		se(masmorra == verdadeiro){
 //			MasmorraCs2()
 //			SaindoMasmorraCs2()
 //			se(florestaCs2 == verdadeiro){
 //			florestaSangrentaCs2()
+//			LutaCs1(2)
+//			FinalCs2()
 			
 //			}
 //		}
+
+		se(investigacao == verdadeiro){
+			
+		}
 		
 	
 	}
@@ -504,7 +509,7 @@ programa
 		}
 			
 		} senao {
-			escreva("Não preciso disso agora")
+			escreva("Não preciso disso agora\n")
 			retc(300)
 		}
 	}
@@ -512,15 +517,15 @@ programa
 	funcao checarVida(){
 		
 		se(vida == 100){
-			escreve("Você se sente perfeitamente bem e está completamente saudável.")
+			escreve("Sua saúde:" + vida + "\nVocê se sente perfeitamente bem e está completamente saudável.\n")
 		} senao se(vida < 100){
-			escreve("Você está bem.")
+			escreve("Sua saúde:" + vida +"\nVocê está bem.\n")
 		} senao se(vida < 65){ 
-			escreve("Você está machucado. Não dá pra parar agora, mas é bom você tentar se recuperar.")
+			escreve("Sua saúde:" + vida +"\nVocê está machucado. Não dá pra parar agora, mas é bom você tentar se recuperar.\n")
 		} senao se(vida < 30){
-			escreve("Você está gravemente ferido.")
+			escreve("Sua saúde:" + vida +"\nVocê está gravemente ferido.\n")
 		} senao se(vida < 10){
-			escreve("Só um milagre pode te salvar agora.")
+			escreve("Sua saúde:" + vida +"\nSó um milagre pode te salvar agora.\n")
 		}
 	}
 
@@ -602,19 +607,16 @@ programa
 				escreve("A: Hum, eu diria que sim. Por que você se interessa?\n")
 				escreve("- Por nenhum motivo específico.\n")
 				escreve("- Você tem costume de conversar com seus clientes excluidos?\n")
-				escreve("A: Suas perguntas são muito incovinientes sabia?\n")
 				escreve("A: Eu gosto apenas de ter certeza que meus cliente sestão acolidos.\n")
-				escreve("- Veem muitas mulheres aqui?\n")
+				escreve("- Vêm muitas mulheres aqui?\n")
 				escreve("A: Não, aqui é um bar mais masculino.\n")
-				escreve("A: Alguns dias duas mulheres veem aqui, ficam lendo.\n")
+				escreve("A: Alguns dias duas mulheres vêm aqui, ficam lendo.\n")
 				escreve("A: Sentadas distante de todos os homens, nunca conversaram com nenhum.\n")
 				escreve("A: São bem estranhas, naverdade.\n")
 				escreve("Pimba, com certeza deve ser a donzela.\n")
 				escreve("E mais alguém. Quem?\n")
 				escreve("- Mulheres costumam ser estranhas mesmo.\n")
-				escreve("Tenho que fingir não saber de nada, é muito arriscado.\n")
-				escreve("- Ei! Eu continuo sendo mulher.\n")
-				escreve("Vocês dois riem, e você diz a ela que deve ir.\n")
+				escreve("Talvez tenha algo importante na biblioteca.\n")
 				livro = verdadeiro
 				continuar = falso
 				pare
@@ -645,11 +647,12 @@ programa
 				escreve("- Você sabe alguma coisa sobre a filha do rei?\n")
 				escreve("A: Filha do rei? Eu não sabia que o rei tinha uma filha\n")
 				retc(300)
-				escreve("A: Você está falando da donzela?\n")
-				escreve("No mesmo momento, você vê a expressão da atendente mudar.\n")
-				escreve("Ela não deveria saber da existência da donzela.\n")
-				escreve("E ela sabe disso.\n")
-				escreve("No mesmo momento, você vê ela fazendo um sinal com as mãos.\n")
+				escreve("- Parece que alguns boatos disso estão se espalhando.\n")
+				escreve("A: Por que o rei esconderia uma filha de todo mundo?\n")
+				escreve("- Não sei, talvez por medo. Talvez ele queira proteje-la.\n")
+				escreve("A: ")
+				retc(200)
+				escreve("\nNo mesmo momento, você vê ela fazendo um sinal com as mãos.\n")
 				escreve("Em poucos segundos os seguranças do bar te pegam pelos braços.\n")
 				escreve("- Ei, o que vocês pensam que estão fazendo?\n")
 				escreve("- Me soltem! AGORA!\n")
@@ -814,7 +817,9 @@ programa
 		escreve("Se for mesmo a donzela.\n")
 
 		escreve("Você se dirige então novamente ao castelo.\n")
-		escreve("Dentro da biblioteca, várias pretileiras vazias.\n")
+		escreve("Dessa vez, você mostra a ata do rei de passe livre e a usa para entrar na biblioteca.\n")
+		escreve("Pouquíssimas pessoas tem o privilégio de ler livros. Você mesmo nunca leu um.\n")
+		escreve("Dentro da biblioteca, várias pretileiras vazias. Estranho.\n")
 		escreve("Há apenas uma com várias coisas.\n")
 		estante()
 		enterCarta()
@@ -1105,14 +1110,11 @@ programa
 		
 	}// fim da funcao
 
-	funcao LutaCs1(){
+	funcao LutaCs1(inteiro cs){
 
 		escreve("Voce rapidamente pega sua adaga. \n")
-		escreve("Está muito escuro, você precisa acender sua tocha.\n")
-		escreve("Sem movimentos bruscos, você se move até a mochila.\n")
-		escreve("Acende a tocha e a deixa encostada em uma pedra.\n")
 
-		escreve("O ubariano começa a se aproximar.\n")
+		escreve("Ele começa a se aproximar.\n")
 		
 		inteiro contador = 5
 		logico continuar = verdadeiro
@@ -1125,10 +1127,16 @@ programa
 				vida = 100
 			}
 			
-
-			Ubariano2()
-			escreve("Vida do Ubariano: " + vidaUbariano2+ "\n" )
+			se(cs == 1){
+				Ubariano2()
+				escreve("Vida do Ubariano: " + vidaUbariano2+ "\n" )	
+			} senao se(cs == 2){
+			Azlond()
+			escreve("Vida do Azlond: " + vidaUbariano2+ "\n" )
+			}
 			escreve("Sua vida: " + vida + "\n\n")
+			
+			
 			
 			escreve("O que você vai fazer? \n")
 
@@ -1479,7 +1487,8 @@ programa
 		escreve("- Eu tenho que fugir. Agora.\n")
 		escreve("Você rapidamente pega tudo, e segue em direção a Ubar.\n")
 		escreve("Será o unico lugar que o rei não irá procurar.\n")
-		GameOver()
+		fim()
+		escreve("Final definitivo 1/3: Final ruim\n")
 	}
 	
 	funcao MasmorraCs2(){
@@ -1630,6 +1639,30 @@ programa
 				
 			} //Fim do escolha checar
 		}// fim do enquanto 
+	}// fim da função
+
+	funcao FinalCs2(){
+		retc(450)
+		escreve("Quando você chega lá, ele sumiu. Já está quase amanhecendo e ele desapareceu.\n")
+		escreve("Isso com certeza é preocupante, mas agora sua única preocupação agora é a donzela.\n")
+		escreve("Você não sabe se ele morreu ou se vai voltar, mas vai até a garota para levá-la ao rei.\n")
+		escreve("Você coloca o colar que achou mais cedo nela e checa seus batimentos. Ela parece bem, mas não quer acordar.\n")
+		escreve("Você olha pro seu estado e vê o quanto está acabado.\n")
+		escreve("- Vou cobrar o dobro do pagamento dessa vez.\n")
+		fim()
+		escreve("Final definitivo 2/3: Final bom")
+		
+	}
+
+	funcao fim(){
+escreva(" ███████████  ███                 ","\n")
+escreva("▒▒███▒▒▒▒▒▒█ ▒▒▒                  ","\n")
+escreva(" ▒███   █ ▒  ████  █████████████  ","\n")
+escreva(" ▒███████   ▒▒███ ▒▒███▒▒███▒▒███ ","\n")
+escreva(" ▒███▒▒▒█    ▒███  ▒███ ▒███ ▒███ ","\n")
+escreva(" ▒███  ▒     ▒███  ▒███ ▒███ ▒███ ","\n")
+escreva(" █████       █████ █████▒███ █████","\n")
+escreva("▒▒▒▒▒       ▒▒▒▒▒ ▒▒▒▒▒ ▒▒▒ ▒▒▒▒▒ ","\n")
 	}
 	
 	funcao escreve(cadeia texto)
@@ -2260,5 +2293,37 @@ programa
 		escreva("            _,'>'","\n")
 		escreva("            )/","\n")
 			}
+
+		funcao Azlond(){
+			escreva("X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X", "\n")
+escreva("|                           ,,'``````````````',,                            |", "\n")
+escreva("X                        ,'`                   `',                          X", "\n")
+escreva("|                      ,'                         ',                        |", "\n")
+escreva("X                    ,'          ;       ;          ',                      X", "\n")
+escreva("|       (           ;             ;     ;             ;     (               |", "\n")
+escreva("X        )         ;              ;     ;              ;     )              X", "\n")
+escreva("|       (         ;                ;   ;                ;   (               |", "\n")
+escreva("X        )    ;   ;    ,,'```',,,   ; ;   ,,,'```',,    ;   ;               X", "\n")
+escreva("|       (    ; ',;   '`          `',   ,'`          `'   ;,' ;              |", "\n")
+escreva("X        )  ; ;`,`',  _--~~~~--__   ' '   __--~~~~--_  ,'`,'; ;     )       X", "\n")
+escreva("|       (    ; `,' ; :  /       \\~~-___-~~/       \\  : ; ',' ;     (        |", "\n")
+escreva("X  )     )   )',  ;   -_\\  o    /  '   '  \\    o  /_-   ;  ,'       )   (   X", "\n")
+escreva("| (     (   (   `;      ~-____--~'       '~--____-~      ;'  )     (     )  |", "\n")
+escreva("X  )     )   )   ;            ,`;,,,   ,,,;',            ;  (       )   (   X", "\n")
+escreva("| (     (   (  .  ;        ,'`  (__ '_' __)  `',        ;  . )     (     )  |", "\n")
+escreva("X  )     \\/ ,\".). ';    ,'`        ~~ ~~        `',    ;  .(.\", \\/  )   (   X", "\n")
+escreva("| (   , ,'|// / (/ ,;  '        _--~~-~~--_        '  ;, \\)    \\|', ,    )  |", "\n")
+escreva("X ,)  , \\/ \\|  \\\\,/  ;;       ,; |_| | |_| ;,       ;;  \\,//  |/ \\/ ,   ,   X", "\n")
+escreva("|\",   .| \\_ |\\/ |#\\_/;       ;_| : `~'~' : |_;       ;\\_/#| \\/| _/ |.   ,\"  |", "\n")
+escreva("X#(,'  )  \\\\\\#\\ \\##/)#;     :  `\\/       \\/   :     ;#(\\##/ /#///  (  ',)# ,X", "\n")
+escreva("|| ) | \\ |/ /#/ |#( \\; ;     :               ;     ; ;/ )#| \\#\\ \\| / | ( |) |", "\n")
+escreva("X\\ |.\\\\ |\\_/#| /#),,`   ;     ;./\\_     _/\\.;     ;   `,,(#\\ |#\\_/| //.| / ,X", "\n")
+escreva("| \\\\_/# |#\\##/,,'`       ;     ~~--|~|~|--~~     ;       `',,\\##/#| #\\_// \\/|", "\n")
+escreva("X  ##/#  #,,'`            ;        ~~~~~        ;            `',,#  #\\##  //X", "\n")
+escreva("|####@,,'`                 `',               ,'`                 `',,@####| |", "\n")
+escreva("X#,,'`                        `',         ,'`                        `',,###X", "\n")
+escreva("|'                               ~~-----~~                               `' |", "\n")
+escreva("X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X-X", "\n")
+		}
 	
 }// fim do programa

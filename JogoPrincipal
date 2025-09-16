@@ -5,6 +5,7 @@ programa
 	inclua biblioteca Texto --> tx
 
 	//Variáveis globais
+	logico gameLoop = verdadeiro
 	cadeia itens[6] = {"vazio", "vazio", "vazio", "vazio", "vazio", "vazio"}
 	inteiro vida = 100
 	inteiro dinheiro = 345
@@ -12,6 +13,8 @@ programa
 	inteiro danoInimigo = 15
 	inteiro dano = u.sorteia(10,20)
 	inteiro vidaInimigo = 70
+	cadeia nome
+	
 	
 	// Logicos Quarto Donzela
 	logico barro = falso
@@ -40,13 +43,14 @@ programa
 	
 	funcao inicio()
 	{	
-//		Introducao()
+
+		enquanto(gameLoop == verdadeiro){
+			//		Introducao()
 //		PrimeiraParte()
 //		QuartoDonzela()
 //		Jardim()
 //		JardimCozinha()
 //		PerolaVermelha()
-		
 
 //		se(livro == verdadeiro){
 //			
@@ -72,9 +76,13 @@ programa
 //			}
 //		}
 
-		se(investigacao == verdadeiro){
-			
+//		se(investigacao == verdadeiro){
+//			investigacaoCs3()
+//			florestaSangrentaCs3()
+//			FinalCs3()
+//		}
 		}
+
 		
 	
 	}
@@ -165,7 +173,6 @@ programa
 	u.aguarde(520)
 	escreve("Apesar de você ter certeza de que os guardas sabem quem você é e o que veio fazer, você diz: \n")
 	escreve("- Meu nome é ")
-	cadeia nome
 	leia(nome)
 	escreve("e então mostra a carta com a assinatura da corte para eles.\n\n")
 	u.aguarde(350)
@@ -185,6 +192,7 @@ programa
 	escreve("Rei: Isso não é do seu interesse. \n")
 	escreve("R: Tudo o que você precisa saber é que ela nunca saia do castelo. \n")
 	escreve("R: Ficava sempre bem protegida no quarto lá em cima.\n")
+	escreve("R: Ela é branca e tem os olhos bem verdes. Assim que a ver saberá que é ela.\n")
 	escreve("R: É de EXTREMA importância que você a encontre o mais RÁPIDO possível.\n")
 	escreve("R: Te dou um prazo máximo de dois dias.\n")
 	escreve("R: Você tem a liberdade de investigar o quarto dela.\n")
@@ -517,15 +525,15 @@ programa
 	funcao checarVida(){
 		
 		se(vida == 100){
-			escreve("Sua saúde:" + vida + "\nVocê se sente perfeitamente bem e está completamente saudável.\n")
+			escreva("Sua saúde:" , vida , ".Você se sente perfeitamente bem e está completamente saudável.\n")
 		} senao se(vida < 100){
-			escreve("Sua saúde:" + vida +"\nVocê está bem.\n")
+			escreva("Sua saúde:" , vida ,".Você está bem.\n")
 		} senao se(vida < 65){ 
-			escreve("Sua saúde:" + vida +"\nVocê está machucado. Não dá pra parar agora, mas é bom você tentar se recuperar.\n")
+			escreva("Sua saúde:" , vida ,".Você está machucado. Não dá pra parar agora, mas é bom você tentar se recuperar.\n")
 		} senao se(vida < 30){
-			escreve("Sua saúde:" + vida +"\nVocê está gravemente ferido.\n")
+			escreva("Sua saúde:" , vida ,".Você está gravemente ferido.\n")
 		} senao se(vida < 10){
-			escreve("Sua saúde:" + vida +"\nSó um milagre pode te salvar agora.\n")
+			escreva("Sua saúde:" , vida ,".Só um milagre pode te salvar agora.\n")
 		}
 	}
 
@@ -551,7 +559,10 @@ programa
 		escreve("Você se senta e conversa com a atendente. Por incrível que pareça é uma mulher.\n")
 		escreve("Atendente: Olá, o que você gostaria?\n")
 		escreve("- Só uma bebida, por favor. \n")
-		escreve("Atendente: Qual bebida você gostaria?\n")
+		escreve("Atendente: Qual bebida você gostaria senhor...?\n")
+		escreve("- " + nome + ", por favor\n")
+		escreve("A: " + nome + " então.\n")
+		escreve("- Eu vou querer um \n")
 		
 		logico continuar = verdadeiro
 		enquanto(continuar == verdadeiro){
@@ -612,7 +623,8 @@ programa
 				escreve("A: Não, aqui é um bar mais masculino.\n")
 				escreve("A: Alguns dias duas mulheres vêm aqui, ficam lendo.\n")
 				escreve("A: Sentadas distante de todos os homens, nunca conversaram com nenhum.\n")
-				escreve("A: São bem estranhas, naverdade.\n")
+				escreve("A: Uma delas tem os olhos mais verdes que eu já vi.")
+				escreve("A: São bem estranhas, na verdade.\n")
 				escreve("Pimba, com certeza deve ser a donzela.\n")
 				escreve("E mais alguém. Quem?\n")
 				escreve("- Mulheres costumam ser estranhas mesmo.\n")
@@ -627,7 +639,7 @@ programa
 				escreve("- Por acaso notou uma menina estranha vindo aqui?\n")
 				escreve("A: ...Menina estranha? O que você quer dizer com isso?\n")
 				escreve("- Uma menina, jovem, que não vem muito a cidade.\n")
-				escreve("- Você está falando da donzela?\n")
+				escreve("- Uma que tenha os olhos verdes...?\n")
 				escreve("A expressão dela muda imediatamente.\n")
 				escreve("Ela sabe que não devia ter falado aquilo.\n")
 				escreve("Ela faz um sinal com as mãos para os seguranças.\n")
@@ -1116,7 +1128,7 @@ programa
 
 		escreve("Ele começa a se aproximar.\n")
 		
-		inteiro contador = 5
+		inteiro contador = 1
 		logico continuar = verdadeiro
 		
 		
@@ -1133,6 +1145,9 @@ programa
 			} senao se(cs == 2){
 			Azlond()
 			escreve("Vida do Azlond: " + vidaUbariano2+ "\n" )
+			} senao se(cs == 3){
+				Ubariano()
+				escreve("Vida da criatura: " + vidaUbariano2+ "\n" )
 			}
 			escreve("Sua vida: " + vida + "\n\n")
 			
@@ -1162,8 +1177,8 @@ programa
 				
 				se(contador == 1){
 					
-					escreve("Você golpeia o Ubariano na " + frasesAtaque[u.sorteia(0,2)] + "\n")
-					escreve("Isso já te da vantagem.\n")
+					escreve("Você o golpeia na " + frasesAtaque[u.sorteia(0,2)] + "\n")
+					escreve("Isso já te dá vantagem.\n")
 					vidaUbariano2 -= u.sorteia(10, 20) + dano
 					escreve("Vida do Ubariano: " + vidaUbariano2 + "\n\n" )
 	
@@ -1173,20 +1188,28 @@ programa
 					escreve("Você desvia do golpe, mas acaba caindo em pedras\n")
 					vida -= u.sorteia(5,7) + danoInimigo
 					escreve("Você se levanta rapidamente, apenas com alguns ralados.\n")
-					escreve("O ubariano te olha agressivamente, e levanta voo.\n")		
+					se(cs == 1){
+						escreve("O ubariano te olha agressivamente, e levanta voo.\n")
+					} senao se(cs == 2){
+						escreve("Afinal quem é esse cara? Não se parece como um humano comum.\n")
+					}
+							
 				}// fim do se
 
 				senao se(contador == 2){
+
+					se(cs == 1){
+					escreve("Você corre para o ubariano não pousar em você.\n")	
+					}
 					
-					escreve("Você corre para o ubariano não pousar em você.\n")
 					escreve("Ele vem em sua direção e tenta te agarrar.\n")
 					escreve("Você crava a sua adaga "+ frasesAtaque2[u.sorteia(0,2)] + "\n\n")
-					escreve("O sangue dele é azul, eca. Ele urge de dor.\n")
+					escreve("O sangue dele é azul. Ele urge de dor.\n")
 					vidaUbariano2 -= u.sorteia(15, 23) + dano
 					escreve("Você tenta correr dele, mas ele consegue te dar um chute!\n")
-					escreve("Você cai no chão tremendo de dor.\n")
+					escreve("Você cai no chão.\n")
 					vida -= u.sorteia(7, 14) + danoInimigo
-					escreve("Ele parece que esta vindo pra cima de você novamente.\n")
+					escreve("Parece que ele está vindo pra cima de você novamente.\n")
 					
 				}// fim do se contador 2
 
@@ -1204,7 +1227,7 @@ programa
 					escreve("Você tenta cravar a adaga nele.\n")
 					escreve("Ele é muito agíl, mas você consegue enfia-la no braço dele.\n")
 					vidaUbariano2 -= u.sorteia(20, 25) + dano
-					escreve("Ele urge de dor, você se levanta e se afasta dele.\n")
+					escreve("Ele grita de dor, você se levanta e se afasta dele.\n")
 					
 				}
 				senao se(contador == 5){
@@ -1221,7 +1244,8 @@ programa
 				pare
 				// FIM DO CASO 1
 				caso 2: 
-				
+
+				se(cs == 1){
 				se (contador == 1){
 					escreve("Você pega um pedaço de tronco do chão, e se defende das garras do ubariano.\n")
 					escreve("Ele parece não ter gostado da sua ousadia.\n")
@@ -1243,17 +1267,7 @@ programa
 					escreve("Você cai em um arbusto cheio de espinhos dolorosos.\n")
 					vida -= u.sorteia(10, 15) + danoInimigo
 					escreve("Ele se levanta e parece estar vindo para cima de você novamente.\n")
-				}// fim do se contador 2
-
-				senao se(contador == 3){
-					escreve("Ele vem com as garras para cima de você.\n")
-					escreve("Você se levanta e da um mortal para trás. Ele fica todo confuso.\n")
-					escreve("Nunca deixe ele saber seu próximo passo.\n")
-					escreve("Você pula e da um chute na garganta dele.Parece ter doido.\n")
-					vidaUbariano2 -= u.sorteia(15, 23) + dano
-					escreve("Ele bate em uma árvore atrás dele e cai.\n")
-				}
-				
+				}// fim do se contador 2		
 				senao se(contador == 4){
 					escreve("Você se prepara, pega uma enorme casca de árvore perto de você.\n")
 					escreve("O ubariano se levante e vem como se fosse lhe agarrar.\n")
@@ -1274,7 +1288,20 @@ programa
 					escreve("Ao se debater pela dor, ele acaba te derrubando.\n")
 					escreve("Você se levanta com muita dor.\n")
 					
+				}		
+				}// fim do se cs == 1
+				
+
+
+				 se(contador == 3){
+					escreve("Ele vem com as garras para cima de você.\n")
+					escreve("Você dá um mortal para trás. Ele fica todo confuso.\n")
+					escreve("Nunca deixe ele saber seu próximo passo.\n")
+					escreve("Você pula e da um chute na garganta dele.Parece ter doido.\n")
+					vidaUbariano2 -= u.sorteia(15, 23) + dano
+					escreve("Ele bate em uma árvore atrás dele e cai.\n")
 				}
+				
 				senao se(contador == 6){
 					continuar = falso
 				}
@@ -1286,19 +1313,22 @@ programa
 					
 					escreve("Você olha para todos os lados procurando uma rota de fuga.\n")
 					escreve("Você avisa um tronco enorme no chão, e corre para se esconder dentro dele.\n")
-					escreve("Obviamente o Ubariano viu exatamente para onde foi.\n")
+					escreve("Obviamente o ele viu exatamente para onde foi.\n")
 					escreve("Ele pega o tronco com as mãos e te chacoalha, até você cair.\n")
 					escreve("Seu pé é torcido ao cair.\n")
 					vida -= u.sorteia(7, 10) + danoInimigo
 					escreve("Você levanta com dificuldade.\n")
-					escreve("O ubariano fica cada vez mais feroz e começa a levantar voo.\n")
+					se(cs == 1){
+					escreve("O ubariano fica cada vez mais feroz e começa a levantar voo.\n")	
+					}
+					
 				
 				}// fim do se contador 1
 				
 				senao se (contador == 2){
-					escreve("Ele voa em sua direção e você corre desesperadamente.\n")
+					escreve("Ele vem em sua direção e você corre desesperadamente.\n")
 					escreve("Você corre olhando para trás para não perde-lo de vista.\n")
-					escreve("Ao se virar, você da de cara em uma árvore.\n")
+					escreve("Ao se virar, você dá de cara em uma árvore.\n")
 					escreve("Você cai no chão com a força do impacto.\n")
 					vida -= u.sorteia(10, 13) + danoInimigo
 					escreve("Ele pousa e parece estar vindo em sua direção.\n")
@@ -1318,14 +1348,14 @@ programa
 				senao se(contador == 4){
 					escreve("Aproveitando que ele está no chão, você foge para dentro das árvores.\n")
 					escreve("Ele começa a farejar você. Com agilidade vocÊ se esconde.\n")
-					escreve("O ubariano te encontra e te agarra.\n")
-					escreve("Você apunha-la sua adaga e enfia-a na mão do Ubariano.\n")
+					escreve("Ele te encontra e te agarra.\n")
+					escreve("Você pega sua adaga e enfia-a na mão da criatura.\n")
 					vidaUbariano2 -= u.sorteia(15,20) + dano
-					escreve("Ele começa a sangrar e urgir, você começa a se afastar.\n")
+					escreve("Ele começa a sangrar e você se afasta.\n")
 				}
 
 				senao se(contador == 5){
-					escreve("O ubariano vem correndo para sua direção.\n")
+					escreve("Ele vem correndo para sua direção.\n")
 					escreve("Você se esquiva e sai correndo.\n")
 					escreve("Obviamente ele vem atrás de você.\n")
 					escreve("No caminho você ve uma pedra obscura, ela é uma pedra muito acida, machuca ao encostar.\n")
@@ -1489,6 +1519,7 @@ programa
 		escreve("Será o unico lugar que o rei não irá procurar.\n")
 		fim()
 		escreve("Final definitivo 1/3: Final ruim\n")
+		gameLoop = falso
 	}
 	
 	funcao MasmorraCs2(){
@@ -1551,6 +1582,7 @@ programa
 				GameOver()
 				escreve("Dica: Na maioria das vezes a solução mais idiota é a pior.")
 				continuar = falso
+				gameLoop = falso
 				pare
 
 				caso contrario: 
@@ -1596,6 +1628,7 @@ programa
 										GameOver()
 										escreve("\nFinal x/x: Nunca confie numa pessoa armada")
 										continuar = falso
+										gameLoop = falso
 									pare
 
 									caso 2:
@@ -1629,8 +1662,8 @@ programa
 					escreve("Pelo que você ouviu na floresta mais cedo, ela já não está mais viva. ")
 					limpa()
 					GameOver()
-					escreve("\nFinal x/x: Final Ruim.")
 					continuar = falso
+					gameLoop = falso
 				pare
 
 				caso contrario:
@@ -1651,7 +1684,109 @@ programa
 		escreve("- Vou cobrar o dobro do pagamento dessa vez.\n")
 		fim()
 		escreve("Final definitivo 2/3: Final bom")
+		gameLoop = falso
 		
+	}
+
+	funcao investigacaoCs3(){
+		escreve("- Definitivamente tem algo estranho com essa taverna.\n")
+		escreve("- Eles sabem de alguma coisa. E pior, sabem que eu sei de alguma coisa. \n")
+		escreve("- Talvez eles até venham atrás de mim. O que seria mais prudente eu fazer?\n")
+		escreve("- Além do mais, eu não tenho nenhuma pista de onde a suposta donzela está.\n")
+		escreve("???: Parece que você está sem sorte também hahah. Você fez o que? Deu em cima da menina de olhos verdes?\n")
+		escreve("Parece que um homem jogado na rua está falando com você.\n")
+		escreve("- Do que você está falando?\n")
+		escreve("???: Sabe outro dia eu estava ali dentro, bebendo, me divertindo e jogando meu charme para as mulheres.\n")
+		escreve("???: Eu estava sem sorte aquele dia. Mas minha sorte mudou quando ela chegou.\n")
+		escreve("???: Uma linda menina de olhos verdes. Talvez a primeira que eu tenha visto. \n")
+		escreve("???: Tentei usar meu charme com ela mas me expulsaram do bar.\n")
+		escreve("???: Esperei ela sair de lá e segui ela até onde pude... Mas quando ela entrou na floresta eu achei melhor deixar quieto.\n")
+		escreve("- Você está falando da \n")
+		escreva("???: Floresta sangrenta.\n")
+		escreve("???: E tem um motivo pra ela se chamar assim. Eu é que não arrisco.\n")
+		escreve("Você é um anjo, essa só pode ser a donzela.\n")
+		escreve("???: Agora")
+		retc(400)
+		escreve("Você pode me dar uma esmola?\n")
+		escreve("- Não.")
+		u.aguarde(300)
+		escreve("E você não deveria seguir as mulheres assim. Toma jeito.\n")
+		escreve("Agora, sem perder mais tempo, o melhor a se fazer é ir para floresta sangrenta.\n")
+		
+	}
+
+	funcao florestaSangrentaCs3(){
+		limpa()
+		FlorestaIm()
+		escreve("\nParece uma floresta muito fechada. O que quer que a donzela tenha ido fazer aí, \n")
+		escreve("não parece ter terminado bem. Você espera encontrá-la com vida.\n")
+		escreve("Você então adentra a floresta.\n")
+		u.aguarde(650)
+		limpa()
+		escreve("Você caminha por algumas horas e não encontra nada.\n")
+		escreve("Já está anoitecendo e não há nada em lugar nenhum.\n")
+		escreve("Tem sons estranhos por todo canto, você começa a se arrepender de ter vindo.\n")
+		escreve("Você ouve um barulho estranho atrás de você e, quando olha pra trás, se depara com isso te olhando pelas árvores\n")
+		criatura()
+		escreve("Você vira pra trás de volta e, discretamente, sai correndo na maior velocidade possível.\n")
+		escreve("Você esbarra em diversas árvores e até perde seu senso de direção.\n")
+		escreve("Quando você finalmente cansa e para pra avaliar onde está, você ouve mais barulhos estranhos.\n")
+		escreve("Mas dessa vez, parecem de humanos.\n")
+		escreve("Você segue as vozes. Parece que tem um homem e uma mulher conversando. Você avista uma cabana e duas pessoas.\n")
+		escreve("Uma delas é uma jovem moça. Será que é a donzela? Você decide arriscar...\n")
+		escreve("- Donzela??\n")
+		escreve("Ela se assuta.\n")
+		escreve("D: Quem está aí??")
+		escreve("Antes que você pudesse responder, uma criatura vai pra cima de você.\n")
+		LutaCs1(3)
+		escreve("Você quase não sobreviveu. Mas agora é hora de ir até a donzela.\n")
+		
+	}
+
+	funcao FinalCs3(){
+		escreve("Você vai até ela e ela ainda está lá.\n")
+		escreve("Ela parece surpresa em te ver\n")
+		escreve("D: Quem é você? O que você quer comigo? Como você está vivo?\n")
+		escreve("- Donzela, o que você faz aqui? O rei está à sua procura.\n")
+		escreve("D: Não me chame assim e eu não voltarei com você para esse maldito castelo.\n")
+		escreve("D: Escuta só, não sei como você sobreviveu ao meu soldado, mas tem mais centenas desses nessa floresta.\n")
+		escreve("- Seu soldado? Do que você está falando?\n")
+		escreve("D: Esse reino é uma desgraça. Somos um povo oprimido há muito tempo. Eles nos rejeitaram.\n")
+		escreve("D: A divina corte é igual à nós, mas ela tem todo o poder.\n")
+		escreve("D: Eu fui enviada há mais de 20 anos pra cá, e chegou a hora de por um fim nisso.\n")
+		escreve("D: Olha, eu não sei se um plebeu como você sabe algo sobre honra ou posição certa.\n")
+		escreve("D: Mas você tem muito valor físico. Te dou uma escolha agora. Ou você se junta ao lado certo, ou morre com seu povo.\n ")
+		logico continuar = verdadeiro
+		enquanto(continuar == verdadeiro){
+			escreve("[ 1 ] Se juntar a eles.\n")
+			escreve("[ 2 ] Eu não me importo. Vou pra casa.\n")
+			inteiro opcao
+			leia(opcao)
+			escolha(opcao){
+				caso 1:
+				escreve("D: Perfeito. Você está prestes a viver história.\n")
+				fim()
+				escreve("Final definitivo 3/3: Final verdadeiro.")
+				continuar = falso
+				gameLoop = falso
+				pare
+
+				caso 2:
+				escreve("D: Que seja, a história começa aqui.\n")
+				escreve("Num estalar de dedos dezenas daquelas criaturas voam pra cima de você.\n")
+				GameOver()
+				escreve("Um final digno e honroso")
+				retc(400)
+				escreve("Ou não.")
+				continuar = falso
+				gameLoop = falso
+				pare
+
+				caso contrario: 
+				escreve("Essa opção é invalida. Escolha uma das opções: \n")
+				
+			}
+		}
 	}
 
 	funcao fim(){
@@ -1754,13 +1889,32 @@ escreva("▒▒▒▒▒       ▒▒▒▒▒ ▒▒▒▒▒ ▒▒▒ ▒▒�
 
 	}
 
+	funcao criatura(){
+escreva(" .-._                                                   _,-,","\n")
+escreva("  `._`-._                                           _,-'_,'","\n")
+escreva("     `._ `-._                                   _,-' _,'","\n")
+escreva("        `._  `-._        __.-----.__        _,-'  _,'","\n")
+escreva("           `._   `#===\"\"\"           \"\"\"===#'   _,'","\n")
+escreva("              `._/)  ._               _.  (\\_,'","\n")
+escreva("               )*'     **.__     __.**     '*( ","\n")
+escreva("               #  .==..__  \"\"   \"\"  __..==,  # ","\n")
+escreva("Deelkar        #   `\\\"._(_).       .(_)_.'\\\"'   #","\n")
+	}
+
 	funcao batalhaEsqueleto( ){
 		
 		logico continuar = verdadeiro
 		
 		enquanto(continuar == verdadeiro ){
 			
-			escreva("Vida: ", vidaInimigo, "hp")
+			se(vida == 0){
+				GameOver()
+				escreve("Você morreu.")
+				continuar = falso
+				gameLoop = falso
+				
+			}
+			escreva("Vida: ", vidaInimigo, "hp\n")
 			escreva("                              _.--\"\"-._                     \n")
 			escreva("  .                         .\"         \".                   \n")
 			escreva(" / \\    ,^.         /(     Y             |      )\\          \n")
@@ -1799,8 +1953,9 @@ escreva("▒▒▒▒▒       ▒▒▒▒▒ ▒▒▒▒▒ ▒▒▒ ▒▒�
 			escreva("                                             |  \\           \n")
 			escreva("                                             |lllj          \n")
 			escreva("                                             |||||    \n")
+			escreva("\n")
+			checarVida()
 		
-			u.aguarde(1000)
 		
 		
 
@@ -1841,7 +1996,6 @@ escreva("▒▒▒▒▒       ▒▒▒▒▒ ▒▒▒▒▒ ▒▒▒ ▒▒�
 					pare
 					
 				caso 3:
-					checarItens()
 					escreve("\nQual item você quer usar?\n")
 					logico continuar2 = verdadeiro
 					enquanto(continuar2 == verdadeiro){
@@ -1897,7 +2051,7 @@ escreva("▒▒▒▒▒       ▒▒▒▒▒ ▒▒▒▒▒ ▒▒▒ ▒▒�
 		se(itens[2+slot] == "Pão"){
 			escreve("Você comeu o pão. Agora se sente melhor.\n")
 			vida += 20
-			itens[2+slot] = " "
+			itens[2+slot] = "vazio"
 		
 		} senao se(itens[2+slot] == "Elixir"){
 			escreve("Você usou o elixir. Você se sente muito muito bem.\n")
@@ -1907,7 +2061,7 @@ escreva("▒▒▒▒▒       ▒▒▒▒▒ ▒▒▒▒▒ ▒▒▒ ▒▒�
 				vida = 100
 			}
 			danoInimigo -= 5
-			itens[2+slot] = " "
+			itens[2+slot] = "vazio"
 			
 		} senao se(itens[2+slot] == "Pólvora explosiva"){
 			escreve("Você se afasta e usa a pólvora. Ela explodiu.\n")
@@ -1915,17 +2069,17 @@ escreva("▒▒▒▒▒       ▒▒▒▒▒ ▒▒▒▒▒ ▒▒▒ ▒▒�
 			vidaInimigo -= 30
 			vidaUbariano2 -= vidaInimigo
 			vida -= 10
-			itens[2+slot] = " "
+			itens[2+slot] = "vazio"
 			
 		} senao se(itens[2+slot] == "Bandagens"){
 			escreve("Você usa as bandagens.\n")
 			vida += 10
 			danoInimigo -=  2
-			itens[2+slot] = " "
+			itens[2+slot] = "vazio"
 		} senao se(itens[2+slot] == "Manoplas"){
 			escreve("Você equipou as manoplas e agora pode bater mais forte.\n")
 			dano = u.sorteia(5, 10) + 10
-			itens[2+slot] = " "
+			itens[2+slot] = "vazio"
 		} senao {
 			escreve("Não há nada para usar.")
 		}

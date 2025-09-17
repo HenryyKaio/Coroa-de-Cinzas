@@ -44,14 +44,14 @@ programa
 	funcao inicio()
 	{	
 
-		enquanto(gameLoop == verdadeiro){
-			//		Introducao()
+
+//		Introducao()
 //		PrimeiraParte()
 //		QuartoDonzela()
 //		Jardim()
 //		JardimCozinha()
 //		PerolaVermelha()
-
+//
 //		se(livro == verdadeiro){
 //			
 //			LivrosCs1()
@@ -60,8 +60,11 @@ programa
 //			FlorestaSangrentaCs1()
 //			
 //			se(LutaUbariano == verdadeiro){
+//			se(gameLoop == verdadeiro){
 //					LutaCs1(1)
-//					FinalCs1()
+//					FinalCs1()	
+//			}
+//
 //					
 //			}
 //		}
@@ -69,19 +72,29 @@ programa
 //			MasmorraCs2()
 //			SaindoMasmorraCs2()
 //			se(florestaCs2 == verdadeiro){
+//			se(gameLoop == verdadeiro){
 //			florestaSangrentaCs2()
+//			se(gameLoop == verdadeiro){
 //			LutaCs1(2)
-//			FinalCs2()
-			
+//			FinalCs2()	
+//			}
+//
+//			}
+//
+//			
 //			}
 //		}
-
+//
 //		se(investigacao == verdadeiro){
 //			investigacaoCs3()
 //			florestaSangrentaCs3()
+//			LutaCs1(3)
 //			FinalCs3()
 //		}
-		}
+//		
+
+loja()
+LutaCs1(2)
 
 		
 	
@@ -702,7 +715,7 @@ programa
 					enquanto(continuar == verdadeiro){
 					limpa()
 					escreva("================================================================\n")
-					escreva("|                       Seu Saldo:   "+  dinheiro + "D                      " )
+					escreva("|                       Seu Saldo:   ",  dinheiro , "G                      " )
 					escreva("|                                                              |\n")
 					escreva("|                                                              |\n")
 					escreva("[ 1 ]       Elixir       |   Um elixir quase milagroso |  320G |\n")
@@ -1095,6 +1108,7 @@ programa
 				Ubariano2()
 				GameOver()
 				continuar = falso
+				gameLoop = falso
 				pare
 
 				caso 2:
@@ -1378,10 +1392,7 @@ programa
 				escreve("\n")
 
 				escreve("Quer usar um de seus itens?\n")
-				escreve("[1] - Sim. \n")
-				escreve("[2] - Não.\n")
-				leia(opcao)
-
+				
 				logico continuar2 = verdadeiro
 				enquanto(continuar2 == verdadeiro){
 
@@ -1547,7 +1558,8 @@ programa
 		
 	}
 
-	funcao SaindoMasmorraCs2(){
+	funcao logico SaindoMasmorraCs2(){
+		
 		escreve("Como pode um homem morto voltar à vida assim?")
 		escreve("Assustador mas, de qualquer forma, hora de ir.\n")
 		escreve("Você caminha por grandes corredores até se deparar com um guarda cuidando a saída.\n")
@@ -1564,32 +1576,35 @@ programa
 		
 			escolha(opcao){
 				caso 1:
-				escreve("Você se aproxima furtivamente e o golpeia sem ele perceber.\n")
-				escreve("- Me assusta o quão conveniente fácil foi escapar daqui.\n")
-				escreve("Você então abre a porta e sai pra fora.")
-				enter()
-				limpa()
-				continuar = falso
-				florestaCs2 = verdadeiro
-				pare
+					escreve("Você se aproxima furtivamente e o golpeia sem ele perceber.\n")
+					escreve("- Me assusta o quão conveniente fácil foi escapar daqui.\n")
+					escreve("Você então abre a porta e sai pra fora.")
+					enter()
+					limpa()
+					continuar = falso
+					florestaCs2 = verdadeiro
+					pare
 
 				caso 2:
-				escreve("Você dá um grito intimidador e vai pra cima do guarda com tudo.\n")
-				escreve("Antes que você conseguisse acertar qualquer golpe nele, ele crava a espada em você.\n")
-				retc(300)
-				escreve("Não foi uma boa ideia.")
-				limpa()
-				GameOver()
-				escreve("Dica: Na maioria das vezes a solução mais idiota é a pior.")
-				continuar = falso
-				gameLoop = falso
-				pare
+					escreve("Você dá um grito intimidador e vai pra cima do guarda com tudo.\n")
+					escreve("Antes que você conseguisse acertar qualquer golpe nele, ele crava a espada em você.\n")
+					retc(300)
+					escreve("Não foi uma boa ideia.")
+					limpa()
+					GameOver()
+					escreve("Dica: Na maioria das vezes a solução mais idiota é a pior.")
+					continuar = falso
+					gameLoop = falso
+					pare
 
 				caso contrario: 
-				escreve("Essa opção é invalida. Escolha uma das opções: \n")
+					escreve("Essa opção é invalida. Escolha uma das opções: \n")
 			
 			}// fim do escolha
 		}// fim do enquanto
+
+		retorne florestaCs2
+		
 	}// fim da função
 
 	funcao florestaSangrentaCs2(){
@@ -1712,6 +1727,7 @@ programa
 		u.aguarde(300)
 		escreve("E você não deveria seguir as mulheres assim. Toma jeito.\n")
 		escreve("Agora, sem perder mais tempo, o melhor a se fazer é ir para floresta sangrenta.\n")
+		enter()
 		
 	}
 
@@ -1722,7 +1738,7 @@ programa
 		escreve("não parece ter terminado bem. Você espera encontrá-la com vida.\n")
 		escreve("Você então adentra a floresta.\n")
 		u.aguarde(650)
-		limpa()
+		enter()
 		escreve("Você caminha por algumas horas e não encontra nada.\n")
 		escreve("Já está anoitecendo e não há nada em lugar nenhum.\n")
 		escreve("Tem sons estranhos por todo canto, você começa a se arrepender de ter vindo.\n")
@@ -1738,12 +1754,13 @@ programa
 		escreve("Ela se assuta.\n")
 		escreve("D: Quem está aí??")
 		escreve("Antes que você pudesse responder, uma criatura vai pra cima de você.\n")
-		LutaCs1(3)
-		escreve("Você quase não sobreviveu. Mas agora é hora de ir até a donzela.\n")
+		
+		
 		
 	}
 
 	funcao FinalCs3(){
+		escreve("Você quase não sobreviveu. Mas agora é hora de ir até a donzela.\n")
 		escreve("Você vai até ela e ela ainda está lá.\n")
 		escreve("Ela parece surpresa em te ver\n")
 		escreve("D: Quem é você? O que você quer comigo? Como você está vivo?\n")
@@ -1898,7 +1915,8 @@ escreva("           `._   `#===\"\"\"           \"\"\"===#'   _,'","\n")
 escreva("              `._/)  ._               _.  (\\_,'","\n")
 escreva("               )*'     **.__     __.**     '*( ","\n")
 escreva("               #  .==..__  \"\"   \"\"  __..==,  # ","\n")
-escreva("Deelkar        #   `\\\"._(_).       .(_)_.'\\\"'   #","\n")
+escreva("              #   `\\\"._(_).       .(_)_.'\\\"'   #","\n")
+escreva("\n")
 	}
 
 	funcao batalhaEsqueleto( ){
@@ -2068,7 +2086,7 @@ escreva("Deelkar        #   `\\\"._(_).       .(_)_.'\\\"'   #","\n")
 			escreve("Como você estava mais longe, não ficou muito ferido.")
 			vidaInimigo -= 30
 			vidaUbariano2 -= vidaInimigo
-			vida -= 10
+			vida -= 30
 			itens[2+slot] = "vazio"
 			
 		} senao se(itens[2+slot] == "Bandagens"){

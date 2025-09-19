@@ -45,52 +45,53 @@ programa
 	{	
 
 
-		Introducao()
-		PrimeiraParte()
-		QuartoDonzela()
-		Jardim()
-		JardimCozinha()
-		PerolaVermelha()
-
-		se(livro == verdadeiro){
-			
-			LivrosCs1()
-			DiarioCs1()
-			CasaCs1() 
-			FlorestaSangrentaCs1()
-			
-			se(LutaUbariano == verdadeiro){
-			se(gameLoop == verdadeiro){
-					LutaCs(1)
-					FinalCs1()	
-			}
-
-					
-			}
-		}
-		se(masmorra == verdadeiro){
-			MasmorraCs2()
-			SaindoMasmorraCs2()
-			se(florestaCs2 == verdadeiro){
-			se(gameLoop == verdadeiro){
-			florestaSangrentaCs2()
-			se(gameLoop == verdadeiro){
-			LutaCs(2)
-			FinalCs2()	
-			}
-
-			}
-
-			
-			}
-		}
-
-		se(investigacao == verdadeiro){
-			investigacaoCs3()
-			florestaSangrentaCs3()
-			LutaCs(3)
-			FinalCs3()
-		}
+//		Introducao()
+//		PrimeiraParte()
+//		QuartoDonzela()
+//		Jardim()
+//		JardimCozinha()
+//		PerolaVermelha()
+//
+//		se(livro == verdadeiro){
+//			
+//			LivrosCs1()
+//			DiarioCs1()
+//			CasaCs1() 
+//			FlorestaSangrentaCs1()
+//			
+//			se(LutaUbariano == verdadeiro){
+//			se(gameLoop == verdadeiro){
+//					LutaCs(1)
+//					FinalCs1()	
+//			}
+//
+//					
+//			}
+//		}
+//		se(masmorra == verdadeiro){
+//			MasmorraCs2()
+//			SaindoMasmorraCs2()
+//			se(florestaCs2 == verdadeiro){
+//			se(gameLoop == verdadeiro){
+//			florestaSangrentaCs2()
+//			se(gameLoop == verdadeiro){
+//			LutaCs(2)
+//			FinalCs2()	
+//			}
+//
+//			}
+batalhaEsqueleto()
+//
+//			
+//			}
+//		}
+//
+//		se(investigacao == verdadeiro){
+//			investigacaoCs3()
+//			florestaSangrentaCs3()
+//			LutaCs(3)
+//			FinalCs3()
+//		}
 		
 
 
@@ -1817,7 +1818,7 @@ escreva("▒▒▒▒▒       ▒▒▒▒▒ ▒▒▒▒▒ ▒▒▒ ▒▒�
 	{ //uma espécie de "escreva()" porém pausadamente. 
 							
 		caracter letra
-		inteiro velocidade = 18 //pausa padrão entre um caracter e outro.
+		inteiro velocidade = 15 //pausa padrão entre um caracter e outro.
 		
 		para(inteiro i = 0 ; i < tx.numero_caracteres(texto) ; i++){ //repete enquanto a frase inteiro não for escrita.
 
@@ -2044,7 +2045,7 @@ escreva("\n")
 					
 					escreve("Você bloqueia o próximo ataque do esqueleto.")
 					inteiro percentual = u.sorteia(5,15)/100
-					vida -= danoInimigo - (danoInimigo*percentual)
+					danoInimigo = (danoInimigo*percentual)
 				
 				}
 				se(vidaInimigo <= 0){
@@ -2055,8 +2056,12 @@ escreva("\n")
 					continuar = falso
 					escreva("\nVocê perdeu essa batalha.\n ")
 				}
+			escreve("O esqueleto te acertou um ataque.\n")
+			vida -= danoInimigo
+				
 				
 			}
+			
 	}
 
 	funcao usarItens(inteiro slot){

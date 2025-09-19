@@ -398,7 +398,7 @@ programa
 
 	funcao JardimCozinha(){
 
-		escreve("Você se sente cada vez mais ancioso.\n")
+		escreve("Você se sente cada vez mais ansioso.\n")
 		escreve("Ao invés de respostas, você só consegue mais perguntas.\n")
 		escreve("Será que tem mais coisas por este jardim?\n")
 		escreve("Ou será que terá mais respostas conversando com uma das criadas?\n")

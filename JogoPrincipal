@@ -538,11 +538,11 @@ batalhaEsqueleto()
 		
 		se(vida == 100){
 			escreva("Sua saúde:" , vida , ".Você se sente perfeitamente bem e está completamente saudável.\n")
-		} senao se(vida < 100){
+		} senao se(vida < 100 e vida > 65){
 			escreva("Sua saúde:" , vida ,".Você está bem.\n")
-		} senao se(vida < 65){ 
-			escreva("Sua saúde:" , vida ,".Você está machucado. Não dá pra parar agora, mas é bom você tentar se recuperar.\n")
-		} senao se(vida < 30){
+		} senao se(vida < 65 e vida > 30){ 
+			escreva("Sua saúde:" , vida ,".Você está machucado, é bom você tentar se recuperar.\n")
+		} senao se(vida < 30 e vida > 10){
 			escreva("Sua saúde:" , vida ,".Você está gravemente ferido.\n")
 		} senao se(vida < 10){
 			escreva("Sua saúde:" , vida ,".Só um milagre pode te salvar agora.\n")
@@ -1918,6 +1918,7 @@ escreva("\n")
 	funcao batalhaEsqueleto( ){
 		
 		logico continuar = verdadeiro
+		cadeia frases[4] = {"pontapé", "soco", "vira-cabeça", "chacoalhão"}
 		
 		enquanto(continuar == verdadeiro ){
 			
@@ -2001,7 +2002,7 @@ escreva("\n")
 						u.aguarde(1000)
 					}
 					senao{
-						escreve("\nVocê acerta um ataque nele.\n")
+						escreve("\nVocê acerta um " + frases[u.sorteia(0,3)] + " nele.\n")
 						vidaInimigo -= dano
 						u.aguarde(1000)
 						
@@ -2048,7 +2049,10 @@ escreva("\n")
 					danoInimigo = (danoInimigo*percentual)
 				
 				}
-				se(vidaInimigo <= 0){
+				se(vidaInimigo > 0){
+			escreve("O esqueleto te acertou um " + frases[u.sorteia(0,3)] + "\n")
+			vida -= danoInimigo
+				} senao se(vidaInimigo <= 0){
 					continuar = falso
 					escreva("\nVocê venceu essa batalha.\n")
 				}
@@ -2056,8 +2060,7 @@ escreva("\n")
 					continuar = falso
 					escreva("\nVocê perdeu essa batalha.\n ")
 				}
-			escreve("O esqueleto te acertou um ataque.\n")
-			vida -= danoInimigo
+			
 				
 				
 			}

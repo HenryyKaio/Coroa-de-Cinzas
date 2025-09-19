@@ -1817,7 +1817,7 @@ escreva("▒▒▒▒▒       ▒▒▒▒▒ ▒▒▒▒▒ ▒▒▒ ▒▒�
 	{ //uma espécie de "escreva()" porém pausadamente. 
 							
 		caracter letra
-		inteiro velocidade = 15 //pausa padrão entre um caracter e outro.
+		inteiro velocidade = 18 //pausa padrão entre um caracter e outro.
 		
 		para(inteiro i = 0 ; i < tx.numero_caracteres(texto) ; i++){ //repete enquanto a frase inteiro não for escrita.
 

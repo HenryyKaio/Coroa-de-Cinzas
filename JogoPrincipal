@@ -8,7 +8,7 @@ programa
 	logico gameLoop = verdadeiro
 	cadeia itens[6] = {"vazio", "vazio", "vazio", "vazio", "vazio", "vazio"}
 	inteiro vida = 100
-	inteiro dinheiro = 345
+	inteiro dinheiro = 350
 	inteiro vidaUbariano2= 200
 	inteiro danoInimigo = 15
 	inteiro dano = u.sorteia(10,20)

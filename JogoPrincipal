@@ -45,53 +45,53 @@ programa
 	{	
 
 
-//		Introducao()
-//		PrimeiraParte()
-//		QuartoDonzela()
-//		Jardim()
-//		JardimCozinha()
-//		PerolaVermelha()
-//
-//		se(livro == verdadeiro){
-//			
-//			LivrosCs1()
-//			DiarioCs1()
-//			CasaCs1() 
-//			FlorestaSangrentaCs1()
-//			
-//			se(LutaUbariano == verdadeiro){
-//			se(gameLoop == verdadeiro){
-//					LutaCs(1)
-//					FinalCs1()	
-//			}
-//
-//					
-//			}
-//		}
-//		se(masmorra == verdadeiro){
-//			MasmorraCs2()
-//			SaindoMasmorraCs2()
-//			se(florestaCs2 == verdadeiro){
-//			se(gameLoop == verdadeiro){
-//			florestaSangrentaCs2()
-//			se(gameLoop == verdadeiro){
-//			LutaCs(2)
-//			FinalCs2()	
-//			}
-//
-//			}
-batalhaEsqueleto()
-//
-//			
-//			}
-//		}
-//
-//		se(investigacao == verdadeiro){
-//			investigacaoCs3()
-//			florestaSangrentaCs3()
-//			LutaCs(3)
-//			FinalCs3()
-//		}
+		Introducao()
+		PrimeiraParte()
+		QuartoDonzela()
+		Jardim()
+		JardimCozinha()
+		PerolaVermelha()
+
+		se(livro == verdadeiro){
+			
+			LivrosCs1()
+			DiarioCs1()
+			CasaCs1() 
+			FlorestaSangrentaCs1()
+			
+			se(LutaUbariano == verdadeiro){
+			se(gameLoop == verdadeiro){
+					LutaCs(1)
+					FinalCs1()	
+			}
+
+					
+			}
+		}
+		se(masmorra == verdadeiro){
+			MasmorraCs2()
+			SaindoMasmorraCs2()
+			se(florestaCs2 == verdadeiro){
+			se(gameLoop == verdadeiro){
+			florestaSangrentaCs2()
+			se(gameLoop == verdadeiro){
+			LutaCs(2)
+			FinalCs2()	
+			}
+
+			}
+
+
+			
+			}
+		}
+
+		se(investigacao == verdadeiro){
+			investigacaoCs3()
+			florestaSangrentaCs3()
+			LutaCs(3)
+			FinalCs3()
+		}
 		
 
 
@@ -1255,17 +1255,18 @@ batalhaEsqueleto()
 				// FIM DO CASO 1
 				caso 2: 
 
-				se(cs == 1){
+				
 				se (contador == 1){
-					escreve("Você pega um pedaço de tronco do chão, e se defende das garras do ubariano.\n")
+					escreve("Você pega um pedaço de tronco do chão, e se defende das garras dele.\n")
 					escreve("Ele parece não ter gostado da sua ousadia.\n")
 					escreve("Ele golpeia seu galho e o quebra em pedaços.\n")
 					escreve("Você tenta procurar outra coisa para se defender.\n")
-					escreve("Ao desviar sua atenção, o ubariano te da um chute na " + frasesAtaque[u.sorteia(0,2)] + "\n")
+					escreve("Ao desviar sua atenção, ele te da um chute na " + frasesAtaque[u.sorteia(0,2)] + "\n")
 					vida -= u.sorteia(10,13) + danoInimigo
 	
 					escreve("A dor é terrível.\n")
-					escreve("Você levanta rapidamente e o ubariano começa a levantar voo.\n")
+					
+					escreve("Você levanta rapidamente e ele surpreendentemente começa a levantar voo.\n")
 				}// fim do se contador 1
 
 				senao se(contador == 2){
@@ -1299,7 +1300,7 @@ batalhaEsqueleto()
 					escreve("Você se levanta com muita dor.\n")
 					
 				}		
-				}// fim do se cs == 1
+			
 				
 
 
@@ -1487,6 +1488,7 @@ batalhaEsqueleto()
 			}// fim do escolha
 
 			contador++
+			enter()
 			se(contador == 6){
 					continuar = falso
 				}
@@ -1999,12 +2001,12 @@ escreva("\n")
 						escreve("\nVocê não acertou o ataque.\n")
 						escreve("Ele contraatacou.")
 						vida -= dano
-						u.aguarde(1000)
+						u.aguarde(300)
 					}
 					senao{
 						escreve("\nVocê acerta um " + frases[u.sorteia(0,3)] + " nele.\n")
 						vidaInimigo -= dano
-						u.aguarde(1000)
+						u.aguarde(300)
 						
 					}
 		
@@ -2052,6 +2054,7 @@ escreva("\n")
 				se(vidaInimigo > 0){
 			escreve("O esqueleto te acertou um " + frases[u.sorteia(0,3)] + "\n")
 			vida -= danoInimigo
+			enter()
 				} senao se(vidaInimigo <= 0){
 					continuar = falso
 					escreva("\nVocê venceu essa batalha.\n")

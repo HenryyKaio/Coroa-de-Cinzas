@@ -45,11 +45,11 @@ programa
 	{	
 
 
-		Introducao()
-		PrimeiraParte()
-		QuartoDonzela()
-		Jardim()
-		JardimCozinha()
+//		Introducao()
+//		PrimeiraParte()
+//		QuartoDonzela()
+//		Jardim()
+//		JardimCozinha()
 		PerolaVermelha()
 
 		se(livro == verdadeiro){
@@ -241,79 +241,79 @@ programa
 			leia(opcao)
 
 			escolha(opcao){
-			caso 1: 
-			escreve("Você começa a olhar em baixo de lençois e travesseiros.\n")
-			escreve("Tudo parece normal.\n")
-			escreve("Ao olhar em baixo da cama, encontra uma pequena caixa de madeira.\n")
-			escreve("Há diversas coisas como amarradores de cabelo, pulseiras e luvas de cetim.\n")
-			escreve("Em baixo de tudo isso você encontra um livro.\n")
-			escreve("Um livro de romance. Nada interessante.\n")
-			escreve("Vasculhando as páginas, você encontra a pétala de uma flor.\n")
-			petala = verdadeiro
-			escreve("Como ela conseguiu isso? Provavelmente veio do jardim.\n")
-			u.aguarde(700)
-			escreve("Você guarda tudo em seu devido lugar e se dirige ao corredor.\n")
-			continuar = falso
+				caso 1: 
+					escreve("Você começa a olhar em baixo de lençois e travesseiros.\n")
+					escreve("Tudo parece normal.\n")
+					escreve("Ao olhar em baixo da cama, encontra uma pequena caixa de madeira.\n")
+					escreve("Há diversas coisas como amarradores de cabelo, pulseiras e luvas de cetim.\n")
+					escreve("Em baixo de tudo isso você encontra um livro.\n")
+					escreve("Um livro de romance. Nada interessante.\n")
+					escreve("Vasculhando as páginas, você encontra a pétala de uma flor.\n")
+					petala = verdadeiro
+					escreve("Como ela conseguiu isso? Provavelmente veio do jardim.\n")
+					u.aguarde(700)
+					escreve("Você guarda tudo em seu devido lugar e se dirige ao corredor.\n")
+					continuar = falso
 			
 
-			pare
+				pare
 
-			caso 2:
-			escreve("Você olha dentro do guarda-roupa e encontra")
-			retc(600)
-			escreve("Roupas.")
-			u.aguarde(750)
-			escreve("Que surpresa.\n")
-			escreve("Parece que realmente não tem nada aqui além de roupas.\n")
-			escreve("Você averigua um pouco mais a fundo do guarda roupa.\n")
-			escreve("Acha um lindo par de sapatilhas de couro.\n")
-			escreve("As duas estavam sujas de terra no solado.\n")
-			barro = verdadeiro
-			escreve("Mas como ua donzela que não sai de seu quarto, poderia ter as sujado de barro?\n")
-			escreve("Isso indica que ela costuma passear escondida...")
-			escreve("No jardim?\n")
-			escreve("Isso soa intrigante. \n")
-			escreve("Você organiza tudo e se digire ao corredor. \n")
-			continuar = falso
+				caso 2:
+					escreve("Você olha dentro do guarda-roupa e encontra")
+					retc(600)
+					escreve("Roupas.")
+					u.aguarde(750)
+					escreve("Que surpresa.\n")
+					escreve("Parece que realmente não tem nada aqui além de roupas.\n")
+					escreve("Você averigua um pouco mais a fundo do guarda roupa.\n")
+					escreve("Acha um lindo par de sapatilhas de couro.\n")
+					escreve("As duas estavam sujas de terra no solado.\n")
+					barro = verdadeiro
+					escreve("Mas como ua donzela que não sai de seu quarto, poderia ter as sujado de barro?\n")
+					escreve("Isso indica que ela costuma passear escondida...")
+					escreve("No jardim?\n")
+					escreve("Isso soa intrigante. \n")
+					escreve("Você organiza tudo e se digire ao corredor. \n")
+					continuar = falso
 			
-			pare
+				pare
 
-			caso 3: 
-			escreve("Você começa a olhar cada item da penteadeira.\n")
-			escreve("Sem tocar em nada.\n")
-			escreve("Tudo parece normal, cada coisa em seu devido lugar.\n")
-			escreve("Dentro da gaveta você percebe uma folha amassada.\n")
-			escreve("Você desamassa e percebe que era a folha de um diário. \n")
-			escreva("Ela parece que foi molhada, mas você consegue entender algumas palavras.\n")
-			escreve("Gosto; Jardim; Pela noite; Ele; Flores; Encontrei; Talvez seja melhor não.\n")
-			escreve("Jardim é? Parece uma boa investigar lá.\n")
-			retc(500)
-			escreve("Você termina de averiguar o quarto e vai.\n")
-			continuar = falso
+				caso 3: 
+					escreve("Você começa a olhar cada item da penteadeira.\n")
+					escreve("Sem tocar em nada.\n")
+					escreve("Tudo parece normal, cada coisa em seu devido lugar.\n")
+					escreve("Dentro da gaveta você percebe uma folha amassada.\n")
+					escreve("Você desamassa e percebe que era a folha de um diário. \n")
+					escreva("Ela parece que foi molhada, mas você consegue entender algumas palavras.\n")
+					escreve("Gosto; Jardim; Pela noite; Ele; Flores; Encontrei; Talvez seja melhor não.\n")
+					escreve("Jardim é? Parece uma boa investigar lá.\n")
+					retc(500)
+					escreve("Você termina de averiguar o quarto e vai.\n")
+					continuar = falso
+				
+				pare
 			
-			pare
+				caso 4:
+					escreve("Você averigua a janela. \n")
+					escreve("Não há nada de estranho exceto por certos riscos na madeira.\n")
+					escreve("Seriam eles sinais de ataque?\n")
+					escreve("Ou sinais de uma possivel fuga?\n")
+					escreve("Você começa a se sentir levemente ansioso.\n")
+					escreve("Há um desenho colado na janela\n")
+					flor()
+					escreve("Lá embaixo, um enorme jardim se estende.\n")
+					escreve("- É isso, acho melhor investigar o jardim.\n ")
+					retc(500)
+					escreve("Você termina de averiguar o quarto e vai.\n")
+					u.aguarde(400)
+					continuar = falso
+					
+				pare
 			
-			caso 4:
-			escreve("Você averigua a janela. \n")
-			escreve("Não há nada de estranho exceto por certos riscos na madeira.\n")
-			escreve("Seriam eles sinais de ataque?\n")
-			escreve("Ou sinais de uma possivel fuga?\n")
-			escreve("Você começa a se sentir levemente ansioso.\n")
-			escreve("Há um desenho colado na janela\n")
-			flor()
-			escreve("Lá embaixo, um enorme jardim se estende.\n")
-			escreve("- É isso, acho melhor investigar o jardim.\n ")
-			retc(500)
-			escreve("Você termina de averiguar o quarto e vai.\n")
-			u.aguarde(400)
-			continuar = falso
-			
-			pare
-			
-			caso contrario:
-			escreve("Essa opção é invalida. Escolha uma das opções: \n")
+				caso contrario:
+					escreve("Essa opção é invalida. Escolha uma das opções: \n")
 		
-		}//fim do escolha
+			}//fim do escolha
 		}//fim do enquanto	
 	
 		escreve("\n\n\n")
@@ -337,59 +337,59 @@ programa
 			leia(opcao)
 			
 			escolha(opcao){
-			caso 1:
-			escreve("O caminho era cheio de terra e lama.\n")
+				caso 1:
+					escreve("O caminho era cheio de terra e lama.\n")
+				
+						se(barro == verdadeiro){
+							escreve("Percebe que exatamente ali, a donzela pode ter sujado as sapatilhas.\n")
+							escreve("Sua teoria estava correta.\n")}
+				
+					escreve("Por outro lado, era cercado de tulipas, lírios...\n")
+					escreve("Apenas flores comuns, tudo normal.\n")
+	
+					se(petala == verdadeiro){
+						escreve("Percebe que existem flores com as mesmas petalas que você encontrou.\n")
+						escreve("Sua teoria estava correta.\n")}
 			
-				se(barro == verdadeiro){
-					escreve("Percebe que exatamente ali, a donzela pode ter sujado as sapatilhas.\n")
-					escreve("Sua teoria estava correta.\n")}
-			
-			escreve("Por outro lado, era cercado de tulipas, lírios...\n")
-			escreve("Apenas flores comuns, tudo normal.\n")
+					u.aguarde(500)
+					escreve("Você continua andando, apenas observando.\n")
+					escreve("Por que será que a donzela supostamente gostava de vir a este lugar?\n")
+					escreve("Depois de um tempo, quase perto do muro do jardim,\n")
+					escreve("você avista de longe, um ponto brilhante.\n")
+					escreve("- O que é aquilo?\n")
+					escreve("Você se aproxima e ve um lindo colar, escrito Stella.\n")
+					escreve("Você nunca ouviu falar este nome.\n")
+					escreve("Será este o nome da donzela?\n")
+					escreve("Você guarda para investigar depois.\n")
+					itens[1] = "colar"
+					continuar = falso
+				pare
 
-				se(petala == verdadeiro){
-					escreve("Percebe que existem flores com as mesmas petalas que você encontrou.\n")
-					escreve("Sua teoria estava correta.\n")}
-		
-			u.aguarde(500)
-			escreve("Você continua andando, apenas observando.\n")
-			escreve("Por que será que a donzela supostamente gostava de vir a este lugar?\n")
-			escreve("Depois de um tempo, quase perto do muro do jardim,\n")
-			escreve("você avista de longe, um ponto brilhante.\n")
-			escreve("- O que é aquilo?\n")
-			escreve("Você se aproxima e ve um lindo colar, escrito Stella.\n")
-			escreve("Você nunca ouviu falar este nome.\n")
-			escreve("Será este o nome da donzela?\n")
-			escreve("Você guarda para investigar depois.\n")
-			itens[1] = "colar"
-			continuar = falso
-			pare
+				caso 2:
+					escreve("Você segue por um lindo caminho com pedras e arbustos.\n")
+					escreve("Em alguns pontos percebe terra e grama.\n")
+					
+						se(barro == verdadeiro){
+							escreve("Percebe que exatamente ali, a donzela pode ter sujado as sapatilhas.\n")
+							escreve("Sua teoria estava correta.\n")}
+				
+					escreve("O chafariz era cheio de cascatas pequenas pedras brilhantes.\n")
+					escreve("Você continua andando sem ver nada de suspeito.\n")
+					escreve("Você chega perto do muro, e no chão ve um ponto brilhando.\n")
+					escreve("Ao se aproximar, você percebe que é um colar.\n")
+					escreve("Com o nome Stella.\n")
+					escreve("Você nunca ouviu falar este nome.\n")
+					escreve("Será este o nome da donzela?\n")
+					escreve("Você guarda para investigar depois.\n")
+					itens[1] = "colar"
+					continuar = falso
+				pare
 
-			caso 2:
-			escreve("Você segue por um lindo caminho com pedras e arbustos.\n")
-			escreve("Em alguns pontos percebe terra e grama.\n")
-			
-				se(barro == verdadeiro){
-					escreve("Percebe que exatamente ali, a donzela pode ter sujado as sapatilhas.\n")
-					escreve("Sua teoria estava correta.\n")}
-		
-			escreve("O chafariz era cheio de cascatas pequenas pedras brilhantes.\n")
-			escreve("Você continua andando sem ver nada de suspeito.\n")
-			escreve("Você chega perto do muro, e no chão ve um ponto brilhando.\n")
-			escreve("Ao se aproximar, você percebe que é um colar.\n")
-			escreve("Com o nome Stella.\n")
-			escreve("Você nunca ouviu falar este nome.\n")
-			escreve("Será este o nome da donzela?\n")
-			escreve("Você guarda para investigar depois.\n")
-			itens[1] = "colar"
-			continuar = falso
-			pare
-
-			caso contrario:
-			escreve("Essa opção é invalida. Escolha uma das opções: \n")
+				caso contrario:
+					escreve("Essa opção é invalida. Escolha uma das opções: \n")
 			
 			
-		}// fim do escolha
+			}// fim do escolha
 		}// fim do enquanto
 	
 		enter()
@@ -414,90 +414,91 @@ programa
 
 			escolha(opcao){
 				caso 1: 
-				escreve("Você começa a andar perto do muro do jardim.\n")
-				escreve("Procurando alguma rachadura, ou algo do tipo.\n")
-				escreve("Em poucos metros, você percebe algo estranho.\n")
-				escreve("No meio de todo muro de pedras, você encontra uma porta camuflada.\n")
-				escreve("Embaixo de diversos musgos na parede.\n")
-				escreve("- O que é isso?\n")
-				escreve("Você começa a abrir a porta, com muita cautela.\n")
-				escreve("Está completamente escuro, a unica luz presente é a da porta se abrindo.\n")
-				escreve("Meu deus.\n")
-				escreve("Um corpo.\n")
-				retc(500)
-				escreve("Você corre ao encontro do corpo no chão.\n")
-				escreve("É um homem de meia idade, sem ferimetos.\n")
-				escreve("- O que está fazendo aqui? Quem é você?\n")
-				escreve("O homem parece estar inconciente, ele tem o brazão do castelo na roupa.\n")
-				escreve("É um soldado do rei.\n")
-				escreve("Guarda: Meu jovem, me ajude.\n")
-				escreve("Você ajuda o guarda a se sentar melhor.\n")
-				escreve("- O senhor está bem? Pode me contar como veio parar aqui?\n")
-				escreve("Guarda: Eu não sei bem, acho que fui golpeado.\n")
-				escreve("- Pode me contar como isso aconteceu?\n")
-				escreve("- Sou um caçador, estou trabalhando para o Rei.\n")
-				escreve("Guarda: Eu faço a ronda da noite pelo jardim, todos os dias.\n")
-				escreve("G: Ontem a noite, vi as flores do campo se mechendo.\n")
-				escreve("G: Não dei muita atenção e vim vindo devagar.\n")
-				escreve("G: Talvez fosse somente a donzela de novo.\n")
-				escreve("- A donzela? \n")
-				escreve("Guarda: ")
-				retc(450)
-				escreve("- Não contarei nada ao rei. Não me importo. Mas preciso que você fale tudo o que sabe.\n")
-				u.aguarde(400)
-				escreve("G: Algumas vezes a donzela desce aqui em baixo, me pede para não contar ao rei.\n")
-				escreve("G: Uma vez, ela saiu, mas não veio até o jardim. Eu a segui. Ela entrou naquela taverna, o Pérola vermelha.\n")
-				escreve("- Entendo. E como o senhor veio parar aqui?\n")
-				escreve("Guarda: Eu vim conferir se estava tudo bem, achando que era ela.\n")
-				escreve("G: Quando cheguei aqui, fui golpeado e jogado pra dentro.\n")
-				escreve("- O senhor sabe quem te golpeou?\n")
-				escreve("Guarda: Não o avistei, ele veio por trás.\n")
-				escreve("Isso era tudo o que precisava saber. Vou te levar pra dentro.\n")
-				escreve("Você leva o guarda para dentro do castelo, junto das curandeiras.\n")
-				escreve("Agora você tem uma ótima dica.\n")
-				escreve("O pérola Vermelha.\n")
-				continuar = falso
+					escreve("Você começa a andar perto do muro do jardim.\n")
+					escreve("Procurando alguma rachadura, ou algo do tipo.\n")
+					escreve("Em poucos metros, você percebe algo estranho.\n")
+					escreve("No meio de todo muro de pedras, você encontra uma porta camuflada.\n")
+					escreve("Embaixo de diversos musgos na parede.\n")
+					escreve("- O que é isso?\n")
+					escreve("Você começa a abrir a porta, com muita cautela.\n")
+					escreve("Está completamente escuro, a unica luz presente é a da porta se abrindo.\n")
+					escreve("Meu deus.\n")
+					escreve("Um corpo.\n")
+					retc(500)
+					escreve("Você corre ao encontro do corpo no chão.\n")
+					escreve("É um homem de meia idade, sem ferimetos.\n")
+					escreve("- O que está fazendo aqui? Quem é você?\n")
+					escreve("O homem parece estar inconciente, ele tem o brazão do castelo na roupa.\n")
+					escreve("É um soldado do rei.\n")
+					escreve("Guarda: Meu jovem, me ajude.\n")
+					escreve("Você ajuda o guarda a se sentar melhor.\n")
+					escreve("- O senhor está bem? Pode me contar como veio parar aqui?\n")
+					escreve("Guarda: Eu não sei bem, acho que fui golpeado.\n")
+					escreve("- Pode me contar como isso aconteceu?\n")
+					escreve("- Sou um caçador, estou trabalhando para o Rei.\n")
+					escreve("Guarda: Eu faço a ronda da noite pelo jardim, todos os dias.\n")
+					escreve("G: Ontem a noite, vi as flores do campo se mechendo.\n")
+					escreve("G: Não dei muita atenção e vim vindo devagar.\n")
+					escreve("G: Talvez fosse somente a donzela de novo.\n")
+					escreve("- A donzela? \n")
+					escreve("Guarda: ")
+					retc(450)
+					escreve("- Não contarei nada ao rei. Não me importo. Mas preciso que você fale tudo o que sabe.\n")
+					u.aguarde(400)
+					escreve("G: Algumas vezes a donzela desce aqui em baixo, me pede para não contar ao rei.\n")
+					escreve("G: Uma vez, ela saiu, mas não veio até o jardim. Eu a segui. Ela entrou naquela taverna, o Pérola vermelha.\n")
+					escreve("- Entendo. E como o senhor veio parar aqui?\n")
+					escreve("Guarda: Eu vim conferir se estava tudo bem, achando que era ela.\n")
+					escreve("G: Quando cheguei aqui, fui golpeado e jogado pra dentro.\n")
+					escreve("- O senhor sabe quem te golpeou?\n")
+					escreve("Guarda: Não o avistei, ele veio por trás.\n")
+					escreve("Isso era tudo o que precisava saber. Vou te levar pra dentro.\n")
+					escreve("Você leva o guarda para dentro do castelo, junto das curandeiras.\n")
+					escreve("Agora você tem uma ótima dica.\n")
+					escreve("O pérola Vermelha.\n")
+					continuar = falso
 				pare
 
 				caso 2:
-				escreve("Você se dirige para a cozinha do castelo.\n")
-				escreve("A criada que leva a comida para ela, com certeza deve saber algo.\n")
-				escreve("Ao olhar a cozinha, vê apenas uma senhora.\n")
-				escreve("- Olá senhora, sou o caçador contratado pelo Rei. Estou à procura da donzela.\n")
-				escreve("- A senhora poderia me contar um pouco sobre sua convivência com ela?\n")
-				escreve("Criada: A donzela não gostava muito de conversa.\n")
-				escreve("C: Nem de comer, não sei como estava viva.\n")
-				escreve("- A senhora sabe me dizer se isto é dela?\n")
-				escreve("Você mostra o colar a ela.\n")
-				escreve("A senhora parece ficar tensa, ela pega o colar com as mãos.\n")
-				escreve("Criada: Não sei se deveria te contar isso, mas...\n")
-				escreve("C: Pelo que sei, esta é a unica coisa que a donzela tem da sua vida antiga.\n")
-				escreve("C: Foi a unica coisa vinda com ela quando ela chegou aqui.\n")
-				escreve("C: Ela não lembrava nem o seu proprio nome.\n")
-				escreve("C: Deduzimos que este deveria ser o nome dela, mas não podemos chama-la assim.\n")
-				escreve("C: Ordens do Rei.\n")
-				escreve("Isso soa muito estranho, por que não poderiam chama-la pelo nome?\n")
-				escreve("- A senhora ja presenciou algo estranho que acontecia com ela?\n")
-				escreve("Criada: O rei era muito severa com ela. Ele batia nela.\n")
-				escreve("C: A coitadinha ficava com o rosto inchado por dias.\n")
-				escreve("C: Uma vez, há pouco tempo fui levar comida para ela de noite,\n")
-				escreve("C: mas ela não estava no quarto.\n")
-				escreve("C: Fiquei esperando ela chegar, e fiz ela me contar onde estava.\n")
-				escreve("C: Não contei nunca ao rei, ele iria bater nela denovo.\n")
-				escreve("- E onde ela estava?\n")
-				escreve("Criada: Ela disse ter ido ao Perola vermelha. A taverna da cidade.\n")
-				escreve("C: Eu entendia a donzela, ela queria ter uma vida normal.\n")
-				escreve("Isso é uma dica e tanto.\n")
-				escreve("Você agradece a senhora por tudo, inclusive pela pista.\n")
-				escreve("E agora você se dirige a sua mais nova esperança.\n")
-				escreve("O pérola Vermelha.\n")
-				continuar = falso
+					escreve("Você se dirige para a cozinha do castelo.\n")
+					escreve("A criada que leva a comida para ela, com certeza deve saber algo.\n")
+					escreve("Ao olhar a cozinha, vê apenas uma senhora.\n")
+					escreve("- Olá senhora, sou o caçador contratado pelo Rei. Estou à procura da donzela.\n")
+					escreve("- A senhora poderia me contar um pouco sobre sua convivência com ela?\n")
+					escreve("Criada: A donzela não gostava muito de conversa.\n")
+					escreve("C: Nem de comer, não sei como estava viva.\n")
+					escreve("- A senhora sabe me dizer se isto é dela?\n")
+					escreve("Você mostra o colar a ela.\n")
+					escreve("A senhora parece ficar tensa, ela pega o colar com as mãos.\n")
+					escreve("Criada: Não sei se deveria te contar isso, mas...\n")
+					escreve("C: Pelo que sei, esta é a unica coisa que a donzela tem da sua vida antiga.\n")
+					escreve("C: Foi a unica coisa vinda com ela quando ela chegou aqui.\n")
+					escreve("C: Ela não lembrava nem o seu proprio nome.\n")
+					escreve("C: Deduzimos que este deveria ser o nome dela, mas não podemos chama-la assim.\n")
+					escreve("C: Ordens do Rei.\n")
+					escreve("Isso soa muito estranho, por que não poderiam chama-la pelo nome?\n")
+					escreve("- A senhora ja presenciou algo estranho que acontecia com ela?\n")
+					escreve("Criada: O rei era muito severa com ela. Ele batia nela.\n")
+					escreve("C: A coitadinha ficava com o rosto inchado por dias.\n")
+					escreve("C: Uma vez, há pouco tempo fui levar comida para ela de noite,\n")
+					escreve("C: mas ela não estava no quarto.\n")
+					escreve("C: Fiquei esperando ela chegar, e fiz ela me contar onde estava.\n")
+					escreve("C: Não contei nunca ao rei, ele iria bater nela denovo.\n")
+					escreve("- E onde ela estava?\n")
+					escreve("Criada: Ela disse ter ido ao Perola vermelha. A taverna da cidade.\n")
+					escreve("C: Eu entendia a donzela, ela queria ter uma vida normal.\n")
+					escreve("Isso é uma dica e tanto.\n")
+					escreve("Você agradece a senhora por tudo, inclusive pela pista.\n")
+					escreve("E agora você se dirige a sua mais nova esperança.\n")
+					escreve("O pérola Vermelha.\n")
+					continuar = falso
 				pare
 
 				caso contrario:
-				escreve("Essa opção é invalida. Escolha uma das opções: \n")
+					escreve("Essa opção é invalida. Escolha uma das opções: \n")
 			}//fim do escolha
 		}//fim do enquanto
+		
 		escreve("Antes de você ir, \n")
 		checarItens()
 		se(Faca == verdadeiro){
@@ -578,28 +579,28 @@ programa
 		
 		logico continuar = verdadeiro
 		enquanto(continuar == verdadeiro){
-		escreve("[1] Vinho\n")
-		escreve("[2] Hidromel\n")
-		escreve("[3] Hipocraz\n")
-		leia(opcao)
-			escolha(opcao){
-			caso 1:
-			escreve("- Um copo de vinho, por favor.\n")
-			continuar = falso
-			pare
-
-			caso 2:
-			escreve("- Um copo de hidromel, por favor.\n")
-			continuar = falso
-			pare
-
-			caso 3:
-			escreve("- Um copo de hipocraz, por favor.\n")
-			continuar = falso
-			pare
-
-			caso contrario:
-			escreve("Essa opção é invalida. Escolha uma das opções: \n")
+			escreve("[1] Vinho\n")
+			escreve("[2] Hidromel\n")
+			escreve("[3] Hipocraz\n")
+			leia(opcao)
+				escolha(opcao){
+					caso 1:
+						escreve("- Um copo de vinho, por favor.\n")
+						continuar = falso
+					pare
+		
+					caso 2:
+						escreve("- Um copo de hidromel, por favor.\n")
+						continuar = falso
+					pare
+		
+					caso 3:
+						escreve("- Um copo de hipocraz, por favor.\n")
+						continuar = falso
+					pare
+		
+					caso contrario:
+						escreve("Essa opção é invalida. Escolha uma das opções: \n")
 			}//fim do escolha
 		}//fim do enquanto
 
@@ -624,71 +625,71 @@ programa
 
 			escolha(opcao){
 				caso 1:
-				escreve("- Então, posso ter perguntar algo?\n")
-				escreve("A: Pode, só não garanto que terá uma resposta.\n")
-				escreve("- Você tem uma boa relação com todos que vem aqui?\n")
-				escreve("A: Hum, eu diria que sim. Por que você se interessa?\n")
-				escreve("- Por nenhum motivo específico.\n")
-				escreve("- Você tem costume de conversar com seus clientes excluidos?\n")
-				escreve("A: Eu gosto apenas de ter certeza que meus cliente sestão acolidos.\n")
-				escreve("- Vêm muitas mulheres aqui?\n")
-				escreve("A: Não, aqui é um bar mais masculino.\n")
-				escreve("A: Alguns dias duas mulheres vêm aqui, ficam lendo.\n")
-				escreve("A: Sentadas distante de todos os homens, nunca conversaram com nenhum.\n")
-				escreve("A: Uma delas tem os olhos mais verdes que eu já vi.")
-				escreve("A: São bem estranhas, na verdade.\n")
-				escreve("Pimba, com certeza deve ser a donzela.\n")
-				escreve("E mais alguém. Quem?\n")
-				escreve("- Mulheres costumam ser estranhas mesmo.\n")
-				escreve("Talvez tenha algo importante na biblioteca.\n")
-				livro = verdadeiro
-				continuar = falso
+					escreve("- Então, posso ter perguntar algo?\n")
+					escreve("A: Pode, só não garanto que terá uma resposta.\n")
+					escreve("- Você tem uma boa relação com todos que vem aqui?\n")
+					escreve("A: Hum, eu diria que sim. Por que você se interessa?\n")
+					escreve("- Por nenhum motivo específico.\n")
+					escreve("- Você tem costume de conversar com seus clientes excluidos?\n")
+					escreve("A: Eu gosto apenas de ter certeza que meus cliente sestão acolidos.\n")
+					escreve("- Vêm muitas mulheres aqui?\n")
+					escreve("A: Não, aqui é um bar mais masculino.\n")
+					escreve("A: Alguns dias duas mulheres vêm aqui, ficam lendo.\n")
+					escreve("A: Sentadas distante de todos os homens, nunca conversaram com nenhum.\n")
+					escreve("A: Uma delas tem os olhos mais verdes que eu já vi.")
+					escreve("A: São bem estranhas, na verdade.\n")
+					escreve("Pimba, com certeza deve ser a donzela.\n")
+					escreve("E mais alguém. Quem?\n")
+					escreve("- Mulheres costumam ser estranhas mesmo.\n")
+					escreve("Talvez tenha algo importante na biblioteca.\n")
+					livro = verdadeiro
+					continuar = falso
 				pare
 
 				caso 2: //Definitivamente a opção de pergunta errada, direta e suspeita demais
-				escreve("- Então, posso ter perguntar algo?\n")
-				escreve("A: Pode, só não garanto que terá uma resposta.\n")
-				escreve("- Por acaso notou uma menina estranha vindo aqui?\n")
-				escreve("A: ...Menina estranha? O que você quer dizer com isso?\n")
-				escreve("- Uma menina, jovem, que não vem muito a cidade.\n")
-				escreve("- Uma que tenha os olhos verdes...?\n")
-				escreve("A expressão dela muda imediatamente.\n")
-				escreve("Ela sabe que não devia ter falado aquilo.\n")
-				escreve("Ela faz um sinal com as mãos para os seguranças.\n")
-				escreve("Ela acha que eu sei de alguma coisa.\n")
-				escreve("Me viro para tentar fugir a tempo.\n")
-				retc(500)
-				escreve("Sinto um golpe na cabeça.\n")
-				escreve("Caio no chão.\n")
-				escreve("Não vejo mais nada.\n")
-				masmorra = verdadeiro
-				continuar = falso
+					escreve("- Então, posso ter perguntar algo?\n")
+					escreve("A: Pode, só não garanto que terá uma resposta.\n")
+					escreve("- Por acaso notou uma menina estranha vindo aqui?\n")
+					escreve("A: ...Menina estranha? O que você quer dizer com isso?\n")
+					escreve("- Uma menina, jovem, que não vem muito a cidade.\n")
+					escreve("- Uma que tenha os olhos verdes...?\n")
+					escreve("A expressão dela muda imediatamente.\n")
+					escreve("Ela sabe que não devia ter falado aquilo.\n")
+					escreve("Ela faz um sinal com as mãos para os seguranças.\n")
+					escreve("Ela acha que eu sei de alguma coisa.\n")
+					escreve("Me viro para tentar fugir a tempo.\n")
+					retc(500)
+					escreve("Sinto um golpe na cabeça.\n")
+					escreve("Caio no chão.\n")
+					escreve("Não vejo mais nada.\n")
+					masmorra = verdadeiro
+					continuar = falso
 				pare
 
 				caso 3: 
-				escreve("- Então, posso ter perguntar algo?\n")
-				escreve("A: Pode, só não garanto que terá uma resposta.\n")
-				escreve("- Você sabe alguma coisa sobre a filha do rei?\n")
-				escreve("A: Filha do rei? Eu não sabia que o rei tinha uma filha\n")
-				retc(300)
-				escreve("- Parece que alguns boatos disso estão se espalhando.\n")
-				escreve("A: Por que o rei esconderia uma filha de todo mundo?\n")
-				escreve("- Não sei, talvez por medo. Talvez ele queira proteje-la.\n")
-				escreve("A: ")
-				retc(200)
-				escreve("\nNo mesmo momento, você vê ela fazendo um sinal com as mãos.\n")
-				escreve("Em poucos segundos os seguranças do bar te pegam pelos braços.\n")
-				escreve("- Ei, o que vocês pensam que estão fazendo?\n")
-				escreve("- Me soltem! AGORA!\n")
-				escreve("Segurança: Fique quieto!\n")
-				escreve("S: Antes que jogamos você no lago.\n")
-				escreve("Eles te colocam para fora e fecham a porta na sua cara.\n")
-				investigacao = verdadeiro
-				continuar = falso
+					escreve("- Então, posso ter perguntar algo?\n")
+					escreve("A: Pode, só não garanto que terá uma resposta.\n")
+					escreve("- Você sabe alguma coisa sobre a filha do rei?\n")
+					escreve("A: Filha do rei? Eu não sabia que o rei tinha uma filha\n")
+					retc(300)
+					escreve("- Parece que alguns boatos disso estão se espalhando.\n")
+					escreve("A: Por que o rei esconderia uma filha de todo mundo?\n")
+					escreve("- Não sei, talvez por medo. Talvez ele queira proteje-la.\n")
+					escreve("A: ")
+					retc(200)
+					escreve("\nNo mesmo momento, você vê ela fazendo um sinal com as mãos.\n")
+					escreve("Em poucos segundos os seguranças do bar te pegam pelos braços.\n")
+					escreve("- Ei, o que vocês pensam que estão fazendo?\n")
+					escreve("- Me soltem! AGORA!\n")
+					escreve("Segurança: Fique quieto!\n")
+					escreve("S: Antes que jogamos você no lago.\n")
+					escreve("Eles te colocam para fora e fecham a porta na sua cara.\n")
+					investigacao = verdadeiro
+					continuar = falso
 				pare
 
 				caso contrario: 
-				escreve("Essa opção é invalida. Escolha uma das opções: \n")
+					escreve("Essa opção é invalida. Escolha uma das opções: \n")
 			}//fim do escolha
 		}//fim do enquanto
 		
@@ -812,7 +813,7 @@ programa
 		
 							caso contrario:
 							escreve("Essa opção é invalida. Escolha uma das opções: \n")
-							pare
+						pare
 						
 						
 						}
@@ -895,54 +896,54 @@ programa
 
 			escolha(opcao){
 				caso 1:
-				escreve("Ao pegar o livro, voce ve algo bem incomum. \n")
-				escreve("O nome Stella na capa. \n")
-				escreve("Será um livro da donzela? \n")
-				escreve("Ou será um diário? \n")
-				inteiro pagina = u.sorteia(110, 111)
-				escreve("Voce abre o livro na pagina " + pagina + ". \n")
-				se (pagina == 110){
-					pagina110()
-					escreve("Ela tem que ser resgatada antes que aconteca o pior.\n")
-					escreve("A floresta sangrenta é muito perigosa.\n")
-					escreve("O que ela estava pensando?\n")
-
-					doente = verdadeiro
-				} senao {
-					pagina111()
-					escreve("O que ela quis dizer com transformção?\n")
-					escreve("Deve ser o dia que ela é chamada pelos Deuses.\n")
-					escreve("Ela deve estar com medo.\n")
-					escreve("Tenho que resgata-la antes que aconteca o pior.\n")
-					escreve("A floresta sangrenta é muito perigosa.\n")
-					escreve("O que ela estava pensando?\n")
-
-					bruxa = verdadeiro
-				}
-				escreve("Você não pode mais perder tempo.\n")
-				escreve("Você decide então ir para casa organizar suas coisas.\n")
-				escreve("Você vai para floresta sangrenta.\n")
-				continuar = falso
+					escreve("Ao pegar o livro, voce ve algo bem incomum. \n")
+					escreve("O nome Stella na capa. \n")
+					escreve("Será um livro da donzela? \n")
+					escreve("Ou será um diário? \n")
+					inteiro pagina = u.sorteia(110, 111)
+					escreve("Voce abre o livro na pagina " + pagina + ". \n")
+					se (pagina == 110){
+						pagina110()
+						escreve("Ela tem que ser resgatada antes que aconteca o pior.\n")
+						escreve("A floresta sangrenta é muito perigosa.\n")
+						escreve("O que ela estava pensando?\n")
+	
+						doente = verdadeiro
+					} senao {
+						pagina111()
+						escreve("O que ela quis dizer com transformção?\n")
+						escreve("Deve ser o dia que ela é chamada pelos Deuses.\n")
+						escreve("Ela deve estar com medo.\n")
+						escreve("Tenho que resgata-la antes que aconteca o pior.\n")
+						escreve("A floresta sangrenta é muito perigosa.\n")
+						escreve("O que ela estava pensando?\n")
+	
+						bruxa = verdadeiro
+					}
+					escreve("Você não pode mais perder tempo.\n")
+					escreve("Você decide então ir para casa organizar suas coisas.\n")
+					escreve("Você vai para floresta sangrenta.\n")
+					continuar = falso
 				pare
 
 				caso 2:
-				escreve("Ao pegar a caixa, você encontra nada muito interessante.\n")
-				escreve("Lápis, ampolas, algumas plantas mortas...\n")
-				escreve("No meio de tudo isso, você enconta pedaços de papel.\n")
-				escreve("Muitos pedaços.\n")
-				escreve("Você pega os pedaços maiores para tentar algo.\n")
-				pedacosCarta()
-				escreve("- Uou.\n")
-				escreve("Isso já ajuda, e muito\n")
-				escreve("Você não pode mais perder tempo.\n")
-				escreve("Você decide então ir para casa organizar suas coisas.\n")
-				escreve("Você vai para floresta sangrenta.\n")
-				continuar = falso
+					escreve("Ao pegar a caixa, você encontra nada muito interessante.\n")
+					escreve("Lápis, ampolas, algumas plantas mortas...\n")
+					escreve("No meio de tudo isso, você enconta pedaços de papel.\n")
+					escreve("Muitos pedaços.\n")
+					escreve("Você pega os pedaços maiores para tentar algo.\n")
+					pedacosCarta()
+					escreve("- Uou.\n")
+					escreve("Isso já ajuda, e muito\n")
+					escreve("Você não pode mais perder tempo.\n")
+					escreve("Você decide então ir para casa organizar suas coisas.\n")
+					escreve("Você vai para floresta sangrenta.\n")
+					continuar = falso
 				pare
 				
 
 				caso contrario:
-				escreve("Essa opção é invalida. Escolha uma das opções: \n")
+					escreve("Essa opção é invalida. Escolha uma das opções: \n")
 
 			}//fim do escolha
 		}// fim do enquanto
@@ -984,28 +985,28 @@ programa
 
 			escolha(opcao){
 				caso 1: 
-				itens[4] = "Poção de Força"
-				escreve("Você coloca a poção de força na sua mochila.\n")
-				pocaoForca = verdadeiro
-				continuar = falso
+					itens[4] = "Poção de Força"
+					escreve("Você coloca a poção de força na sua mochila.\n")
+					pocaoForca = verdadeiro
+					continuar = falso
 				pare
 
 				caso 2: 
-				itens[4] = "Poção de Cura"
-				escreve("Você coloca a poção de cura na sua mochila.\n")
-				pocaoCura = verdadeiro
-				continuar = falso
+					itens[4] = "Poção de Cura"
+					escreve("Você coloca a poção de cura na sua mochila.\n")
+					pocaoCura = verdadeiro
+					continuar = falso
 				pare
 
 				caso 3: 
-				itens[4] = "Poção de Resistência"
-				escreve("Você coloca a poção de resistência na sua mochila.\n")
-				pocaoResistencia = verdadeiro
-				continuar = falso
+					itens[4] = "Poção de Resistência"
+					escreve("Você coloca a poção de resistência na sua mochila.\n")
+					pocaoResistencia = verdadeiro
+					continuar = falso
 				pare
 
 				caso contrario:
-				escreve("Essa opção é invalida. Escolha uma das opções: \n")
+					escreve("Essa opção é invalida. Escolha uma das opções: \n")
 				
 			}// fim do escolha
 		}// fim do enquanto
@@ -1049,30 +1050,30 @@ programa
 
 			escolha(opcao){
 				caso 1: 
-				escreve("Você continua andando para dentro da floresta.\n")
-				escreve("Nenhum sinal de animais evidentes.\n")
-				escreve("Está tudo um completo silencio.\n")
-				retc(600)
-				escreve("Após uns 10 minutos caminhando, você escuta um riacho.\n")
-				escreve("Você segue em direção ao som e o encontra.\n")
-				escreve("Rapidamente você se agacha e verifica se a água é doce.\n")
-				escreve("Graças a Deus sim.\n")
-				escreve("Você toma bastante água e tenta pegar algum peixe.\n")
-				retc(500)
-				escreve("Tudo funciona como o plenajedo.\n")
-				escreve("Agora você volta para floresta para fazer um abrigo.\n")
-				continuar = falso
+					escreve("Você continua andando para dentro da floresta.\n")
+					escreve("Nenhum sinal de animais evidentes.\n")
+					escreve("Está tudo um completo silencio.\n")
+					retc(600)
+					escreve("Após uns 10 minutos caminhando, você escuta um riacho.\n")
+					escreve("Você segue em direção ao som e o encontra.\n")
+					escreve("Rapidamente você se agacha e verifica se a água é doce.\n")
+					escreve("Graças a Deus sim.\n")
+					escreve("Você toma bastante água e tenta pegar algum peixe.\n")
+					retc(500)
+					escreve("Tudo funciona como o plenajedo.\n")
+					escreve("Agora você volta para floresta para fazer um abrigo.\n")
+					continuar = falso
 				pare
 
 				caso 2:
-				escreve("Você continua andando para dentro da floresta.\n")
-				escreve("Encontra um lugar supostamente seguro e amplo para fazer o abrigo.\n")
-				continuar = falso
+					escreve("Você continua andando para dentro da floresta.\n")
+					escreve("Encontra um lugar supostamente seguro e amplo para fazer o abrigo.\n")
+					continuar = falso
 				pare
 				
 
 				caso contrario:
-				escreve("Essa opção é invalida. Escolha uma das opções:\n")
+					escreve("Essa opção é invalida. Escolha uma das opções:\n")
 				
 			}// fim do escolha
 		} // fim do enquanto
@@ -1097,35 +1098,35 @@ programa
 			escolha(opcao){
 				
 				caso 1:
-				escreve("Você ignora completamente o barulho.\n")
-				escreve("Se vira de lado e tenta cochilar novamente.\n")
-				escreve("Você sente o barulho se aproximando.\n")
-				escreve("Quando levanta a cabeça e olha para o lado...\n")
-				escreve("Você vê um enorme Ubariano.\n")
-				escreve("E não um qualquer.\n")
-				escreve("Um Ubariano da realeza.\n")
-				Ubariano2()
-				GameOver()
-				continuar = falso
-				gameLoop = falso
+					escreve("Você ignora completamente o barulho.\n")
+					escreve("Se vira de lado e tenta cochilar novamente.\n")
+					escreve("Você sente o barulho se aproximando.\n")
+					escreve("Quando levanta a cabeça e olha para o lado...\n")
+					escreve("Você vê um enorme Ubariano.\n")
+					escreve("E não um qualquer.\n")
+					escreve("Um Ubariano da realeza.\n")
+					Ubariano2()
+					GameOver()
+					continuar = falso
+					gameLoop = falso
 				pare
 
 				caso 2:
-				escreve("Você levanta devagar, sem fazer barulho.\n")
-				escreve("Rapidamente pega sua mochila.\n")
-				escreve("Você apunhala sua faca por precaução.\n")
-				escreve("Devagar você anda em direção ao barulho.\n")
-				escreve("Adentrando os arbustos, entre duas árvores...\n")
-				escreve("você o ve. Um enorme Ubariano.\n")
-				escreve("E não um qualquer, um da realeza.\n")
-				Ubariano2()
-				escreve("Ele é enorme. E está te encarando.\n")
-				continuar = falso
-				LutaUbariano = verdadeiro
+					escreve("Você levanta devagar, sem fazer barulho.\n")
+					escreve("Rapidamente pega sua mochila.\n")
+					escreve("Você apunhala sua faca por precaução.\n")
+					escreve("Devagar você anda em direção ao barulho.\n")
+					escreve("Adentrando os arbustos, entre duas árvores...\n")
+					escreve("você o ve. Um enorme Ubariano.\n")
+					escreve("E não um qualquer, um da realeza.\n")
+					Ubariano2()
+					escreve("Ele é enorme. E está te encarando.\n")
+					continuar = falso
+					LutaUbariano = verdadeiro
 				pare
 
 				caso contrario:
-				escreve("Essa opção é invalida. Escolha uma das opções: \n")
+					escreve("Essa opção é invalida. Escolha uma das opções: \n")
 			}// fim do escolha
 			
 		}// fim do enquanto	
@@ -1185,267 +1186,267 @@ programa
 
 				caso 1: 
 				
-				se(contador == 1){
-					
-					escreve("Você o golpeia na " + frasesAtaque[u.sorteia(0,2)] + "\n")
-					escreve("Isso já te dá vantagem.\n")
-					vidaUbariano2 -= u.sorteia(10, 20) + dano
-					escreve("Vida do Ubariano: " + vidaUbariano2 + "\n\n" )
+					se(contador == 1){
+						
+						escreve("Você o golpeia na " + frasesAtaque[u.sorteia(0,2)] + "\n")
+						escreve("Isso já te dá vantagem.\n")
+						vidaUbariano2 -= u.sorteia(10, 20) + dano
+						escreve("Vida do Ubariano: " + vidaUbariano2 + "\n\n" )
+		
+						escreve("Ele parece não ter gostado nada disso.\n")
+						escreve("Ele corre mais rápido ainda em sua direção.\n")
+						escreve("Ele tenta cravar as garras perto de suas pernas.\n")
+						escreve("Você desvia do golpe, mas acaba caindo em pedras\n")
+						vida -= u.sorteia(5,7) + danoInimigo
+						escreve("Você se levanta rapidamente, apenas com alguns ralados.\n")
+						se(cs == 1){
+							escreve("O ubariano te olha agressivamente, e levanta voo.\n")
+						} senao se(cs == 2){
+							escreve("Afinal quem é esse cara? Não se parece como um humano comum.\n")
+						}
+								
+					}// fim do se
 	
-					escreve("Ele parece não ter gostado nada disso.\n")
-					escreve("Ele corre mais rápido ainda em sua direção.\n")
-					escreve("Ele tenta cravar as garras perto de suas pernas.\n")
-					escreve("Você desvia do golpe, mas acaba caindo em pedras\n")
-					vida -= u.sorteia(5,7) + danoInimigo
-					escreve("Você se levanta rapidamente, apenas com alguns ralados.\n")
-					se(cs == 1){
-						escreve("O ubariano te olha agressivamente, e levanta voo.\n")
-					} senao se(cs == 2){
-						escreve("Afinal quem é esse cara? Não se parece como um humano comum.\n")
+					senao se(contador == 2){
+	
+						se(cs == 1){
+							escreve("Você corre para o ubariano não pousar em você.\n")	
+						}
+						
+						escreve("Ele vem em sua direção e tenta te agarrar.\n")
+						escreve("Você crava a sua adaga "+ frasesAtaque2[u.sorteia(0,2)] + "\n\n")
+						escreve("O sangue dele é azul. Ele urge de dor.\n")
+						vidaUbariano2 -= u.sorteia(15, 23) + dano
+						escreve("Você tenta correr dele, mas ele consegue te dar um chute!\n")
+						escreve("Você cai no chão.\n")
+						vida -= u.sorteia(7, 14) + danoInimigo
+						escreve("Parece que ele está vindo pra cima de você novamente.\n")
+						
+					}// fim do se contador 2
+	
+					senao se(contador == 3){
+						escreve("Você tenta surpreende-lo, levanta super rapido.\n")
+						escreve("Corre na direção dele, desvia para a esquerda e vai para trás dele.\n")
+						escreve("Antes que ele consiga se virar, você pula em cima dele.\n")
+						escreve("Crava a adaga perto do pescoço dele.\n")
+						vidaUbariano2 -= u.sorteia(20, 30) + dano
+						escreve("Ele grita e você corre para longe.\n")
+						escreve("Parece ter doido bastante, ele cai no chão de dor.\n")
 					}
-							
-				}// fim do se
-
-				senao se(contador == 2){
-
-					se(cs == 1){
-					escreve("Você corre para o ubariano não pousar em você.\n")	
+					senao se(contador == 4){
+						escreve("Sem pensar muito, você corre para cima dele.\n")
+						escreve("Você tenta cravar a adaga nele.\n")
+						escreve("Ele é muito agíl, mas você consegue enfia-la no braço dele.\n")
+						vidaUbariano2 -= u.sorteia(20, 25) + dano
+						escreve("Ele grita de dor, você se levanta e se afasta dele.\n")
+						
 					}
-					
-					escreve("Ele vem em sua direção e tenta te agarrar.\n")
-					escreve("Você crava a sua adaga "+ frasesAtaque2[u.sorteia(0,2)] + "\n\n")
-					escreve("O sangue dele é azul. Ele urge de dor.\n")
-					vidaUbariano2 -= u.sorteia(15, 23) + dano
-					escreve("Você tenta correr dele, mas ele consegue te dar um chute!\n")
-					escreve("Você cai no chão.\n")
-					vida -= u.sorteia(7, 14) + danoInimigo
-					escreve("Parece que ele está vindo pra cima de você novamente.\n")
-					
-				}// fim do se contador 2
-
-				senao se(contador == 3){
-					escreve("Você tenta surpreende-lo, levanta super rapido.\n")
-					escreve("Corre na direção dele, desvia para a esquerda e vai para trás dele.\n")
-					escreve("Antes que ele consiga se virar, você pula em cima dele.\n")
-					escreve("Crava a adaga perto do pescoço dele.\n")
-					vidaUbariano2 -= u.sorteia(20, 30) + dano
-					escreve("Ele grita e você corre para longe.\n")
-					escreve("Parece ter doido bastante, ele cai no chão de dor.\n")
-				}
-				senao se(contador == 4){
-					escreve("Sem pensar muito, você corre para cima dele.\n")
-					escreve("Você tenta cravar a adaga nele.\n")
-					escreve("Ele é muito agíl, mas você consegue enfia-la no braço dele.\n")
-					vidaUbariano2 -= u.sorteia(20, 25) + dano
-					escreve("Ele grita de dor, você se levanta e se afasta dele.\n")
-					
-				}
-				senao se(contador == 5){
-					escreve("Ele grita e corre para você.\n")
-					escreve("Você da uma rasteira nele, ele cai na hora.\n")
-					vidaUbariano2 -= u.sorteia(7, 15) + dano
-					escreve("Em contrapartida, ele arranha sua perna deixando quase em carne viva.\n")
-					vida -= u.sorteia(10, 15) + danoInimigo
-					escreve("Você se levanta, com muita dor.")
-				}
-				senao se(contador == 6){
-					continuar = falso
-				}
+					senao se(contador == 5){
+						escreve("Ele grita e corre para você.\n")
+						escreve("Você da uma rasteira nele, ele cai na hora.\n")
+						vidaUbariano2 -= u.sorteia(7, 15) + dano
+						escreve("Em contrapartida, ele arranha sua perna deixando quase em carne viva.\n")
+						vida -= u.sorteia(10, 15) + danoInimigo
+						escreve("Você se levanta, com muita dor.")
+					}
+					senao se(contador == 6){
+						continuar = falso
+					}
 				pare
 				// FIM DO CASO 1
 				caso 2: 
 
 				
-				se (contador == 1){
-					escreve("Você pega um pedaço de tronco do chão, e se defende das garras dele.\n")
-					escreve("Ele parece não ter gostado da sua ousadia.\n")
-					escreve("Ele golpeia seu galho e o quebra em pedaços.\n")
-					escreve("Você tenta procurar outra coisa para se defender.\n")
-					escreve("Ao desviar sua atenção, ele te da um chute na " + frasesAtaque[u.sorteia(0,2)] + "\n")
-					vida -= u.sorteia(10,13) + danoInimigo
+					se (contador == 1){
+						escreve("Você pega um pedaço de tronco do chão, e se defende das garras dele.\n")
+						escreve("Ele parece não ter gostado da sua ousadia.\n")
+						escreve("Ele golpeia seu galho e o quebra em pedaços.\n")
+						escreve("Você tenta procurar outra coisa para se defender.\n")
+						escreve("Ao desviar sua atenção, ele te da um chute na " + frasesAtaque[u.sorteia(0,2)] + "\n")
+						vida -= u.sorteia(10,13) + danoInimigo
+		
+						escreve("A dor é terrível.\n")
+						
+						escreve("Você levanta rapidamente e ele surpreendentemente começa a levantar voo.\n")
+					}// fim do se contador 1
 	
-					escreve("A dor é terrível.\n")
-					
-					escreve("Você levanta rapidamente e ele surpreendentemente começa a levantar voo.\n")
-				}// fim do se contador 1
-
-				senao se(contador == 2){
-					escreve("Ele vem voando em sua direção.\n")
-					escreve("Você pega pedras e do chão e atira nele para se defender.\n")
-					escreve("Uma das pedras pega nas asas dele com força e ele cai no chão.\n")
-					vidaUbariano2 -= u.sorteia(20, 27) + dano
-					escreve("Você tenta ir para mais longe dele, mas ele se arrasta pelo chão e te derruba.\n")
-					escreve("Você cai em um arbusto cheio de espinhos dolorosos.\n")
-					vida -= u.sorteia(10, 15) + danoInimigo
-					escreve("Ele se levanta e parece estar vindo para cima de você novamente.\n")
-				}// fim do se contador 2		
-				senao se(contador == 4){
-					escreve("Você se prepara, pega uma enorme casca de árvore perto de você.\n")
-					escreve("O ubariano se levante e vem como se fosse lhe agarrar.\n")
-					escreve("Você tenta se proteger com seu escudo improvisado.\n")
-					escreve("Com uma unica mão ele quebra o escudo e acerta sua barriga.\n")
-					vida -= u.sorteia(10, 15) + danoInimigo
-					escreve("Com um dos pedaços quebrados de seu escudo, você crava-o na barriga dele.\n")
-					vidaUbariano2 -= u.sorteia(10, 20) + dano
-					escreve("Ele grita de dor e você se afasta.\n")
-				}
-				senao se(contador == 5){
-					escreve("Você percebe a fúria no olhar dele.\n")
-					escreve("Ele vem em sua direção, você esquiva e sai correndo.\n")
-					escreve("Ele tenta voar, mas parece estar com as asas machucadas.\n")
-					escreve("Você encontra uma pedra escalcante no chão. Ela é quente como o fogo.\n")
-					escreve("Você a chuta na direção dele, criando uma queimadura.\n")
-					vidaUbariano2 -= u.sorteia(20, 25) + dano
-					escreve("Ao se debater pela dor, ele acaba te derrubando.\n")
-					escreve("Você se levanta com muita dor.\n")
-					
-				}		
-			
+					senao se(contador == 2){
+						escreve("Ele vem voando em sua direção.\n")
+						escreve("Você pega pedras e do chão e atira nele para se defender.\n")
+						escreve("Uma das pedras pega nas asas dele com força e ele cai no chão.\n")
+						vidaUbariano2 -= u.sorteia(20, 27) + dano
+						escreve("Você tenta ir para mais longe dele, mas ele se arrasta pelo chão e te derruba.\n")
+						escreve("Você cai em um arbusto cheio de espinhos dolorosos.\n")
+						vida -= u.sorteia(10, 15) + danoInimigo
+						escreve("Ele se levanta e parece estar vindo para cima de você novamente.\n")
+					}// fim do se contador 2		
+					senao se(contador == 4){
+						escreve("Você se prepara, pega uma enorme casca de árvore perto de você.\n")
+						escreve("O ubariano se levante e vem como se fosse lhe agarrar.\n")
+						escreve("Você tenta se proteger com seu escudo improvisado.\n")
+						escreve("Com uma unica mão ele quebra o escudo e acerta sua barriga.\n")
+						vida -= u.sorteia(10, 15) + danoInimigo
+						escreve("Com um dos pedaços quebrados de seu escudo, você crava-o na barriga dele.\n")
+						vidaUbariano2 -= u.sorteia(10, 20) + dano
+						escreve("Ele grita de dor e você se afasta.\n")
+					}
+					senao se(contador == 5){
+						escreve("Você percebe a fúria no olhar dele.\n")
+						escreve("Ele vem em sua direção, você esquiva e sai correndo.\n")
+						escreve("Ele tenta voar, mas parece estar com as asas machucadas.\n")
+						escreve("Você encontra uma pedra escalcante no chão. Ela é quente como o fogo.\n")
+						escreve("Você a chuta na direção dele, criando uma queimadura.\n")
+						vidaUbariano2 -= u.sorteia(20, 25) + dano
+						escreve("Ao se debater pela dor, ele acaba te derrubando.\n")
+						escreve("Você se levanta com muita dor.\n")
+						
+					}		
 				
-
-
-				 se(contador == 3){
-					escreve("Ele vem com as garras para cima de você.\n")
-					escreve("Você dá um mortal para trás. Ele fica todo confuso.\n")
-					escreve("Nunca deixe ele saber seu próximo passo.\n")
-					escreve("Você pula e da um chute na garganta dele.Parece ter doido.\n")
-					vidaUbariano2 -= u.sorteia(15, 23) + dano
-					escreve("Ele bate em uma árvore atrás dele e cai.\n")
-				}
-				
-				senao se(contador == 6){
-					continuar = falso
-				}
+					
+	
+	
+					 se(contador == 3){
+						escreve("Ele vem com as garras para cima de você.\n")
+						escreve("Você dá um mortal para trás. Ele fica todo confuso.\n")
+						escreve("Nunca deixe ele saber seu próximo passo.\n")
+						escreve("Você pula e da um chute na garganta dele.Parece ter doido.\n")
+						vidaUbariano2 -= u.sorteia(15, 23) + dano
+						escreve("Ele bate em uma árvore atrás dele e cai.\n")
+					}
+					
+					senao se(contador == 6){
+						continuar = falso
+					}
 				pare
 				//FIM DO CASO 2
 
 				caso 3:
-				se (contador == 1){
+					se (contador == 1){
+						
+						escreve("Você olha para todos os lados procurando uma rota de fuga.\n")
+						escreve("Você avisa um tronco enorme no chão, e corre para se esconder dentro dele.\n")
+						escreve("Obviamente o ele viu exatamente para onde foi.\n")
+						escreve("Ele pega o tronco com as mãos e te chacoalha, até você cair.\n")
+						escreve("Seu pé é torcido ao cair.\n")
+						vida -= u.sorteia(7, 10) + danoInimigo
+						escreve("Você levanta com dificuldade.\n")
+						se(cs == 1){
+						escreve("O ubariano fica cada vez mais feroz e começa a levantar voo.\n")	
+						}
+						
 					
-					escreve("Você olha para todos os lados procurando uma rota de fuga.\n")
-					escreve("Você avisa um tronco enorme no chão, e corre para se esconder dentro dele.\n")
-					escreve("Obviamente o ele viu exatamente para onde foi.\n")
-					escreve("Ele pega o tronco com as mãos e te chacoalha, até você cair.\n")
-					escreve("Seu pé é torcido ao cair.\n")
-					vida -= u.sorteia(7, 10) + danoInimigo
-					escreve("Você levanta com dificuldade.\n")
-					se(cs == 1){
-					escreve("O ubariano fica cada vez mais feroz e começa a levantar voo.\n")	
+					}// fim do se contador 1
+					
+					senao se (contador == 2){
+						escreve("Ele vem em sua direção e você corre desesperadamente.\n")
+						escreve("Você corre olhando para trás para não perde-lo de vista.\n")
+						escreve("Ao se virar, você dá de cara em uma árvore.\n")
+						escreve("Você cai no chão com a força do impacto.\n")
+						vida -= u.sorteia(10, 15) + danoInimigo
+						escreve("Ele pousa e parece estar vindo em sua direção.\n")
+					}// fim do se contador 2
+	
+					senao se(contador == 3){
+						escreve("Você tenta rastejar para fugir dele.\n")
+						escreve("Ele te pega pelo pé e te joga longe.\n")
+						escreve("Isso doi muito.\n")
+						vida -= u.sorteia(10, 20) + danoInimigo
+						escreve("Você se levanta com difuldade e pega uma enorme pedra no chão.\n")
+						escreve("Você atira e acerta a cabeça dele.\n")
+						escreve("Ele fica meio tonto e cai no chão.\n")
+						vidaUbariano2 -= u.sorteia(15, 25) + dano
+					}// fim do se contador 3
+					
+					senao se(contador == 4){
+						escreve("Aproveitando que ele está no chão, você foge para dentro das árvores.\n")
+						escreve("Ele começa a farejar você. Com agilidade vocÊ se esconde.\n")
+						escreve("Ele te encontra e te agarra.\n")
+						escreve("Você pega sua adaga e enfia-a na mão da criatura.\n")
+						vidaUbariano2 -= u.sorteia(15,20) + dano
+						escreve("Ele começa a sangrar e você se afasta.\n")
 					}
-					
-				
-				}// fim do se contador 1
-				
-				senao se (contador == 2){
-					escreve("Ele vem em sua direção e você corre desesperadamente.\n")
-					escreve("Você corre olhando para trás para não perde-lo de vista.\n")
-					escreve("Ao se virar, você dá de cara em uma árvore.\n")
-					escreve("Você cai no chão com a força do impacto.\n")
-					vida -= u.sorteia(10, 15) + danoInimigo
-					escreve("Ele pousa e parece estar vindo em sua direção.\n")
-				}// fim do se contador 2
-
-				senao se(contador == 3){
-					escreve("Você tenta rastejar para fugir dele.\n")
-					escreve("Ele te pega pelo pé e te joga longe.\n")
-					escreve("Isso doi muito.\n")
-					vida -= u.sorteia(10, 20) + danoInimigo
-					escreve("Você se levanta com difuldade e pega uma enorme pedra no chão.\n")
-					escreve("Você atira e acerta a cabeça dele.\n")
-					escreve("Ele fica meio tonto e cai no chão.\n")
-					vidaUbariano2 -= u.sorteia(15, 25) + dano
-				}// fim do se contador 3
-				
-				senao se(contador == 4){
-					escreve("Aproveitando que ele está no chão, você foge para dentro das árvores.\n")
-					escreve("Ele começa a farejar você. Com agilidade vocÊ se esconde.\n")
-					escreve("Ele te encontra e te agarra.\n")
-					escreve("Você pega sua adaga e enfia-a na mão da criatura.\n")
-					vidaUbariano2 -= u.sorteia(15,20) + dano
-					escreve("Ele começa a sangrar e você se afasta.\n")
-				}
-
-				senao se(contador == 5){
-					escreve("Ele vem correndo para sua direção.\n")
-					escreve("Você se esquiva e sai correndo.\n")
-					escreve("Obviamente ele vem atrás de você.\n")
-					escreve("No caminho você ve uma pedra obscura, ela é uma pedra muito acida, machuca ao encostar.\n")
-					escreve("Você chuta nele para dar mais vantagem.\n")
-					vidaUbariano2 -= u.sorteia(13,18) + dano
-					escreve("Ele ao se debater, te derruba.\n")
-					vida -= u.sorteia(10,15) + danoInimigo
-					escreve("Você se levanta, com muita dor.\n")
-				}
-				senao se(contador == 6){
-					continuar = falso
-				}
+	
+					senao se(contador == 5){
+						escreve("Ele vem correndo para sua direção.\n")
+						escreve("Você se esquiva e sai correndo.\n")
+						escreve("Obviamente ele vem atrás de você.\n")
+						escreve("No caminho você ve uma pedra obscura, ela é uma pedra muito acida, machuca ao encostar.\n")
+						escreve("Você chuta nele para dar mais vantagem.\n")
+						vidaUbariano2 -= u.sorteia(13,18) + dano
+						escreve("Ele ao se debater, te derruba.\n")
+						vida -= u.sorteia(10,15) + danoInimigo
+						escreve("Você se levanta, com muita dor.\n")
+					}
+					senao se(contador == 6){
+						continuar = falso
+					}
 				pare
 				// FIM DO CASO 3
 				caso 4:
 				
-				escreva("| ")
-				para(inteiro i=0; i < 6; i++){
-				escreva(i, "- ", itens[i], " | ")}
-				escreve("\n")
-
-				escreve("Quer usar um de seus itens?\n")
-				
-				logico continuar2 = verdadeiro
-				enquanto(continuar2 == verdadeiro){
-
-					escreve("[1] - Sim. \n")
-					escreve("[2] - Não.\n")
-					leia(opcao)
-					escolha(opcao){
-					caso 1:
-
-					escreve("Digite o número do item que você quer utilizar.\n")
-					inteiro item
-					leia(item)
-
-						escolha(item){
-							caso 0:
-							escreve("Você não pode usar esse item.\n")
-							continuar2 = falso
-							pare
+					escreva("| ")
+					para(inteiro i=0; i < 6; i++){
+					escreva(i, "- ", itens[i], " | ")}
+					escreve("\n")
 	
-							caso 1:
-							escreve("Você não pode usar esse item.\n")
-							continuar2 = falso
-							pare
+					escreve("Quer usar um de seus itens?\n")
+					
+					logico continuar2 = verdadeiro
+					enquanto(continuar2 == verdadeiro){
 	
-							caso 2:
-							escreve("Você já está usando esse item.\n")
-							continuar2 = falso
-							pare
+						escreve("[1] - Sim. \n")
+						escreve("[2] - Não.\n")
+						leia(opcao)
+						escolha(opcao){
+						caso 1:
 	
-							caso 3:
-							usarItens(1)
-							continuar2 = falso
-							contador -= 1
-							pare
+						escreve("Digite o número do item que você quer utilizar.\n")
+						inteiro item
+						leia(item)
 	
-							caso 4:
-							usarItens(2)
-							continuar2 = falso
-							contador -= 1
-							pare
-	
-							caso 5:
-							usarItens(3)
-							continuar2 = falso
-							contador -= 1
-							pare
-							
-						}// fim escolha item
+							escolha(item){
+								caso 0:
+									escreve("Você não pode usar esse item.\n")
+									continuar2 = falso
+								pare
+		
+								caso 1:
+									escreve("Você não pode usar esse item.\n")
+									continuar2 = falso
+								pare
+		
+								caso 2:
+									escreve("Você já está usando esse item.\n")
+									continuar2 = falso
+								pare
+		
+								caso 3:
+									usarItens(1)
+									continuar2 = falso
+									contador -= 1
+								pare
+		
+								caso 4:
+									usarItens(2)
+									continuar2 = falso
+									contador -= 1
+								pare
+		
+								caso 5:
+									usarItens(3)
+									continuar2 = falso
+									contador -= 1
+								pare
+								
+							}// fim escolha item
 					pare
 
 					caso 2:
-					continuar2 = falso
+						continuar2 = falso
 					pare 
 
 					caso contrario:
-					escreve("Essa opção é invalida. Escolha uma das opções: \n")
+						escreve("Essa opção é invalida. Escolha uma das opções: \n")
 					
 					}// fim do escolha
 				}// fim do enquanto
@@ -1453,37 +1454,37 @@ programa
 				// FIM DO CASO 4
 				caso 5:
 				
-				se(livro== verdadeiro){
-					
-					se(pocaoForca == verdadeiro){
-						escreve("Você ingere a poção rapidamente.\n")	
-						dano += u.sorteia(7, 12)
-						pocaoForca = falso
-						contador -= 1
-					}
-
-					senao se(pocaoCura == verdadeiro){
-						escreve("Você ingere a poção rapidamente.\n")	
-						vida += u.sorteia(7, 15)
-						pocaoCura = falso
-						contador -= 1
-					}
-
-					senao se(pocaoResistencia == verdadeiro){
-						escreve("Você ingere a poção rapidamente.\n")	
-						danoInimigo -= u.sorteia(7, 12)
-						contador -= 1
-						pocaoResistencia = falso
-					}
-
-					senao {
-						escreve("Você não possui mais poções.\n")
-					}
-				}// fim do se livro
+					se(livro== verdadeiro){
+						
+						se(pocaoForca == verdadeiro){
+							escreve("Você ingere a poção rapidamente.\n")	
+							dano += u.sorteia(7, 12)
+							pocaoForca = falso
+							contador -= 1
+						}
+	
+						senao se(pocaoCura == verdadeiro){
+							escreve("Você ingere a poção rapidamente.\n")	
+							vida += u.sorteia(7, 15)
+							pocaoCura = falso
+							contador -= 1
+						}
+	
+						senao se(pocaoResistencia == verdadeiro){
+							escreve("Você ingere a poção rapidamente.\n")	
+							danoInimigo -= u.sorteia(7, 12)
+							contador -= 1
+							pocaoResistencia = falso
+						}
+	
+						senao {
+							escreve("Você não possui mais poções.\n")
+						}
+					}// fim do se livro
 				pare 
 				// FIM DO CASO 5
 				caso contrario:
-				escreve("Essa opção é invalida. O Ubariano esta vindo até você. \n")
+					escreve("Essa opção é invalida. O Ubariano esta vindo até você. \n")
 				
 			}// fim do escolha
 
@@ -1779,26 +1780,26 @@ programa
 			leia(opcao)
 			escolha(opcao){
 				caso 1:
-				escreve("D: Perfeito. Você está prestes a viver história.\n")
-				fim()
-				escreve("Final definitivo 3/3: Final verdadeiro.")
-				continuar = falso
-				gameLoop = falso
+					escreve("D: Perfeito. Você está prestes a viver história.\n")
+					fim()
+					escreve("Final definitivo 3/3: Final verdadeiro.")
+					continuar = falso
+					gameLoop = falso
 				pare
 
 				caso 2:
-				escreve("D: Que seja, a história começa aqui.\n")
-				escreve("Num estalar de dedos dezenas daquelas criaturas voam pra cima de você.\n")
-				GameOver()
-				escreve("Um final digno e honroso")
-				retc(400)
-				escreve("Ou não.")
-				continuar = falso
-				gameLoop = falso
+					escreve("D: Que seja, a história começa aqui.\n")
+					escreve("Num estalar de dedos dezenas daquelas criaturas voam pra cima de você.\n")
+					GameOver()
+					escreve("Um final digno e honroso")
+					retc(400)
+					escreve("Ou não.")
+					continuar = falso
+					gameLoop = falso
 				pare
 
 				caso contrario: 
-				escreve("Essa opção é invalida. Escolha uma das opções: \n")
+					escreve("Essa opção é invalida. Escolha uma das opções: \n")
 				
 			}
 		}
@@ -1844,6 +1845,8 @@ escreva("▒▒▒▒▒       ▒▒▒▒▒ ▒▒▒▒▒ ▒▒▒ ▒▒�
 			}// fim do escolha
 		}// fim do para
 	}// fim da funcao
+
+	//Créditos dessa função escreve vão para www.github.com/JoaoGuimaraesTDS2023/ 
 	
 	funcao enterCarta(){
 		escreve("Pressione Enter para continuar.")
@@ -1905,16 +1908,16 @@ escreva("▒▒▒▒▒       ▒▒▒▒▒ ▒▒▒▒▒ ▒▒▒ ▒▒�
 	}
 
 	funcao criatura(){
-escreva(" .-._                                                   _,-,","\n")
-escreva("  `._`-._                                           _,-'_,'","\n")
-escreva("     `._ `-._                                   _,-' _,'","\n")
-escreva("        `._  `-._        __.-----.__        _,-'  _,'","\n")
-escreva("           `._   `#===\"\"\"           \"\"\"===#'   _,'","\n")
-escreva("              `._/)  ._               _.  (\\_,'","\n")
-escreva("               )*'     **.__     __.**     '*( ","\n")
-escreva("               #  .==..__  \"\"   \"\"  __..==,  # ","\n")
-escreva("              #   `\\\"._(_).       .(_)_.'\\\"'   #","\n")
-escreva("\n")
+		escreva(" .-._                                                   _,-,","\n")
+		escreva("  `._`-._                                           _,-'_,'","\n")
+		escreva("     `._ `-._                                   _,-' _,'","\n")
+		escreva("        `._  `-._        __.-----.__        _,-'  _,'","\n")
+		escreva("           `._   `#===\"\"\"           \"\"\"===#'   _,'","\n")
+		escreva("              `._/)  ._               _.  (\\_,'","\n")
+		escreva("               )*'     **.__     __.**     '*( ","\n")
+		escreva("               #  .==..__  \"\"   \"\"  __..==,  # ","\n")
+		escreva("              #   `\\\"._(_).       .(_)_.'\\\"'   #","\n")
+		escreva("\n")
 	}
 
 	funcao batalhaEsqueleto( ){
